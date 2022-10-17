@@ -20,13 +20,13 @@ section.homepage-advantages
 
                     {
                         image: "img/home/adv-3",
-                        name: "Собственное автоматизированное производство",
+                        name: "Собственное автоматизированное<br> производство",
                         desc: "Комплексный подход позволяет обеспечивать полную совместимость компонентов и подсистем между собой"
                     },
 
                     {
                         image: "img/home/adv-4",
-                        name: "Собственная акредитованная лаборатория",
+                        name: "Собственная акредитованная<br> лаборатория",
                         desc: "Удовлетворяем требования заказчиков в области испытаний, измерений или исследований продукции"
                     },
 
@@ -36,5 +36,5 @@ section.homepage-advantages
                 .homepage-advantages__item
                     .homepage-advantages__item-icon: img.lazyload(loading="lazy" data-src=item.image + ".svg" width=70 height="70")
                     .homepage-advantages__item-content
-                        .homepage-advantages__item-name=item.name
+                        .homepage-advantages__item-name !{item.name}
                         .homepage-advantages__item-desc=item.desc

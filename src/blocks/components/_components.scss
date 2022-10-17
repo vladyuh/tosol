@@ -41,8 +41,14 @@
       flex-grow: 1;
       max-width: 258px;
 
+
       span{
         margin-right: 10px;
+        letter-spacing: 0.1em;
+      }
+
+      svg{
+        flex-shrink: 0;
       }
 
     }

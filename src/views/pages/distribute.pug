@@ -1,0 +1,137 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/distribute.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Дистрибьюторы",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.distribute-block.trust-block.splide
+        .container
+            .trust-block__title.distribute-block__title.section-h2 Дистрибьюторы
+            .trust-block__caption.distribute-block__caption Продукция компании "Тосол-Синтез" на рынке автохимии представлена:
+            .trust-block__filter
+                .trust-block__filter-item.btn.btn-secondary.is-active(data-filter="is-net") Транснациональные сети
+                .trust-block__filter-item.btn.btn-secondary(data-filter="is-station") Автозаправочные станции
+                .trust-block__filter-item.btn.btn-secondary(data-filter="is-store") Интернет-магазины
+                .trust-block__filter-item.btn.btn-secondary(data-filter="is-market") Маркетплейсы
+            .trust-block__arrows.splide__arrows.slider-nav
+                button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                    include ../../img/svg/ic_arrow-left.svg
+                button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                    span Далее
+                    include ../../img/svg/ic_arrow-right.svg
+            .splide__track
+                ul.splide__list
+                    li.splide__slide(data-filter="is-net")
+                        picture
+                            source(srcset="img/trust/1.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+                    li.splide__slide(data-filter="is-net")
+                        picture
+                            source(srcset="img/trust/2.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+                    li.splide__slide(data-filter="is-station")
+                        picture
+                            source(srcset="img/trust/3.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
+                    li.splide__slide(data-filter="is-station")
+                        picture
+                            source(srcset="img/trust/4.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
+                    li.splide__slide(data-filter="is-store")
+                        picture
+                            source(srcset="img/trust/5.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/5.jpg")
+                    li.splide__slide(data-filter="is-store")
+                        picture
+                            source(srcset="img/trust/6.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/trust/6.jpg")
+                    li.splide__slide(data-filter="is-market")
+                        picture
+                            source(srcset="img/product-detail/wb.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/product-detail/wb.png")
+                    li.splide__slide(data-filter="is-market")
+                        picture
+                            source(srcset="img/product-detail/ozon.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/product-detail/ozon.png")
+
+    section.distribute-map
+        .container
+            .distribute-map__title Представительства компании в регионах РФ, ближнем и дальнем зарубежье
+            .distribute-map__regions
+                .distribute-map__region.is-active Россия
+                .distribute-map__region Армения
+                .distribute-map__region Азербайджан
+                .distribute-map__region Беларусь
+                .distribute-map__region Болгария
+                .distribute-map__region Грузия
+                .distribute-map__region Израиль
+                .distribute-map__region Казахстан
+                .distribute-map__region Кыргызстан
+                .distribute-map__region Латвия
+                .distribute-map__region Литва
+                .distribute-map__region Молдавия
+                .distribute-map__region Монголия
+                .distribute-map__region Приднестровье
+                .distribute-map__region Таджикистан
+                .distribute-map__region Туркмения
+                .distribute-map__region Узбекистан
+            .distribute-map__list
+                .distribute-map__list-search
+                    input(type="search" placeholder="Поиск")
+                    +icons("#ic_search-gray", 20)
+                .distribute-map__list-items
+                    .distribute-map__list-item
+                        .distribute-map__list-name ООО «Алтай-ТС»
+                        .distribute-map__list-address г. Барнаул, ул. Совхозная, д 54, корп 1
+                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
+                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
+                        a(href="#").distribute-map__list-site avtoopt.com
+                    .distribute-map__list-item
+                        .distribute-map__list-name ООО «Барнаул-ТС»
+                        .distribute-map__list-address г. Барнаул, ул. Советская, д 5
+                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
+                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
+                        a(href="#").distribute-map__list-site avtoopt.com
+                    .distribute-map__list-item
+                        .distribute-map__list-name
+                        .distribute-map__list-name ООО «Масло-ТС»
+                        .distribute-map__list-address г. Барнаул, пр. Ленина, д 11
+                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
+                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
+                        a(href="#").distribute-map__list-site avtoopt.com
+            .distribute-map__container
+                .distribute-map__container-wrap
+                    #map
+
+    include ../../blocks/modules/common/dist-block/dist-block
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/distribute.js")

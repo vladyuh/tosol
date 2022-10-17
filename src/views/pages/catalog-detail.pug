@@ -1,0 +1,128 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/catalog.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            .breadcrumb
+                ul.breadcrumb__list
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href='/') Главная
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href='/') Каталог продукции
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href='/') Охлаждающие жидкости
+                    li.breadcrumb__item
+                        a.breadcrumb__link.breadcrumb__link_active(href='/') FELIX Carbox G12+, красный
+    section.catalog-detail
+        .container
+            h1.catalog-detail__title.section-h1 FELIX Carbox G12+, красный
+            .catalog-detail__product
+                .catalog-detail__product__wrapper
+                    .catalog-detail__product-brand
+                        picture
+                            source(srcset='img/home/brand-logo.webp' type='image/webp')
+                            img(src='img/home/brand-logo.png')
+                    .catalog-detail__product-image
+                        picture
+                            source(srcset='img/products/1.webp' type='image/webp')
+                            img(src='img/products/1.png' width='247' height='247')
+                .catalog-detail__product-types
+                    .catalog-detail__product-type
+                        include ../../img/option-0.svg
+                        span 5 л
+                    .catalog-detail__product-type.is-active
+                        include ../../img/option-1.svg
+                        span 1 л
+                    .catalog-detail__product-type
+                        include ../../img/option-2.svg
+                        span 20 л
+                    .catalog-detail__product-type
+                        include ../../img/option-3.svg
+                        span 180 кг
+            .catalog-detail__info
+                .catalog-detail__info-art Арт 88964536
+                .catalog-detail__info-title.section-h5 Описание продукта
+                .catalog-detail__info-desc
+                    p Антифриз FELIX CARBOX G12+ это готовый к применению профессиональный карбоксилатный антифриз с увеличенным ресурсом эксплуатации (тип OAT). Антифриз FELIX CARBOX G12+ обладает увеличенным сроком эксплуатации 250 000 км пробега или 5 лет использования.
+                    p Cпецификаций импортных автопроизводителей, международным стандартам: ASTM D 3306, ASTM D 4985, ASTM D 6210, KSM 2142, BS 6580, SAE J 1034, JIS K 2234. Качество продукта подтверждено в специализированной американской лаборатории ABIC Testing Laboratories, INC.
+                    p Органический антифриз класса G12+ по классификации Volkswagen.
+                .catalog-detail__info-link
+                    a(href="#").btn.btn-primary Перейти на сайт FELIX
+            .catalog-detail__toggles
+                .catalog-detail__toggle.btn.btn-secondary.is-active(data-tab='1') Преимущества
+                .catalog-detail__toggle.btn.btn-secondary(data-tab='2') Технический лист
+                .catalog-detail__toggle.btn.btn-secondary(data-tab='3') Видео
+                .catalog-detail__toggle.btn.btn-secondary(data-tab='4') Купить онлайн
+            .catalog-detail__tabs
+                .catalog-detail__tab.is-active(data-tab='1')
+                    .catalog-detail__advantages
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/1.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Обладает увеличенным ресурсом эксплуатации – 250 000 км
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/2.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Обладает повышенной термостабильностью и теплопроводностью
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/3.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Имеет оптимальные смазывающие свойства
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/4.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Обеспечивает быстрый прогрев двигателя при отрицательных температурах, до -45°С
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/5.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Исключает возможность образования накипи и отложений
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/6.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Готов к применению
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/7.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Продлевает срок службы помпы, термостата, радиатора в 1,5 раза
+                        .catalog-detail__advantage
+                            .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/8.svg" width=42 height=42)
+                            .catalog-detail__advantage-caption Содержит карбоксилатный пакет присадок
+                .catalog-detail__tab(data-tab='2')
+                    .catalog-detail__docs
+                        .catalog-detail__doc
+                            .catalog-detail__doc-icon: img.lazyload(loading="lazy" data-src="img/svg/ic_docs.svg" width=48 height=48)
+                            .catalog-detail__doc-text
+                                .catalog-detail__doc-name Технический лист FELIX CARBOX
+                                .catalog-detail__doc-caption PDF, размер файла: (59,13kb)
+                .catalog-detail__tab(data-tab='3')
+                    .catalog-detail__video(data-id="brInSakoYjI")
+                        .catalog-detail__video-preview
+                            picture
+                                source(srcset='img/about/company.webp' type='image/webp')
+                                img.lazyload(loading="lazy" data-src='img/about/company.jpg')
+                        .catalog-detail__video-play: include ../../img/svg/ic_play.svg
+                .catalog-detail__tab(data-tab='4')
+                    .catalog-detail__markets
+                        a(href="#").catalog-detail__market
+                            picture
+                                source(srcset='img/product-detail/wb.webp' type='image/webp')
+                                img.lazyload(loading="lazy" data-src='img/product-detail/wb.png')
+                        a(href="#").catalog-detail__market
+                            picture
+                                source(srcset='img/product-detail/ozon.webp' type='image/webp')
+                                img.lazyload(loading="lazy" data-src='img/product-detail/ozon.png')
+                        a(href="#").catalog-detail__market
+                            picture
+                                source(srcset='img/product-detail/sber.webp' type='image/webp')
+                                img.lazyload(loading="lazy" data-src='img/product-detail/sber.png')
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/catalog.js")

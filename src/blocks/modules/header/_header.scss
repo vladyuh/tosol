@@ -48,6 +48,18 @@
             background-image: url("../img/svg/ic_arrow-down-gray.svg")
         }
 
+        .header__feedback{
+            .btn{
+                background: rgba(8, 123, 168, 0.1);
+                color: var(--color-accent);
+
+                &:hover{
+                    color: #fff;
+                }
+
+            }
+        }
+
 
 
     }
@@ -140,6 +152,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
         }
 
     }
@@ -177,6 +190,7 @@
                 font-size: 12px;
                 line-height: 14px / 12px * 100%;
                 background: rgba(8, 123, 168, 0.6);
+                letter-spacing: initial;
 
                 &:hover{
                     background: var(--color-accent);

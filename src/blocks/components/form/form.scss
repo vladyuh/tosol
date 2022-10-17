@@ -132,6 +132,8 @@ textarea {
 
   &__styled {
     position: relative;
+    display: flex;
+    align-items: center;
 
     &_icon {
       padding: $paddingWithIcon;

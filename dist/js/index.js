@@ -35,6 +35,11 @@ window.addEventListener("load", function () {
             perPage: 1,
             arrows: true,
             pagination: false,
+            autoplay: true,
+            interval: 5000,
+            rewind: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
             mediaQuery: "min",
             gap: 16,
             breakpoints: {

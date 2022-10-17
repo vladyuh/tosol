@@ -50,6 +50,19 @@
       line-height: 140%;
       margin-bottom: 12px;
       color: #FFFFFF;
+
+      @media screen and (min-width: 831px) {
+        font-size: 24px;
+      }
+
+      @media screen and (min-width: 1025px) {
+        font-size: 28px;
+      }
+
+      @media screen and (min-width: 1153px) {
+        font-size: 30px;
+      }
+
     }
 
     &-desc {

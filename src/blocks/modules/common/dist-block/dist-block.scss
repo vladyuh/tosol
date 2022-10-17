@@ -1,0 +1,130 @@
+.dist-block{
+  padding: 60px 0;
+  background: var(--color-accent);
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__text{
+    max-width: 731px;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+
+  &__title,
+  &__caption{
+    color: #fff;
+  }
+
+  &__title{
+    margin-bottom: 5px;
+  }
+
+  &__form{
+    max-width: 570px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px -10px;
+
+    .form__field{
+      padding: 5px 10px;
+      width: 100%;
+      margin-bottom: 0;
+
+      select,
+      .select__styled{
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 99px;
+        color: #fff;
+        span{
+          color: #fff;
+        }
+
+        &::after{
+          width: 10px;
+          height: 10px;
+          min-width: 10px;
+          background-image: url("../img/svg/arrow-drop.svg");
+          right: 24px;
+        }
+
+      }
+    }
+
+    .form__submit{
+      padding: 5px 10px;
+      width: 100%;
+
+      .btn{
+        width: 100%;
+      }
+
+    }
+
+    .form__agreement{
+      margin-top: 0;
+      padding: 5px 10px;
+      color: var(--color-text-secondary);
+      width: 100%;
+
+      a{
+        color: #fff;
+      }
+
+    }
+
+    @media screen and (min-width: 577px) {
+
+      .form__field{
+        width: 330px / 570px * 100%;
+      }
+
+      .form__submit{
+        width: 240px / 570px * 100%;
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 1025px) {
+    .container{
+      flex-wrap: nowrap;
+    }
+
+    &__text{
+      width: 570px / 1400px * 100%;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    &__caption{
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+
+    &__form{
+      width: 730px / 1400px * 100%;
+    }
+
+  }
+
+  @media screen and (min-width: 1281px) {
+
+    &__text{
+      width: 730px / 1400px * 100%;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+    &__form{
+      width: 570px / 1400px * 100%;
+    }
+
+  }
+
+
+}

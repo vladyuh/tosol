@@ -28,6 +28,13 @@
             position: relative;
             margin-bottom: 24px;
 
+            &.more{
+                .footer__nav-link{
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+
             &.has-submenu{
 
 
@@ -254,6 +261,10 @@
         &__nav{
             margin-right: 28px;
             margin-bottom: 0;
+        }
+
+        .footer__contacts-item{
+            margin: 14px 0;
         }
 
     }
