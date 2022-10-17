@@ -1,0 +1,78 @@
+.page-banner{
+  position: relative;
+  padding: 0px 0 68px;
+  min-height: 420px;
+
+  &__breadcrumbs{
+    position: relative;
+    z-index: 1;
+
+    .breadcrumb__item::after{
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.8821 2.67857L5.56126 0.133004C5.39958 -0.0443351 5.14021 -0.0443351 4.97853 0.133004C4.81684 0.310344 4.81684 0.594827 4.97853 0.772167L6.59537 2.54557L0.414315 2.54557C0.185263 2.54557 -1.36434e-07 2.74877 -1.25891e-07 3C-1.15349e-07 3.25123 0.185263 3.45443 0.414316 3.45443L6.592 3.45443L4.97516 5.22783C4.81347 5.40517 4.81347 5.68965 4.97516 5.86699C5.13684 6.04433 5.39621 6.04433 5.55789 5.86699L7.87874 3.32143C7.95958 3.23276 8 3.11823 8 3C8 2.88177 7.96295 2.76724 7.8821 2.67857Z' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
+    }
+
+    .breadcrumb__link{
+      color: #fff;
+
+      &__active{
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+    }
+
+  }
+
+  &__title,
+  &__subtitle{
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title{
+    margin-bottom: 38px;
+  }
+
+  &__subtitle{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 155%;
+
+    @media screen and (min-width: 641px) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1153px) {
+      font-size: 22px;
+    }
+  }
+
+  &__image{
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-position: 20%;
+      object-fit: cover;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(1, 25, 43, 0.3);
+    }
+
+  }
+
+}

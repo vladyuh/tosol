@@ -1,0 +1,118 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/personal.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Личный кабинет",
+                        isActive: true,
+                    },
+                    {
+                        link: "/",
+                        text: "Информация о компании",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.personal-block
+        .container
+            h1.personal-block__title.section-h1 Информация о компании
+            .personal-block__sidebar
+                .personal-block__company
+                    .personal-block__company-name ООО "Масла России"
+                    .personal-block__company-phone
+                        span Контактный телефон
+                        a(href="#") +7 123 456-78-90
+                    .personal-block__company-email
+                        span Электронная почта
+                        a(href="#") oooilrussia@gmail.com
+                ul.personal-block__menu
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link.is-active Информация о компании
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Сертификаты и допуски
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Справочная информация
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Телефонный справочник
+                .personal-block__logout
+                    a(href="#").btn.btn-primary Выход
+            .personal-block__content
+                .personal-info
+                    form.form.personal-info__data
+                        .personal-info__data-col
+                            .personal-info__data-title.section-h4 Контактные данные
+                            .form__fields
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="Название компании")
+                                        label.input-label Название компании
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="ИНН")
+                                        label.input-label ИНН
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="КПП")
+                                        label.input-label КПП
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="ОГРН")
+                                        label.input-label ОГРН
+                        .personal-info__data-col
+                            .personal-info__data-title.section-h4 Регистрационные данные
+                            .form__fields
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="Электронная почта")
+                                        label.input-label Электронная почта
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="+7 123 456-78-90")
+                                        label.input-label +7 123 456-78-90
+                                .form__field
+                                    .input.input-text.input-with--label
+                                        input(type="text" placeholder="Адрес")
+                                        label.input-label Адрес
+                        .form__submit
+                            a(href="#").btn.btn-primary Изменить данные
+                    form.form.personal-info__data.personal-info__password
+                        .personal-info__data-col
+                            .personal-info__data-title.section-h4 Смена пароля
+                            .form__fields
+                                .form__field
+                                    .input.input-password.input-with--label
+                                        input(type="password" placeholder="Текущий пароль")
+                                        label.input-label Текущий пароль
+                                .form__field
+                                    .input.input-password.input-with--label
+                                        input(type="password" placeholder="Новый пароль")
+                                        label.input-label Новый пароль
+                                .form__field
+                                    .input.input-password.input-with--label
+                                        input(type="password" placeholder="Повторите пароль")
+                                        label.input-label Повторите пароль
+                        .form__submit
+                            a(href="#").btn.btn-primary Сменить пароль
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/personal.js")

@@ -1,0 +1,129 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  padding: 17px 34px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-size: 14px;
+  line-height: 143%;
+  transition: all 0.25s ease;
+
+  &-primary{
+    background: var(--color-accent);
+    color: #fff;
+
+    &:hover{
+      background: var(--color-accent-hover);
+    }
+
+  }
+
+  &-secondary{
+    background: var(--color-section-bg);
+    color: var(--color-accent);
+
+    &:hover{
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+  }
+
+  &-white{
+    background: #fff;
+    color: var(--color-accent);
+
+    &:hover{
+      background: var(--color-accent-hover);
+      color: #fff;
+    }
+
+  }
+  
+  &:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &_loading {
+    cursor: wait;
+
+    &::after {
+      content: '';
+      width: 12px;
+      min-width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      border-left-color: transparent !important;
+      margin-left: 10px;
+      -webkit-transition: -webkit-transform .5s linear;
+      transition: transform .5s linear;
+      -o-transition: transform .5s linear;
+      transition: transform .5s linear, -webkit-transform .5s linear;
+      -webkit-animation: .5s linear infinite loadingrotate;
+      animation: .5s linear infinite loadingrotate;
+      display: inline-block;
+
+    }
+  }
+
+  &_success::after {
+    content: '';
+    width: 15px;
+    min-width: 14px;
+    height: 9px;
+    border: 2px solid #fff;
+    -webkit-animation: none;
+    animation: none;
+    min-width: 12px;
+    display: inline-block;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg) translateX(4px);
+    -ms-transform: rotate(-45deg) translateX(4px);
+    transform: rotate(-45deg) translateX(4px);
+    margin-left: 10px;
+    position: relative;
+    left: 5px;
+  }
+
+  &_disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+}
+
+@-webkit-keyframes loadingrotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes loadingrotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}

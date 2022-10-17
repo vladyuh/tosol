@@ -1,0 +1,111 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/articles.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Обучающие материалы",
+                    },
+                    {
+                        link: "/",
+                        text: "Тосол или антифриз? Как выбирать",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.articles-detail
+        .container
+            h1.articles-detail__title.section-h1 Тосол или антифриз? Как выбирать
+            .articles-detail__tags
+                .articles-detail__tag Продукция
+                .articles-detail__tag Автосервис
+            a(href="#").articles-detail__back
+                +icons('#ic_prev', 12)
+                span Вернуться к списку обучающих материалов
+            .articles-detail__date 31 января 2022
+            .articles-detail__content.edit-content
+                picture
+                    source(srcset="img/detail/article-2.webp" type="image/webp")
+                    img.lazyload(loading="lazy" data-src="img/detail/article-2.jpg")
+                p
+                    strong.
+                        Что лучше — тосол или антифриз? Можно ли их смешивать? Как правильно выбрать охлаждающую жидкость? Эти вопросы тревожат многих начинающих автолюбителей. Попытаемся ответить на них и определиться с главным вопросом — что лучше заливать, тосол или антифриз?
+                p Перед тем как перейти к анализу, необходимо разобраться в том, что такое охлаждающая жидкость, для чего она нужна, и на основе чего производится.
+                p В наше время, когда практически все материалы из которого сделан ДВС уже имеют высокую коррозионную стойкость, этот вопрос не так актуален. Однако, отличия все таки остались и из-за обозначений тосола в ГОСТе и происходит путаница тосол или антифриз. В ГОСТе был даже стандартизован цвет антифризов и тосолов.
+                p Когда у жидкости есть цвет, то проще контролировать нужный уровень в расширительном бачке. А так же цветом маркируют разные сорта жидкости, имеющие разные температуры кристаллизации.
+                p Однако сейчас почти никто не соблюдает стандартов на цвет жидкости, кроме известных производителей. Потому и нужно сохранить марку охлаждающей жидкости, которую заливали. И никогда, повторяем, никогда не смешивайте тосол с антифризом или жидкости разных цветов.
+                p И чтобы проверить качество охлаждающей жидкости, нужно взять пробу (небольшое количество испытуемой жидкости) и положить её в морозилку, где должна быть температура минус 20-25 градусов.
+
+    section.materials-more.splide
+        .container
+            .section-h2.materials-more__title Другие материалы
+            .materials-more__arrows.splide__arrows.slider-nav
+                button.materials-more__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                    include ../../img/svg/ic_arrow-left.svg
+                button.materials-more__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                    span Далее
+                    include ../../img/svg/ic_arrow-right.svg
+            .splide__track
+
+                -
+                    var list = [
+
+                        {
+                            image: "img/home/learn-1",
+                            name: "Рекомендуемый порядок промывки системы охлаждения автомобиля",
+                            tags: ["Ремонт", "Инструкции", "Автосервис", "Продукция", "Обучение"]
+                        },
+
+                        {
+                            image: "img/home/learn-2",
+                            name: "Тосол или антифриз? Что и как нужно выбирать",
+                            tags: ["Продукция", "Автосервис"]
+                        },
+
+                    ]
+
+                ul.splide__list
+                    each item in list
+                        li.splide__slide.homepage-materials__item.materials-more__item
+                            a(href="#").homepage-materials__item-image.materials-more__item-image
+                                picture
+                                    source(srcset=item.image + ".webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src=item.image + ".jpg")
+                                .homepage-materials__item-arrow.materials-more__item-arrow: include ../../img/svg/ic_arrow-right-gray.svg
+                            .homepage-materials__item-content.materials-more__item-content
+                                .homepage-materials__item-tags.materials-more__item-tags
+                                    each tag in item.tags
+                                        a(href="#").homepage-materials__item-tag.materials-more__item-tag=tag
+                                a(href="#").homepage-materials__item-name.materials-more__item-name=item.name
+                                a(href="#").homepage-materials__item-more.materials-more__item-more
+                                    span Подробнее
+                                    include ../../img/svg/ic-more.svg
+
+    include ../../blocks/modules/common/mail-block/mail-block
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/articles.js")

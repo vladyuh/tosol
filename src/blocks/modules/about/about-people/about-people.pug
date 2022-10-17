@@ -1,0 +1,56 @@
+section.aboutpage-staff
+    .container
+        .aboutpage-staff__title.section-h2 Руководство компании
+        .aboutpage-staff__ceo
+            .aboutpage-staff__ceo-image
+                picture
+                    source(srcset="img/about/people-1.webp" type="image/webp")
+                    img.lazyload(loading="lazy" data-src="img/about/people-1.jpg")
+            .aboutpage-staff__ceo-text
+                .aboutpage-staff__ceo-icon: +icons("#ic_quote",54)
+                .aboutpage-staff__ceo-quote Разнообразный и богатый опыт постоянное информационно пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Повседневная практика показывает, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации новых предложений.
+                .aboutpage-staff__ceo-caption
+                    .aboutpage-staff__ceo-name
+                        strong Михайлов Олег Вячеславович
+                        span Генеральный директор
+                    .aboutpage-staff__ceo-sign
+                        picture
+                            source(srcset="img/about/sign.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/about/sign.jpg" width=268 height=209)
+        .aboutpage-staff__slider.splide
+            .splide__track
+                ul.splide__list
+                    li.splide__slide.aboutpage-staff__slide
+                        .aboutpage-staff__slide-image
+                            picture
+                                source(srcset="img/about/people-2.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/people-2.jpg")
+                        .aboutpage-staff__slide-name Кузнецова Екатерина Владимировна
+                        .aboutpage-staff__slide-caption Заместитель директора по общим вопросам
+                    li.splide__slide.aboutpage-staff__slide
+                        .aboutpage-staff__slide-image
+                            picture
+                                source(srcset="img/about/people-3.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/people-3.jpg")
+                        .aboutpage-staff__slide-name Сидоров Александр Иванович
+                        .aboutpage-staff__slide-caption Руководитель отдела производства
+                    li.splide__slide.aboutpage-staff__slide
+                        .aboutpage-staff__slide-image
+                            picture
+                                source(srcset="img/about/people-4.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/people-4.jpg")
+                        .aboutpage-staff__slide-name Бурмистрова Елена Викоровна
+                        .aboutpage-staff__slide-caption Руководитель отдела маркетинга
+                    li.splide__slide.aboutpage-staff__slide
+                        .aboutpage-staff__slide-image
+                            picture
+                                source(srcset="img/about/people-5.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/people-5.jpg")
+                        .aboutpage-staff__slide-name Сидоров Александр Иванович
+                        .aboutpage-staff__slide-caption Руководитель отдела по общению с клиентами
+                .aboutpage-staff__arrows.splide__arrows.slider-nav
+                    button.aboutpage-staff__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                        include ../../../../img/svg/ic_arrow-left.svg
+                    button.aboutpage-staff__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                        span Далее
+                        include ../../../../img/svg/ic_arrow-right.svg

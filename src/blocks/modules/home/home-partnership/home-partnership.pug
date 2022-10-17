@@ -1,0 +1,29 @@
+section.homepage-partnership
+    .container
+        .homepage-partnership__title.section-h2 Приглашаем к сотрудничеству
+        .homepage-partnership__items
+
+            -
+                var list = [
+
+                    {
+                        image: "img/home/part-1",
+                        name: "Стать поставщиком",
+                        desc: "Разнообразный и богатый опыт реализация намеченных плановых заданий"
+                    },
+
+                    {
+                        image: "img/home/part-2",
+                        name: "Контрактное производство",
+                        desc: "Разнообразный и богатый опыт реализация намеченных плановых заданий"
+                    },
+
+                ]
+
+            each item in list
+                a(href="#").homepage-partnership__item
+                    .homepage-partnership__item-icon: img.lazyload(loading="lazy" data-src=item.image + ".svg" width=48 height=48)
+                    .homepage-partnership__item-content
+                        .homepage-partnership__item-name=item.name
+                        .homepage-partnership__item-desc=item.desc
+                        .homepage-partnership__item-arrow: include ../../../../img/svg/ic_arrow-right-gray.svg

@@ -1,0 +1,37 @@
+section.homepage-products
+    .container
+        .homepage-products__title.section-h2 Продукция
+        .homepage-products__items
+
+            -
+                var list = [
+
+                    {
+                        image: "img/home/prod-1",
+                        name: "Охлаждающие жидкости",
+                        link: "#"
+                    },
+                    {
+                        image: "img/home/prod-2",
+                        name: "Тормозные жидкости",
+                        link: "#"
+                    },
+                    {
+                        image: "img/home/prod-3",
+                        name: "Смазочные материалы",
+                        link: "#"
+                    }
+
+                ]
+
+            each item in list
+                .homepage-products__item
+                    .homepage-products__item-image
+                        picture
+                            source(srcset=item.image+".webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src=item.image+".jpg")
+                    a(href=item.link).homepage-products__item-content
+                        span.homepage-products__item-name=item.name
+                        span.homepage-products__item-link: include ../../../../img/svg/ic_arrow-right-gray.svg
+        .homepage-products__all
+            a(href="#").btn.btn-primary Вся продукция

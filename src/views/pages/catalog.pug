@@ -1,0 +1,133 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/catalog.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Каталог продукции",
+                        isActive: true,
+                    },
+                ]
+            )
+
+
+    section.homepage-products.products-block
+        .container
+            h1.homepage-products__title.products-block__title.section-h1 Каталог продукции
+            .homepage-products__items.products-block__items
+
+                -
+                    var list = [
+
+                        {
+                            image: "img/home/prod-1",
+                            name: "Охлаждающие жидкости",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-2",
+                            name: "Тормозные жидкости",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-3",
+                            name: "Смазочные материалы",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-4",
+                            name: "Тормозные колодки",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-5",
+                            name: "Автофильтры",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-6",
+                            name: "Автохимия и автокосметика",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-7",
+                            name: "Стеклоомывающая жидкость",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-8",
+                            name: "Щетки стеклоочистителя",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-9",
+                            name: "Автотовары и автоаксессуары",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-10",
+                            name: "Жидкость для SCR систем",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-11",
+                            name: "Антисептик",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-12",
+                            name: "Ароматизаторы",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-13",
+                            name: "Полиэтиленовая тара",
+                            link: "#"
+                        },
+                        {
+                            image: "img/home/prod-14",
+                            name: "Теплоносители",
+                            link: "#"
+                        }
+
+                    ]
+
+                each item in list
+                    .homepage-products__item.products-block__item
+                        .homepage-products__item-image.products-block__item-image
+                            picture
+                                source(srcset=item.image + ".webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src=item.image + ".jpg")
+                        a(href=item.link).homepage-products__item-content.products-block__item-content
+                            span.homepage-products__item-name.products-block__item-name=item.name
+                            span.homepage-products__item-link.products-block__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+
+
+            .products-block__caption.
+                Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Равным образом сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/index.js")

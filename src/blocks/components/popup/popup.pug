@@ -1,0 +1,200 @@
+mixin coopPopup
+    .popup.popup-coop#coop
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                form.form.popup__form.popup-coop__form
+                    .form__title.section-h3 Оставьте заявку на сотрудничество
+                    .form__fields
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Ваше имя*")
+                                label.input-label Ваше имя*
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Название организации*")
+                                label.input-label Название организации*
+                        .form__field
+                            .input.input-tel.input-with--label
+                                input(type="tel" placeholder="Телефон*")
+                                label.input-label Телефон*
+                        .form__field
+                            .input.input-email.input-with--label
+                                input(type="email" placeholder="Ваш email*")
+                                label.input-label Ваш email*
+                        .form__field
+                            .select
+                                select(name="")
+                                    option(value="Выберите регион" selected) Выберите регион
+                                    option(value="Москва") Москва
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Комментарий")
+                                label.input-label Комментарий
+                    .form__submit
+                        button.btn.btn-primary Оставить заявку
+                    .form__agreement Заявки обрабатываются с 9-00 до 19-00, по будням. Передавая свои данные, вы даете согласие на&nbsp;
+                        a(href="#") обработку персональных данных
+mixin vacancyPopup
+    .popup.popup-vacancy#vacancy
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                form.form.popup__form.popup-vacancy__form
+                    .form__title.section-h3 Откликнуться на вакансию
+                    .form__caption Пришлите резюме и мы свяжемся с Вами в ближайшее время
+                    .form__fields
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Ваше имя *")
+                                label.input-label Ваше имя *
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="tel" placeholder="Ваш телефон")
+                                label.input-label Ваш телефон
+                        .form__field.fullwidth
+                            label.file-input
+                                .file-input__icon: +icons('#ic_file', 48)
+                                .file-input__title Прикрепите резюме
+                                .file-input__caption название файла - ангийскими буквами до 10 Мб - максимальный размер файла .pdf / .doc / .jpg / .txt
+                                input(type="file" name="resume")
+                    .form__submit
+                        button.btn.btn-primary Отправить резюме
+                    .form__agreement Нажимая на кнопку «Отправить»,Вы даете Согласие на &nbsp;
+                        a(href="#") обработку персональных данных
+mixin productionPopup
+    .popup.popup-production#production
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                form.form.popup__form.popup-production__form
+                    .form__title.section-h3 Мастер подбора продукции
+                    .form__fields
+                        .form__field
+                            span.label Продукт
+                            .select
+                                select(name="")
+                                    option(value="Выберите продукт" selected) Выберите продукт
+                                    option(value="Охлаждающая жидкость") Охлаждающая жидкость
+                        .form__field
+                            span.label Марка автомобиля
+                            .select
+                                select(name="")
+                                    option(value="Выберите марку автомобиля" selected) Выберите марку автомобиля
+                                    option(value="Audi") Audi
+                                    option(value="BMW") BMW
+                        .form__field.halfwidth
+                            span.label Модель
+                            .select
+                                select(name="")
+                                    option(value="Выберите модель" selected) Выберите модель
+                        .form__field.halfwidth
+                            span.label Объем двигателя
+                            .select
+                                select(name="")
+                                    option(value="Выберите объем" selected) Выберите объем
+                        .form__field.halfwidth
+                            span.label Топливо
+                            .select
+                                select(name="")
+                                    option(value="Выберите топливо" selected) Выберите топливо
+                        .form__field.halfwidth
+                            span.label Год выпуска
+                            .select
+                                select(name="")
+                                    option(value="Выберите год" selected) Выберите год
+                    .form__submit
+                        button.btn.btn-primary Подобрать
+mixin successPopup
+    .popup.popup-success#success
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                .section-h3.popup-success__title Ваша заявка принята!
+                .popup-success__caption Наш менеджер свяжется с вами <br>в ближайшее время
+                a(href="#close").btn.btn-primary Закрыть
+mixin loginPopup
+    .popup.popup-login#login
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                form.form.popup__form.popup-login__form
+                    .popup-login__image
+                        picture
+                            source(srcset="img/logo.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/logo.png" width=140 height=140)
+                    .form__title.section-h3 Войти
+                    .form__fields
+                        .form__field
+                            span.label Адрес электронной почты
+                            .input.input-email
+                                input(type="email" placeholder="")
+                        .form__field
+                            span.label Пароль
+                            .input.input-password
+                                input(type="password" placeholder="")
+                    .form__submit
+                        button.btn.btn-primary Войти
+                    .form__links
+                        .form__link: a(href="#") Забыли пароль?
+                        .form__link
+                            | Еще не зарегистрировались?&nbsp;
+                            a(href="#") Регистрация
+mixin catalogPopup
+    .popup.popup-catalog#catalog
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                .popup-catalog__title.section-h3 Каталог продукции
+                ul.popup-catalog__list
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Охлаждающие жидкости
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Тормозные жидкости
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Тормозные колодки
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Смазочные материалы
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Автофильтры
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Теплоносители
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Ароматизаторы
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Автохимия и автокосметика
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Стеклоомывающие жидкости
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Щетки стеклоочистителя
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Автотовары и автоаксессуары
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Жидкость для SCR систем
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Полиэтиленовая тара
+                    li.popup-catalog__list-item: a(href='#').popup-catalog__list-link Антисептик
+                .popup-catalog__link
+                    a(href="#").btn.btn-primary Перейти в каталог
+                .popup-catalog__brands
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/felix.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/felix.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/chistayamilya.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/chistayamilya.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/champion.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/champion.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/AWM.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/AWM.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/rosdot.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/rosdot.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/AdBlue.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/AdBlue.png")
+                    a(href="#").popup-catalog__brands-item
+                        picture
+                            source(srcset="img/catalog/sakura.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/catalog/sakura.png")

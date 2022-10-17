@@ -1,0 +1,131 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/articles.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Публикации",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    .homepage-press.articles-block
+        .container
+            h1.homepage-press__title.articles-block__title.section-h1 Публикации
+            .homepage-press__items.articles-block__items
+                -
+                    var list = [
+
+                        {
+                            image: "img/home/press-1",
+                            date: "31 января 2022",
+                            name: "«Тосол-Синтез» на международной выставке Automechanika Dubai 2021",
+                            desc: "Компания «Тосол-Синтез» представила бренд FELIX международной выставке автомобильной промышленности Automechanika Dubai 2021. Выставка прошла во Всемирном торговом центре Дубая в декабре 2021 года."
+                        },
+
+                        {
+                            image: "img/home/press-4",
+                            date: "31 января 2022",
+                            name: "Космонавт Иван Вагнер встретился с командой «Тосол-Синтез-Инвест»",
+                            desc: "Участник действующего отряда космонавтов Иван Вагнер рассказал, как проходит подготовка к работе на Международной космической станции, своем пути к полету в космос и поделился секретами эффективного командного взаимодействия."
+                        },
+
+                        {
+                            image: "img/home/press-1",
+                            date: "31 января 2022",
+                            name: "«Тосол-Синтез» на международной выставке Automechanika Dubai 2021",
+                            desc: "Компания «Тосол-Синтез» представила бренд FELIX международной выставке автомобильной промышленности Automechanika Dubai 2021. Выставка прошла во Всемирном торговом центре Дубая в декабре 2021 года."
+                        },
+
+                        {
+                            image: "img/home/press-2",
+                            date: "31 января 2022",
+                            name: "Чем заменить импортные OEM-антифризы?",
+                            desc: "В данной статье предлагаем вашему вниманию линейку антифризов FELIX, которые на 100% могут заменить оригинальные жидкости практически для любого автомобиля. Рассмотрим преимущества, и предоставим две таблицы: с соответствием импортных брендов к линейке FELIX и подробную таблицу применяемости по марке авто."
+                        },
+
+                        {
+                            image: "img/home/press-5",
+                            date: "31 января 2022",
+                            name: "«Тосол-Синтез-Инвест» вышел в финал Второго Чемпионата по производительности!",
+                            desc: "Команды нашей компании уже второй год занимают лидирующие позиции на протяжении всего Чемпионата, подтверждая, что «Тосол-Синтез-Инвест» сформировало у себя лучшие управленческие кадры."
+                        },
+
+                        {
+                            image: "img/home/press-2",
+                            date: "31 января 2022",
+                            name: "Чем заменить импортные OEM-антифризы?",
+                            desc: "В данной статье предлагаем вашему вниманию линейку антифризов FELIX, которые на 100% могут заменить оригинальные жидкости практически для любого автомобиля. Рассмотрим преимущества, и предоставим две таблицы: с соответствием импортных брендов к линейке FELIX и подробную таблицу применяемости по марке авто."
+                        },
+
+                        {
+                            image: "img/home/press-3",
+                            date: "31 января 2022",
+                            name: "Конференция региональных менеджеров - 2022",
+                            desc: "С 13 по 15 апреля компания «Тосол-Синтез» провела ежегодную конференцию региональных менеджеров, в которой приняли участие более 50 сотрудников компании из России и СНГ. В ходе конференции обсудили тенденции развития в текущей экономической ситуации, подвели итоги прошедшего года и поставили цели на следующий."
+                        },
+
+                        {
+                            image: "img/home/press-6",
+                            date: "31 января 2022",
+                            name: "Новинка в ассортименте антифризов FELIX Carbox",
+                            desc: "Антифриз CARBOX®SQ - усовершенствованная формула для высоконагруженных двигателей и работы в тяжелых условиях эксплуатации!"
+                        },
+
+                        {
+                            image: "img/home/press-3",
+                            date: "31 января 2022",
+                            name: "Конференция региональных менеджеров - 2022",
+                            desc: "С 13 по 15 апреля компания «Тосол-Синтез» провела ежегодную конференцию региональных менеджеров, в которой приняли участие более 50 сотрудников компании из России и СНГ. В ходе конференции обсудили тенденции развития в текущей экономической ситуации, подвели итоги прошедшего года и поставили цели на следующий."
+                        },
+
+                    ]
+
+                each item in list
+                    .homepage-press__item.articles-block__item
+                        a(href="#").homepage-press__item-image.articles-block__image
+                            picture
+                                source(srcset=item.image + ".webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src=item.image + ".jpg")
+                        .homepage-press__item-content.articles-block__item-content
+                            .homepage-press__item-date.articles-block__item-date=item.date
+                            a(href="#").homepage-press__item-name.articles-block__item-name=item.name
+                            .homepage-press__item-desc.articles-block__item-desc=item.desc
+            .pagination.articles-block__pagination
+                .pagination-more
+                    .btn.btn-primary Показать еще
+                .pagination-pages
+                    a(href="#").pagination-pages__page.prev: include ../../img/svg/ic_prev.svg
+                    ul.pagination-pages__items
+                        li.pagination-pages__item: a(href="#").pagination-pages__item-link.is-active 1
+                        li.pagination-pages__item: a(href="#").pagination-pages__item-link 2
+                        li.pagination-pages__item: a(href="#").pagination-pages__item-link ...
+                        li.pagination-pages__item: a(href="#").pagination-pages__item-link 7
+                    a(href="#").pagination-pages__page.next: include ../../img/svg/ic_next.svg
+
+
+    
+block scripts
+    script(src="js/main.js")

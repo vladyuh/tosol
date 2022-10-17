@@ -1,0 +1,28 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../blocks/components/form/form.pug
+include ../blocks/components/checkbox/checkbox.pug
+include ../blocks/components/headers/headers.pug
+include ../blocks/components/table/table.pug
+include ../blocks/components/popup/popup.pug
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/index.css")
+block content
+
+    include ../blocks/modules/home/home-banner/home-banner
+    include ../blocks/modules/home/home-production/home-production
+    include ../blocks/modules/home/home-brands/home-brands
+    include ../blocks/modules/home/home-advantages/home-advantages
+    include ../blocks/modules/home/home-press/home-press
+    include ../blocks/modules/home/home-materials/home-materials
+    include ../blocks/modules/home/home-partnership/home-partnership
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/index.js")

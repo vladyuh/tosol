@@ -1,0 +1,130 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/personal.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Личный кабинет",
+                        isActive: true,
+                    },
+                    {
+                        link: "/",
+                        text: "Сертификаты и допуски",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.personal-block
+        .container
+            h1.personal-block__title.section-h1 Сертификаты и допуски
+            .personal-block__sidebar
+                .personal-block__company
+                    .personal-block__company-name ООО "Масла России"
+                    .personal-block__company-phone
+                        span Контактный телефон
+                        a(href="#") +7 123 456-78-90
+                    .personal-block__company-email
+                        span Электронная почта
+                        a(href="#") oooilrussia@gmail.com
+                ul.personal-block__menu
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Информация о компании
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link.is-active Сертификаты и допуски
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Справочная информация
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Телефонный справочник
+                .personal-block__logout
+                    a(href="#").btn.btn-primary Выход
+            .personal-block__content
+                .personal-certificates
+                    .personal-certificates__toggles
+                        .personal-certificates__toggle.btn.btn-secondary.is-active(data-tab="1") Сертификаты IATF
+                        .personal-certificates__toggle.btn.btn-secondary(data-tab="2") Охлаждающие жидкости
+                        .personal-certificates__toggle.btn.btn-secondary(data-tab="3") Теплоносители
+                        .personal-certificates__toggle.btn.btn-secondary(data-tab="4") Тормозные колодки
+                        .personal-certificates__toggle.btn.btn-secondary(data-tab="5") Сертификаты соответсвия системы экологического менеджмента
+                    .personal-certificates__tabs
+                        .personal-certificates__tab(data-tab="1").is-active
+                            .personal-certificates__items
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-1.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-1.jpg")
+                                    .personal-certificates__item-name Сертификат IATF название
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-2.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-2.jpg")
+                                    .personal-certificates__item-name Сертификат вариант название сертификата
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-3.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-3.jpg")
+                                    .personal-certificates__item-name IATF сертификат название
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-4.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-4.jpg")
+                                    .personal-certificates__item-name Сертификат IATF название
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-5.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-5.jpg")
+                                    .personal-certificates__item-name Сертификат IATF название
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                                .personal-certificates__item
+                                    a(href="#").personal-certificates__item-link
+                                        picture
+                                            source(srcset="img/about/cert-6.webp" type="image/webp")
+                                            img.lazyload(loading="lazy" data-src="img/about/cert-6.jpg")
+                                    .personal-certificates__item-name Сертификат вариант название сертификата
+                                    .personal-certificates__item-get
+                                        span PDF, 59.3 kb
+                                        a(href="#") Скачать
+                        .personal-certificates__tab(data-tab="2")
+                        .personal-certificates__tab(data-tab="3")
+                        .personal-certificates__tab(data-tab="4")
+                        .personal-certificates__tab(data-tab="5")
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/personal.js")

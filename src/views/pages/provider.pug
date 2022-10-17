@@ -1,0 +1,188 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/provider.css")
+block content
+
+    +pageBanner({
+        links: [
+            {
+                link: "/",
+                text: "Главная",
+            },
+            {
+                link: "/",
+                text: "Стать поставщиком",
+                isActive: true,
+            },
+        ],
+        title: "Стать поставщиком",
+        text: "Как стать надежным партнером<br> ООО «Тосол-Синтез» в области менеджмента<br> качества и экологического менеджмента",
+        image: "img/provider"
+    })
+
+    section.provider-block.detail-page
+        .container
+            .provider-block__content.detail-page__content
+
+                .provider-steps
+                        .provider-steps__count
+                            .provider-steps__count-current 1
+                            .provider-steps__count-all из 13
+                        .provider-steps__progress
+                            .provider-steps__progress-dots
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                                .provider-steps__progress-dot
+                            .provider-steps__progress-line
+                                .provider-steps__progress-bar
+                        .provider-steps__slider.splide
+                            .splide__track
+                                ul.splide__list
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                                    li.splide__slide.provider-steps__slide
+                                        .section-h3 Требования к порядку действий в случае непредвиденных обстоятельств
+                                        p Поставщик имеет план действий на случай непредвиденных обстоятельств, который периодически пересматривается.
+                                        p При возникновении обстоятельств, препятствующих выполнению поставки продукции «Поставщиком» в полном соответствии с заказом, «Поставщик» обязан незамедлительно уведомить «Покупателя» об этом в письменном виде по факсу или электронной почте.
+                            .provider-steps__arrows.splide__arrows.slider-nav
+                                button.aboutpage-company__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                                    include ../../img/svg/ic_arrow-left.svg
+                                button.aboutpage-company__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                                    span Далее
+                                    include ../../img/svg/ic_arrow-right.svg
+
+                .provider-request
+                    .provider-request__content
+                        .provider-request__icon: img.lazyload(loading="lazy" data-src="img/svg/ic_docs.svg" width=48 height=48)
+                        .provider-request__title.section-h5 Форма запроса на изменение от субпоставщика
+                        .provider-request__caption Документ для скачивания .DOC, размер файла: (59,13kb)
+                        .provider-request__btn
+                            a(href="#").btn.btn-primary Скачать
+                        
+                .provider-contact
+                    .provider-contact__content
+                        .provider-contact__image
+                            picture
+                                source(srcset="img/contact.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/contact.jpg" width=64 height=64)
+                        .provider-contact__title.section-h5 Михаил Евгеньевич Лисицын
+                        .provider-contact__caption Менеджер отдела обеспечения производства
+                        .provider-contact__phone
+                            span По всем вопросам звоните по телефону
+                            a(href="#") 8 8313 25-54-42
+
+
+            .provider-block__sidebar.detail-page__sidebar
+                form.form.provider-block__form.detail-page__form
+                    .form__title.section-h3 Анкета потенциального поставщика
+                    .form__fields
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Контактное лица*")
+                                label.input-label Контактное лица*
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Название организации*")
+                                label.input-label Название организации*
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="ИНН*")
+                                label.input-label ИНН*
+                        .form__field
+                            .input.input-email.input-with--label
+                                input(type="email" placeholder="Ваш email*")
+                                label.input-label Ваш email*
+                        .form__field
+                            .input.input-tel.input-with--label
+                                input(type="tel" placeholder="Телефон*")
+                                label.input-label Телефон*
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="ФИО руководителя предприятия")
+                                label.input-label ФИО руководителя предприятия
+                        .form__field
+                            .select
+                                select(name="")
+                                    option(value="Выберите регион" selected) Выберите регион
+                                    option(value="Москва") Москва
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Сайт")
+                                label.input-label Сайт
+                    .form__submit
+                        button.btn.btn-primary Оставить заявку
+                    .form__agreement Заявки обрабатываются с 9-00 до 19-00, по будням. Передавая свои данные, вы даете согласие на&nbsp;
+                        a(href="#") обработку персональных данных
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/provider.js")

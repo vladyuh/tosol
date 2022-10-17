@@ -1,0 +1,90 @@
+.certificates-block{
+  padding: 60px 0;
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title{
+    width: 100%;
+  }
+
+  &__arrows{
+    padding-top: 48px;
+    order: 3;
+    width: 100%;
+  }
+
+  &__slide{
+    background: #F5F6F6;
+    padding: 15px;
+    position: relative;
+
+    &-link{
+      display: block;
+
+      &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background-color: #fff;
+        background-size: 40px;
+        background-position: center;
+        background-image: url("../img/svg/ic_show.svg");
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: all 0.25s ease;
+      }
+
+      &:hover::after{
+        opacity: 1;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 831px) {
+
+    .container{
+      align-items: center;
+    }
+
+    &__title{
+      order: 1;
+      max-width: calc(100% - 254px);
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    &__arrows{
+      order: 2;
+      padding-top: 0;
+      width: auto;
+
+      .splide__arrow--next{
+        max-width: 160px;
+      }
+
+    }
+
+    .splide__track{
+      order: 3;
+      padding-top: 48px;
+      width: 100%;
+    }
+
+
+  }
+
+  @media screen and (min-width: 1152px){
+    padding: 120px 0;
+  }
+
+
+}

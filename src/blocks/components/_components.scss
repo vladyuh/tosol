@@ -1,0 +1,122 @@
+@import "../components/burger/burger.scss";
+@import "../components/breadcrumbs/breadcrumbs.scss";
+@import "../components/button/button.scss";
+@import "../components/checkbox/checkbox.scss";
+@import "../components/form/form.scss";
+@import "../components/mobile-menu/mobile-menu.scss";
+@import "../components/headers/headers.scss";
+@import "../components/popup/popup.scss";
+@import "../components/table/table.scss";
+
+.slider-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+  &__arrow{
+    appearance: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    min-width: 54px;
+    border-radius: 99px;
+    cursor: pointer;
+
+    &.splide__arrow--prev{
+      background: rgba(8, 123, 168, 0.1);
+      margin-right: 20px;
+
+      svg path{
+        fill: var(--color-accent);
+      }
+
+    }
+
+    &.splide__arrow--next{
+      background: var(--color-accent);
+      padding: 0 42px;
+      color: #FFFFFF;
+      flex-grow: 1;
+      max-width: 258px;
+
+      span{
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+}
+
+.pagination{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &-more{
+    margin-bottom: 24px;
+    min-width: 200px;
+  }
+
+  &-pages{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__page{
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(8, 123, 168, 0.1);
+      border-radius: 99px;
+    }
+
+    &__items{
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__item{
+      padding: 15px;
+
+      &-link{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px / 16px * 100%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #01192B;
+
+        &.is-active{
+          color: var(--color-accent);
+        }
+
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 1025px) {
+
+    &-more{
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    &-pages{
+      width: auto;
+      max-width: calc(100% - 224px);
+    }
+
+
+  }
+
+
+}

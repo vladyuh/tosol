@@ -1,0 +1,116 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/basics.css")
+block content
+
+    +pageBanner({
+        links: [
+            {
+                link: "/",
+                text: "Главная",
+            },
+            {
+                link: "/",
+                text: "Основы устойчивого развития",
+                isActive: true,
+            },
+        ],
+        title: "Основы устойчивого развития",
+        text: "Ценности ООО «Тосол-Синтез-Инвест» – определяют основные<br> принципы и нормы поведения в отношении своих сотрудников,<br> деловых партнеров и клиентов Общества",
+        image: "img/basics"
+    })
+
+    section.activities-block
+        .container
+            .activities-block__items
+                .activities-block__item
+                    .activities-block__item-icon
+                        picture
+                            source(srcset="img/activities-1.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/activities-1.png")
+                    .activities-block__item-desc.
+                        ООО «Тосол-Синтез-Инвест» является участником национального проекта «Повышение производительности труда и поддержка занятости».  Что обеспечивает предприятию устойчивость развития и конкурентоспособность на рынке в области качества
+                                    и эффективности с ведущими предприятиями отрасли.
+                .activities-block__item
+                    .activities-block__item-icon
+                        picture
+                            source(srcset="img/activities-2.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/activities-2.png")
+                    .activities-block__item-desc.
+                        Компания "Тосол-Синтез" принимает активное участие
+                        в проекте по поддержке волонтёрства и служб Министерства здравоохранения по всей стране.
+                .activities-block__item
+                    .activities-block__item-icon
+                        picture
+                            source(srcset="img/activities-3.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/activities-3.png")
+                    .activities-block__item-desc.
+                        Компания "Тосол-Синтез" принимает активное участие
+                        в поддержке и развитии детского, юношеского
+                        и профессионального спорта (футбол, хоккей).
+
+    section.realization-block
+        .container
+            .section-h2.realization-block__title Реализация главной&nbsp;цели<br> достигается благодаря
+            .realization-block__items
+                .realization-block__item
+                    .realization-block__item-icon: img.lazyload(data-src="img/real-1.svg" loading="lazy")
+                    .realization-block__item-name.section-h4 Развитие
+                    .realization-block__item-desc Мы совершенствуем свои производственные и технологические процессы, проводим научно-исследовательскую деятельность по выявлению новых продуктов и улучшению рецептур своей продукции. Также особое внимание мы уделяем развитию профессиональных и управленческих компетенций своего            персонала для достижения амбициозных целей Общества. У нас всегда приветствуется инициатива работников, которые предлагают свои идеи по усовершенствованию бизнес-процессов и повышению нашей эффективности. Мы ищем нестандартные подходы и идеи для развития своего бизнеса и бизнеса клиентов
+                .realization-block__item
+                    .realization-block__item-icon: img.lazyload(data-src="img/real-2.svg" loading="lazy")
+                    .realization-block__item-name.section-h4 Качество
+                    .realization-block__item-desc Наш девиз: «Качество - это постоянное совершенствование», поэтому мы не останавливаемся на достигнутом и всегда нацелены на улучшение качества нашей продукции. Высокое качество нашей продукции достигается благодаря профессионализму и командной работе, а также за счет приверженности к высоким стандартам СМК. В нашей команде каждый работник включен в процесс непрерывного повышения качества с целью его повышения и сохранения репутации надежного поставщика сертифицированной продукции
+                .realization-block__item
+                    .realization-block__item-icon: img.lazyload(data-src="img/real-3.svg" loading="lazy")
+                    .realization-block__item-name.section-h4 Ответсвенность
+                    .realization-block__item-desc Мы совершенствуем свои производственные и технологические процессы, проводим научно-исследовательскую деятельность по выявлению новых продуктов и улучшению рецептур своей продукции. Также особое внимание мы уделяем развитию профессиональных и управленческих компетенций своего персонала для достижения амбициозных целей Общества. У нас всегда приветствуется инициатива работников, которые предлагают свои идеи по усовершенствованию бизнес-процессов и повышению нашей эффективности. Мы ищем нестандартные подходы и идеи для развития своего бизнеса и бизнеса клиентов
+                .realization-block__item
+                    .realization-block__item-icon: img.lazyload(data-src="img/real-4.svg" loading="lazy")
+                    .realization-block__item-name.section-h4 Клиентоориентированность
+                    .realization-block__item-desc Наш девиз: «Качество - это постоянное совершенствование», поэтому мы не останавливаемся на достигнутом и всегда нацелены на улучшение качества нашей продукции. Высокое качество нашей продукции достигается благодаря профессионализму и командной работе, а также за счет приверженности к высоким стандартам СМК. В нашей команде каждый работник включен в процесс непрерывного повышения качества с целью его повышения и сохранения репутации надежного поставщика сертифицированной продукции
+
+    section.ceo-block
+        .container
+            .ceo-block__image
+                picture
+                    source(srcset="img/about/people-1.webp" type="image/webp")
+                    img.lazyload(loading="lazy" data-src="img/about/people-1.jpg")
+            .ceo-block__text
+                .ceo-block__text-icon: +icons("#ic_quote",54)
+                .ceo-block__text-quote Разнообразный и богатый опыт постоянное информационно пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Повседневная практика показывает, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации новых предложений.
+                .ceo-block__text-caption
+                    .ceo-block__text-name
+                        strong Михайлов Олег Вячеславович
+                        span Генеральный директор
+                    .ceo-block__text-sign
+                        picture
+                            source(srcset="img/about/sign.webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="img/about/sign.jpg" width=268 height=209)
+
+    include ../../blocks/modules/common/cert-block/cert-block
+
+    section.codex-block
+        .container
+            .codex-block__content
+                .section-h4.codex-block__title Кодекс деловой этики
+                .codex-block__caption Документ для скачивания .PDF<br> размер файла: (59,13kb)
+                .codex-block__link
+                    a(href="#").btn.btn-primary Скачать
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/basics.js")

@@ -1,0 +1,135 @@
+.homepage-partnership {
+  padding: 60px 0;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -12px 0;
+  }
+
+  &__item {
+    width: calc(100% - 24px);
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px 80px 16px 16px;
+    background: #087BA8;
+    border-radius: 4px;
+    background: var(--color-accent);
+
+    &:hover{
+      .homepage-partnership__item-arrow{
+        background: #FFFFFF;
+
+        svg path{
+          fill: var(--color-accent);
+        }
+
+      }
+    }
+
+    &-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+      flex-shrink: 0;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    &-desc {
+      font-size: 14px;
+      line-height: 143%;
+      color: #FFFFFF;
+    }
+
+    &-arrow{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      transition: all 0.25s ease;
+
+      svg path{
+        fill: #fff;
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 831px) {
+    padding: 60px 0;
+
+    &__title {
+      margin-bottom: 48px;
+    }
+
+    &__items {
+      margin: -24px -24px 0;
+    }
+
+    &__item {
+      width: calc(100% / 2 - 48px);
+      margin: 24px;
+      padding: 30px 84px 30px 30px;
+
+      &-arrow{
+        top: auto;
+        transform: none;
+        right: 30px;
+        bottom: 30px;
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding: 100px 0;
+
+    &__items {
+      margin: -32px -24px 0;
+    }
+
+    &__item {
+      width: calc(100% / 2 - 64px);
+      margin: 32px 24px;
+
+      &-icon {
+        width: 64px;
+        height: 64px;
+        margin-right: 40px;
+      }
+
+      &-name {
+        margin-bottom: 8px;
+      }
+
+    }
+
+  }
+
+
+}

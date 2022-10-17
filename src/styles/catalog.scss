@@ -1,0 +1,249 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "../blocks/modules/home/home-production/home-production";
+
+.products-block{
+  padding-top: 0;
+
+  .homepage-products__item{
+    flex-grow: 0;
+  }
+
+  &__caption{
+    padding-top: 60px;
+    max-width: 920px;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--color-text-primary);
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding-top: 0;
+    padding-bottom: 90px;
+
+  }
+
+}
+
+.catalog{
+  padding: 0 0 60px;
+
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-title{
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &-categories{
+    width: 100%;
+    margin-bottom: 40px;
+
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item{
+        display: flex;
+        margin: 3px 0;
+      }
+
+      &-link{
+        padding: 11px 21px;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        color: var(--color-text-primary);
+        transition: all 0.25s ease;
+
+        &.is-active,
+        &:hover{
+          background: rgba(8, 123, 168, 0.1);
+          border-radius: 99px;
+          color: var(--color-accent);
+        }
+
+      }
+
+    }
+
+  }
+
+  &-products{
+    width: 100%;
+
+    &__filter{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -5px -10px 20px;
+
+      &-item{
+        margin: 5px 10px;
+        display: flex;
+
+        span{
+          background: #F5F6F6;
+          border-radius: 99px;
+          padding: 10px 20px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 143%;
+          color: var(--color-accent);
+          transition: all 0.25s ease;
+          cursor: pointer;
+        }
+
+        input{
+          display: none;
+        }
+
+        input:checked ~ span{
+          background: var(--color-accent-hover);
+          color: #fff;
+        }
+
+      }
+
+    }
+
+    &__items{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px -15px 30px;
+    }
+
+    &__item{
+      width: calc(100% - 30px);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid rgba(8, 123, 168, 0.2);
+      border-radius: 4px;
+      margin: 15px;
+      padding: 30px;
+      
+      @media screen and (min-width: 577px) {
+        width: calc(100% / 2 - 30px);
+      }
+
+      @media screen and (min-width: 831px) {
+        width: calc(100% / 3 - 30px);
+      }
+
+      &-image{
+        max-width: 247px;
+        width: 100%;
+        margin: 0 auto 30px;
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+
+      }
+
+      &-name{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 133%;
+        color: var(--color-accent);
+        margin-bottom: 15px;
+
+        &:hover{
+          color: var(--color-accent-hover);
+        }
+
+      }
+
+      &-info{
+        width: calc(100% - 70px);
+        margin-right: auto;
+      }
+
+      &-art{
+        font-size: 14px;
+        line-height: 200%;
+        color: rgba(1, 25, 43, 0.5);
+        margin-bottom: 3px;
+      }
+
+      &-volume{
+        font-size: 22px;
+        line-height: 127%;
+        color: var(--color-text-primary);
+      }
+
+      &-link{
+        width: 54px;
+        height: 54px;
+        background: rgba(8, 123, 168, 0.1);
+        border-radius: 99px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+          background: var(--color-accent);
+
+          svg path{
+            fill: #fff;
+          }
+
+        }
+
+      }
+
+    }
+
+    &__pagination{
+      margin-bottom: 80px;
+    }
+
+    &__caption{
+      font-size: 16px;
+      line-height: 175%;
+      color: var(--color-text-primary);
+    }
+
+  }
+  
+  @media screen and (min-width: 1025px) {
+    padding: 0 0 100px;
+
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding: 0 0 120px;
+
+    &-title{
+      margin-bottom: 48px;
+    }
+
+    &-categories{
+      &__list{
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+    }
+
+    &-categories{
+      width: 328px / 1400px * 100%;
+      margin-right: auto;
+    }
+
+    &-products{
+      width: 1041px / 1400px * 100%;
+    }
+
+  }
+  
+}

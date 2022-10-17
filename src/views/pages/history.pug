@@ -1,0 +1,112 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/history.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "История предприятия",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.history-block
+        .container
+            h1.history-block__title.section-h1 История предприятия
+            .history-block__caption «Тосол-Синтез» - компания с богатой историей<br> и в настоящее время является лидером среди<br> российских компаний
+            .history-block__years.splide
+                .splide__track
+                    ul.splide__list
+                        li.splide__slide.history-block__years-item 1993
+                        li.splide__slide.history-block__years-item 2005
+                        li.splide__slide.history-block__years-item 2008
+                        li.splide__slide.history-block__years-item 2014
+                        li.splide__slide.history-block__years-item 2016
+                        li.splide__slide.history-block__years-item 2018
+                        li.splide__slide.history-block__years-item 2022
+            .history-block__slider.splide
+                .history-block__arrows.splide__arrows.slider-nav
+                    button.history-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                        include ../../img/svg/ic_arrow-left.svg
+                    button.history-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                        span Далее
+                        include ../../img/svg/ic_arrow-right.svg
+                .splide__track
+                    ul.splide__list
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+                        li.splide__slide.history-block__slide
+                            .history-block__slide-desc
+                                p А 5 апреля 2016 года компания «Тосол-Синтез» получила статус Q1 — высшую оценку Ford Motor Company. Статуc поставщика Q1 — это признание безупречного качества продукции, системы управления и организации производства.
+                            .history-block__slide-image
+                                picture
+                                    source(srcset="img/about/company.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/about/company.jpg")
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/history.js")

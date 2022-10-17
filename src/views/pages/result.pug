@@ -1,0 +1,132 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/result.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Результат подбора",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.result-block
+        .container
+            h1.result-block__title.section-h1 Результат подбора антифриза
+            .result-block__alert
+                .result-block__alert-caption Для автомобиля:
+                .result-block__alert-value Hyundai Elantra 2016-2019, 1.6 MPi, бензин
+                .result-block__alert-link
+                    a(href="#").btn.btn-primary Изменить подбор
+            .result-block__items
+                .result-block__item
+                    .result-block__item-images
+                        .result-block__item-logo
+                            picture
+                                source(srcset="img/home/brand-logo.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/home/brand-logo.png")
+                        .result-block__item-image
+                            picture
+                                source(srcset="img/products/1.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/products/1.png" width=247 height=247)
+                    .result-block__item-content
+                        .result-block__item-art Арт 88964536
+                        .result-block__item-name Антифриз FELIX JDM G12++, зеленый
+                        .result-block__item-volume 5 кг
+                        ul.result-block__item-features
+                            li Вид антифриза: <strong>Лобридный (P-OAT)</strong>
+                            li Индекс допуска VAG: <strong>G12++</strong>
+                            li Температура замерзания, °С: <strong>минус 40</strong>
+                        .result-block__item-actions
+                            a(href="#").result-block__item-contact.btn.btn-secondary Связаться с отделом продаж
+                            a(href="#").result-block__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+                .result-block__item
+                    .result-block__item-images
+                        .result-block__item-logo
+                            picture
+                                source(srcset="img/home/brand-logo.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/home/brand-logo.png")
+                        .result-block__item-image
+                            picture
+                                source(srcset="img/products/1.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/products/1.png" width=247 height=247)
+                    .result-block__item-content
+                        .result-block__item-art Арт 88964536
+                        .result-block__item-name Антифриз FELIX JDM G12++, зеленый
+                        .result-block__item-volume 5 кг
+                        ul.result-block__item-features
+                            li Вид антифриза: <strong>Лобридный (P-OAT)</strong>
+                            li Индекс допуска VAG: <strong>G12++</strong>
+                            li Температура замерзания, °С: <strong>минус 40</strong>
+                        .result-block__item-actions
+                            a(href="#").result-block__item-contact.btn.btn-secondary Связаться с отделом продаж
+                            a(href="#").result-block__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+                .result-block__item
+                    .result-block__item-images
+                        .result-block__item-logo
+                            picture
+                                source(srcset="img/home/brand-logo.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/home/brand-logo.png")
+                        .result-block__item-image
+                            picture
+                                source(srcset="img/products/3.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/products/3.png" width=247 height=247)
+                    .result-block__item-content
+                        .result-block__item-art Арт 88964536
+                        .result-block__item-name Антифриз FELIX JDM G12++, зеленый
+                        .result-block__item-volume 5 кг
+                        ul.result-block__item-features
+                            li Вид антифриза: <strong>Лобридный (P-OAT)</strong>
+                            li Индекс допуска VAG: <strong>G12++</strong>
+                            li Температура замерзания, °С: <strong>минус 40</strong>
+                        .result-block__item-actions
+                            a(href="#").result-block__item-contact.btn.btn-secondary Связаться с отделом продаж
+                            a(href="#").result-block__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+                .result-block__item
+                    .result-block__item-images
+                        .result-block__item-logo
+                            picture
+                                source(srcset="img/home/brand-logo.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/home/brand-logo.png")
+                        .result-block__item-image
+                            picture
+                                source(srcset="img/products/1.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/products/1.png" width=247 height=247)
+                    .result-block__item-content
+                        .result-block__item-art Арт 88964536
+                        .result-block__item-name Антифриз FELIX JDM G12++, зеленый
+                        .result-block__item-volume 5 кг
+                        ul.result-block__item-features
+                            li Вид антифриза: <strong>Лобридный (P-OAT)</strong>
+                            li Индекс допуска VAG: <strong>G12++</strong>
+                            li Температура замерзания, °С: <strong>минус 40</strong>
+                        .result-block__item-actions
+                            a(href="#").result-block__item-contact.btn.btn-secondary Связаться с отделом продаж
+                            a(href="#").result-block__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+            .result-block__all
+                a(href="#").btn.btn-primary Весь каталог
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/index.js")

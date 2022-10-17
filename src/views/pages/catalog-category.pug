@@ -1,0 +1,159 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/catalog.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Каталог продукции",
+                    },
+                    {
+                        link: "/",
+                        text: "Охлаждающие жидкости",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.catalog
+        .container
+            h1.catalog-title.section-h1 Охлаждающие жидкости
+            .catalog-categories
+                ul.catalog-categories__list
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link.is-active Охлаждающие жидкости
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Тормозные жидкости
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Тормозные колодки
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Смазочные материалы
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Автофильтры
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Теплоносители
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Ароматизаторы
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Автохимия и автокосметика
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Стеклоомывающие жидкости
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Щетки стеклоочистителя
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Автотовары и автоаксессуары
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Жидкость для SCR систем
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Полиэтиленовая тара
+                    li.catalog-categories__list-item: a(href="#").catalog-categories__list-link Антисептик
+            .catalog-products
+                form.form.catalog-products__filter
+                    label.catalog-products__filter-item
+                        input(type="radio" name="type" checked)
+                        span Все товары
+                    label.catalog-products__filter-item
+                        input(type="radio" name="type")
+                        span Профессиональные антифризы Felix
+                    label.catalog-products__filter-item
+                        input(type="radio" name="type")
+                        span Тосолы FELIX
+                    label.catalog-products__filter-item
+                        input(type="radio" name="type")
+                        span Антифризы SAKURA
+                    label.catalog-products__filter-item
+                        input(type="radio" name="type")
+                        span Антифризы AWM
+                .catalog-products__items
+                    -
+                        var list = [
+                            {
+                                image: "img/products/1",
+                                name: "Антифриз FELIX Carbox G12+, красный",
+                                art: "Арт 88964536",
+                                volume: "5 кг",
+                            },
+                            {
+                                image: "img/products/2",
+                                name: "Антифриз Sakura \"GREEN\", -45С, G12",
+                                art: "Арт 88964536",
+                                volume: "5 кг",
+                            },
+                            {
+                                image: "img/products/3",
+                                name: "Антифриз FELIX \"JDM\" G12++, зеленый",
+                                art: "Арт 88964536",
+                                volume: "1 кг",
+                            },
+                            {
+                                image: "img/products/4",
+                                name: "Антифриз Sakura \"RED\", -45С, G12",
+                                art: "Арт 88964536",
+                                volume: "1 кг",
+                            },
+                            {
+                                image: "img/products/5",
+                                name: "Антифриз FELIX Carbox G12+, красный",
+                                art: "Арт 88964536",
+                                volume: "10 кг",
+                            },
+                            {
+                                image: "img/products/6",
+                                name: "Антифриз FELIX \"EVO\" G12++, фиолетовый",
+                                art: "Арт 88964536",
+                                volume: "5 кг",
+                            },
+                            {
+                                image: "img/products/7",
+                                name: "Антифриз FELIX Carbox G12+, красный",
+                                art: "Арт 88964536",
+                                volume: "5 кг",
+                            },
+                            {
+                                image: "img/products/8",
+                                name: "Антифриз Sakura \"GREEN\", -45С, G12",
+                                art: "Арт 88964536",
+                                volume: "5 кг",
+                            },
+                            {
+                                image: "img/products/9",
+                                name: "Антифриз Sakura \"RED\", -45С, G12",
+                                art: "Арт 88964536",
+                                volume: "1 кг",
+                            },
+                        ]
+                    each item in list
+                        .catalog-products__item
+                            .catalog-products__item-image
+                                picture
+                                    source(srcset=item.image+".webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src=item.image+".png" width=247 height=247)
+                            a(href="#").catalog-products__item-name=item.name
+                            .catalog-products__item-info
+                                .catalog-products__item-art=item.art
+                                .catalog-products__item-volume=item.volume
+                            a(href="#").catalog-products__item-link: include ../../img/svg/ic_arrow-right-gray.svg
+                .pagination.catalog-products__pagination
+                    .pagination-more
+                        .btn.btn-primary Показать еще
+                    .pagination-pages
+                        a(href="#").pagination-pages__page.prev: include ../../img/svg/ic_prev.svg
+                        ul.pagination-pages__items
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link.is-active 1
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link 2
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link ...
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link 7
+                        a(href="#").pagination-pages__page.next: include ../../img/svg/ic_next.svg
+                .catalog-products__caption.
+                    Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Равным образом сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+
+block scripts
+    script(src="js/main.js")
+    script(src="js/index.js")

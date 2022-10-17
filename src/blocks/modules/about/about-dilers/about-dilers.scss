@@ -1,0 +1,109 @@
+.aboutpage-dealers{
+  padding: 50px 0;
+  background: #00415D;
+  color: #fff;
+
+  @media screen and (min-width: 1025px){
+    padding: 100px 0;
+  }
+
+  &__title{
+    color: #fff;
+    margin-bottom: 24px;
+    max-width: 725px;
+  }
+
+  &__caption{
+    max-width: 620px;
+    margin-bottom: 32px;
+  }
+
+  &__items{
+    margin-bottom: 36px;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    &-name{
+      flex-basis: 130px;
+      text-align: right;
+      margin-right: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px / 16px * 100%;
+      color: #FFFFFF;
+    }
+
+    &-percantage{
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    &-line{
+      height: 40px;
+      background: #E7F2F7;
+      max-width: calc(100% - 47px);
+    }
+
+    &-percent{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px / 32px * 100%;
+      color: #E7F2F7;
+      margin-left: 9px;
+    }
+
+  }
+
+  &__image{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 831px) {
+
+    &__caption{
+      margin-bottom: 48px;
+    }
+
+    &__content{
+      display: flex;
+      align-items: center;
+    }
+
+    &__items{
+      width: (495px + 109px) / 1400px * 100%;
+      margin-right: auto;
+    }
+
+    &__image{
+      margin-top: -48px;
+      margin-left: -109px;
+      width: 831px / 1400px * 100%;
+    }
+
+
+  }
+
+  @media screen and (min-width: 1025px){
+    &__title{
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1153px) {
+
+    &__caption{
+      font-size: 20px;
+      line-height: 155%;
+    }
+
+  }
+
+}

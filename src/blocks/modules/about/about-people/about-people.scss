@@ -1,0 +1,158 @@
+.aboutpage-staff{
+  padding: 50px 0;
+
+  @media screen and (min-width: 1025px) {
+
+    padding: 100px 0;
+
+  }
+
+  &__title{
+    margin-bottom: 32px;
+  }
+
+  &__ceo{
+    margin-bottom: 32px;
+
+    &-image{
+      margin-bottom: 24px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-quote{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 180%;
+      color: var(--color-text-primary);
+      margin-bottom: 12px;
+    }
+
+    &-caption{
+      display: flex;
+      align-items: center;
+    }
+
+    &-name{
+      padding-right: 12px;
+      margin-right: auto;
+
+      strong{
+        display: block;
+      }
+
+    }
+
+    &-sign{
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  }
+
+  &__slide{
+    margin-bottom: 44px;
+
+
+    &-image{
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 26px;
+      width: 100%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+
+    }
+
+    &-name{
+      font-size: 16px;
+      line-height: 150%;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 5px;
+    }
+
+    &-caption{
+      font-size: 16px;
+      line-height: 138%;
+      color: rgba(1, 25, 43, 0.5);
+
+    }
+
+  }
+
+  @media screen and (min-width: 1025px) {
+
+    &__ceo{
+      display: flex;
+      align-items: flex-start;
+
+      &-image{
+        max-width: 685px;
+        width: 685px / 1400px * 100%;
+        margin-right: auto;
+        margin-bottom: 0;
+      }
+
+      &-text{
+        max-width: 620px;
+        width: 620px / 1400px * 100%;
+      }
+
+      &-quote{
+        font-size: 18px;
+      }
+
+      &-name{
+        font-size: 18px;
+        line-height: 160%;
+
+        strong{
+          font-size: 20px;
+        }
+
+      }
+
+    }
+
+    &__slide{
+      &-name{
+        font-size: 18px;
+      }
+    }
+
+
+  }
+
+  @media screen and (min-width: 1281px){
+
+    &__ceo{
+      &-quote{
+        font-size: 20px;
+      }
+    }
+
+    &__slide{
+
+      &-name{
+        font-size: 20px;
+      }
+
+    }
+
+
+  }
+
+
+}

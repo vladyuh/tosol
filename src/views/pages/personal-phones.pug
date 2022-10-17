@@ -1,0 +1,103 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/personal.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Личный кабинет",
+                        isActive: true,
+                    },
+                    {
+                        link: "/",
+                        text: "Телефонный справочник",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    section.personal-block
+        .container
+            h1.personal-block__title.section-h1 Телефонный справочник
+            .personal-block__sidebar
+                .personal-block__company
+                    .personal-block__company-name ООО "Масла России"
+                    .personal-block__company-phone
+                        span Контактный телефон
+                        a(href="#") +7 123 456-78-90
+                    .personal-block__company-email
+                        span Электронная почта
+                        a(href="#") oooilrussia@gmail.com
+                ul.personal-block__menu
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Информация о компании
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Сертификаты и допуски
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link Справочная информация
+                    li.personal-block__menu-item: a(href="#").personal-block__menu-link.is-active Телефонный справочник
+                .personal-block__logout
+                    a(href="#").btn.btn-primary Выход
+            .personal-block__content
+                .personal-phones
+                    .personal-phones__items
+                        .personal-phones__item
+                            .personal-phones__item-name Секретарь генерального директора
+                            .personal-phones__item-phone
+                                a(href="#")
+                                    span Тел.:&nbsp;
+                                    | +7 123 456-78-90
+                            .personal-phones__item-email
+                                a(href="#")
+                                    span Email:&nbsp;
+                                    | oooilrussia@gmail.com
+                        .personal-phones__item
+                            .personal-phones__item-name Отдел продаж
+                            .personal-phones__item-phone
+                                a(href="#")
+                                    span Тел.:&nbsp;
+                                    | +7 987 654-32-10
+                            .personal-phones__item-email
+                                a(href="#")
+                                    span Email:&nbsp;
+                                    | oilrussale@gmail.com
+                        .personal-phones__item
+                            .personal-phones__item-name Отдел логистики
+                            .personal-phones__item-phone
+                                a(href="#")
+                                    span Тел.:&nbsp;
+                                    | +7 123 456-78-90
+                                a(href="#")
+                                    span Тел.:&nbsp;
+                                    | +7 987 654-32-10
+                            .personal-phones__item-email
+                        .personal-phones__item
+                            .personal-phones__item-name Отдел маркетинга и рекламы
+                            .personal-phones__item-phone
+                                a(href="#")
+                                    span Тел.:&nbsp;
+                                    | +7 123 456-78-90
+                            .personal-phones__item-email
+                                a(href="#")
+                                    span Email:&nbsp;
+                                    | oilrusmarket@gmail.com
+block scripts
+    script(src="js/main.js")
+    script(src="js/personal.js")

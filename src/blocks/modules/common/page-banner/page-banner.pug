@@ -1,0 +1,11 @@
+include ../../../components/breadcrumbs/breadcrumbs
+mixin pageBanner(data)
+    section.page-banner
+        .container
+            +breadcrumb(data.links,'page-banner__breadcrumbs')
+            h1.section-h1.page-banner__title=data.title
+            .page-banner__subtitle !{data.text}
+            .page-banner__image
+                picture
+                    source(srcset=data.image+".webp" type="image/webp")
+                    img(src=data.image+".jpg")

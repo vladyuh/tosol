@@ -1,0 +1,113 @@
+$textPrimary: var(--color-text-primary);
+$linkColor: var(--color-accent);
+$marker: var(--color-text-primary);
+$tableHead: #eef0fc;
+$tableBorder: #b5b5b5;
+
+.edit-content {
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 56px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    line-height: 160%;
+
+    @media screen and (min-width: 831px) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 1025px) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1153px) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 30px / 18px * 100%;
+    color: $textPrimary;
+
+    @media screen and (min-width: 831px) {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: $linkColor;
+    font-size: 16px;
+    line-height: 150%;
+
+    @media screen and (min-width: 831px) {
+      font-size: 18px;
+    }
+  }
+
+  bold {
+    font-weight: bold !important;
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: item;
+
+    li {
+      padding-left: 23px;
+      position: relative;
+      counter-increment: item;
+      font-size: 15px;
+      line-height: 180%;
+      color: $textPrimary;
+
+      @media screen and (min-width: 577px) {
+        padding-left: 45px;
+      }
+    }
+
+    li::before {
+      content: counter(item, decimal-leading-zero) ".";
+      position: absolute;
+      top: 0.15em;
+      left: 0;
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 180%;
+      color: $marker;
+    }
+  }
+
+  ul {
+    padding: 17px 0;
+
+    li {
+      padding-left: 23px;
+      position: relative;
+      font-size: 16px;
+      line-height: 180%;
+      color: $textPrimary;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: $marker;
+      border-radius: 50%;
+    }
+  }
+}

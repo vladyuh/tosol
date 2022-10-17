@@ -1,0 +1,162 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/contacts.css")
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb(
+                [
+                    {
+                        link: "/",
+                        text: "Главная",
+                    },
+                    {
+                        link: "/",
+                        text: "Контакты",
+                        isActive: true,
+                    },
+                ]
+            )
+
+    .contacts-block
+        .container
+            h1.contacts-block__title.section-h1 Контакты
+            .contacts-block__toggles
+                .contacts-block__toggle.btn.btn-secondary(data-tab="1").is-active Центральный офис
+                .contacts-block__toggle.btn.btn-secondary(data-tab="2") Склад
+                .contacts-block__toggle.btn.btn-secondary(data-tab="3") Производство
+                .contacts-block__toggle.btn.btn-secondary(data-tab="4") Логистический центр
+                .contacts-block__toggle.btn.btn-secondary(data-tab="5") Производство ПЭТ
+            .contacts-block__tabs
+                .contacts-block__tab(data-tab="1").is-active
+                    .contacts-block__info
+                        .contacts-block__info-title.section-h4 Центральный офис
+                        .contacts-block__info-items
+                            .contacts-block__info-item.address
+                                .contacts-block__info-caption Адрес
+                                .contacts-block__info-value Нижегородская область, г. Дзержинск, ул. Ватутина, д. 31а
+                            .contacts-block__info-item.phone
+                                .contacts-block__info-caption Контактный телефон
+                                .contacts-block__info-value
+                                    a(href="tel:")
+                                        span 8 8313 27-41-09
+                                        span (многоканальный)
+                            .contacts-block__info-item.email
+                                .contacts-block__info-caption Электронная почта
+                                .contacts-block__info-value
+                                    a(href="mailto:") ts-s@avtoopt.com
+                            .contacts-block__info-item.worktime
+                                .contacts-block__info-caption Режим работы
+                                .contacts-block__info-value.
+                                    Понедельник-Пятница с 9.00 - до 18.00<br>
+                                    с 13.00 - до 14.00 - перерыв
+                    .contacts-block__map
+                        iframe(loading="lazy" data-src="https://yandex.by/map-widget/v1/-/CCUZuYSUxB" width="560" height="400" frameborder="0" allowfullscreen="true")
+                    .contacts-block__items
+                        -
+                            var list = [
+                                {
+                                    image: "img/contacts/1",
+                                    name: "Лисицын Михаил Евгеньевич",
+                                    caption: "Приобретение продукции и коммерческие предложения",
+                                    phone: "8 8313 25-54-42",
+                                    email: "ts-s@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/2",
+                                    name: "Каренина Анна Львовна",
+                                    caption: "Приобретение тары ПЭТ",
+                                    phone: "8 8313 27-41-09",
+                                    email: "n.zhilyaeva@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/3",
+                                    name: "Воронина Екатерина Александровна",
+                                    caption: "Технический специалист по вопросам продукции",
+                                    phone: "8 8313 27-41-09",
+                                    email: "n.zhilyaeva@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/4",
+                                    name: "Мелехов Григорий Пантелеймонович",
+                                    caption: "Отдел продаж",
+                                    phone: "8 8313 25-54-42",
+                                    email: "sales@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/1",
+                                    name: "Лисицын Михаил Евгеньевич",
+                                    caption: "Приобретение продукции и коммерческие предложения",
+                                    phone: "8 8313 25-54-42",
+                                    email: "ts-s@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/2",
+                                    name: "Каренина Анна Львовна",
+                                    caption: "Приобретение тары ПЭТ",
+                                    phone: "8 8313 27-41-09",
+                                    email: "n.zhilyaeva@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/3",
+                                    name: "Воронина Екатерина Александровна",
+                                    caption: "Технический специалист по вопросам продукции",
+                                    phone: "8 8313 27-41-09",
+                                    email: "n.zhilyaeva@t-s.ru"
+                                },
+                                {
+                                    image: "img/contacts/4",
+                                    name: "Мелехов Григорий Пантелеймонович",
+                                    caption: "Отдел продаж",
+                                    phone: "8 8313 25-54-42",
+                                    email: "sales@t-s.ru"
+                                }
+                            ]
+                        each item in list
+                            .contacts-block__item
+                                .contacts-block__item-image
+                                    picture
+                                        source(srcset=item.image+".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image+".jpg" width=64 height=64)
+                                .contacts-block__item-name=item.name
+                                .contacts-block__item-caption=item.caption
+                                a(href="#").contacts-block__item-phone=item.phone
+                                a(href="#").contacts-block__item-email=item.email
+                .contacts-block__tab(data-tab="2")
+                .contacts-block__tab(data-tab="3")
+                .contacts-block__tab(data-tab="4")
+                .contacts-block__tab(data-tab="5")
+    
+    .requisites-block
+        .container
+            .requisites-block__title.section-h2 Реквизиты компании
+            .requisites-block__items
+                .requisites-block__item
+                    .requisites-block__item-icon: img.lazyload(loading="lazy" data-src="img/svg/ic_docs.svg" width=48 height=48)
+                    .requisites-block__item-title.section-h5 «Тосол-Синтез-Инвест» - производитель продукции
+                    .requisites-block__item-caption PDF, размер файла: (59,13kb)
+                    .requisites-block__item-btn
+                        a(href="#").btn.btn-secondary Скачать реквизиты
+                .requisites-block__item
+                    .requisites-block__item-icon: img.lazyload(loading="lazy" data-src="img/svg/ic_docs.svg" width=48 height=48)
+                    .requisites-block__item-title.section-h5 «Тосол-Синтез Трейдинг» - торговая площадка
+                    .requisites-block__item-caption PDF, размер файла: (59,13kb)
+                    .requisites-block__item-btn
+                        a(href="#").btn.btn-secondary Скачать реквизиты
+
+block scripts    
+    script(src="js/main.js")
+    script(src="js/contacts.js")

@@ -1,0 +1,90 @@
+include ../../../blocks/components/popup/popup.pug
+footer.footer
+    .footer-top
+        .container
+            .footer__nav
+                ul.footer__nav-list
+                    li.footer__nav-item.has-submenu
+                        a(href="#").footer__nav-link О компании
+                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        ul.footer__nav-submenu
+                            li.footer__nav-item: a(href="#").footer__nav-link О нас
+                            li.footer__nav-item: a(href="#").footer__nav-link История предприятия
+                            li.footer__nav-item: a(href="#").footer__nav-link Вакансии
+                            li.footer__nav-item: a(href="#").footer__nav-link Основы устойчивого развития
+                    li.footer__nav-item.has-submenu
+                        a(href="#").footer__nav-link Пресс-центр
+                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        ul.footer__nav-submenu
+                            li.footer__nav-item: a(href="#").footer__nav-link Публикации
+                            li.footer__nav-item: a(href="#").footer__nav-link Обучающие материалы
+                    li.footer__nav-item.has-submenu
+                        a(href="#").footer__nav-link Продукция
+                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        ul.footer__nav-submenu
+                            li.footer__nav-item: a(href="#").footer__nav-link Охлаждающие жидкости
+                            li.footer__nav-item: a(href="#").footer__nav-link Тормозные жидкости
+                            li.footer__nav-item: a(href="#").footer__nav-link Антисептик
+                            li.footer__nav-item: a(href="#").footer__nav-link Полиэтиленовая тара
+                            li.footer__nav-item: a(href="#").footer__nav-link Тормозные колодки
+                            li.footer__nav-item: a(href="#").footer__nav-link Теплоносители
+                            li.footer__nav-item: a(href="#").footer__nav-link Смазочные материалы
+                            li.footer__nav-item: a(href="#").footer__nav-link Стеклоомывающие жидкости
+                            li.footer__nav-item: a(href="#").footer__nav-link Автоаксессуары
+                            li.footer__nav-item: a(href="#").footer__nav-link Автофильтры
+                            li.footer__nav-item: a(href="#").footer__nav-link Автохимия
+                            li.footer__nav-item: a(href="#").footer__nav-link Автокосметика
+                            li.footer__nav-item: a(href="#").footer__nav-link Ароматизаторы
+                            li.footer__nav-item: a(href="#").footer__nav-link Жидкость для SCR  систем
+                            li.footer__nav-item: a(href="#").footer__nav-link Еще
+                    li.footer__nav-item
+                        a(href="#").footer__nav-link Стать поставщиком
+                    li.footer__nav-item
+                        a(href="#").footer__nav-link Дистрибьюторы
+                    li.footer__nav-item
+                        a(href="#").footer__nav-link Контрактное производство
+                    li.footer__nav-item.has-submenu
+                        a(href="#").footer__nav-link Сертификаты и допуски
+                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        ul.footer__nav-submenu
+                                li.footer__nav-item: a(href="#").footer__nav-link Сертификат IATF
+                                li.footer__nav-item: a(href="#").footer__nav-link Сертификаты соответствия системы экологического менеджмента
+            .footer__info
+                .footer__contacts
+                    .footer__contacts-caption Контакты
+                    .footer__contacts-items
+                        .footer__contacts-item
+                            .footer__contacts-icon: +icons('#ic_place',20)
+                            .footer__contacts-value Нижегородская область, г. Дзержинск, ул. Ватутина, д. 31а
+                        .footer__contacts-item
+                            .footer__contacts-icon: +icons('#ic_tel',20)
+                            .footer__contacts-value
+                                a(href="#") 8 (8313) 25 54 42
+                                a(href="#") 8 (8313) 25 53 47
+                        .footer__contacts-item
+                            .footer__contacts-icon: +icons('#ic_mail',20)
+                            .footer__contacts-value
+                                a(href="#") t-s@t-s.ru
+                .footer__socials
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/vk.svg" loading="lazy")
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/fb.svg" loading="lazy")
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/yout.svg" loading="lazy")
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/inst.svg" loading="lazy")
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/ok.svg" loading="lazy")
+                    a(href="#").footer__socials-social: img.lazyload(data-src="img/svg/ozon.svg" loading="lazy")
+                .footer__subscribe
+                    .footer__subscribe-caption Подпишитесь на новости и обучение
+                    form.footer__subscribe-form
+                        input(type="email" placeholder="Ваш email")
+                        button(type="submit"): +icons("#ic_subs", 24)
+    .footer-bottom
+        .container
+            .footer__copy Copyright © 2003-2021 Tosol-Sintez
+            .footer__policy Политика обработки персональных данных
+
++coopPopup()
++vacancyPopup()
++productionPopup()
++successPopup()
++loginPopup()
++catalogPopup()

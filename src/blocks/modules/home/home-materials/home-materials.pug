@@ -1,0 +1,39 @@
+section.homepage-materials
+    .container
+        .homepage-materials__title.section-h2 Обучающие материалы
+        .homepage-materials__items
+
+            -
+                var list = [
+
+                    {
+                        image: "img/home/learn-1",
+                        name: "Рекомендуемый порядок промывки системы охлаждения автомобиля",
+                        tags: ["Ремонт","Инструкции","Автосервис","Продукция","Обучение"]
+                    },
+
+                    {
+                        image: "img/home/learn-2",
+                        name: "Тосол или антифриз? Что и как нужно выбирать",
+                        tags: ["Продукция","Автосервис"]
+                    },
+
+                ]
+
+            each item in list
+                .homepage-materials__item
+                    a(href="#").homepage-materials__item-image
+                        picture
+                            source(srcset=item.image + ".webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src=item.image + ".jpg")
+                        .homepage-materials__item-arrow: include ../../../../img/svg/ic_arrow-right-gray.svg
+                    .homepage-materials__item-content
+                        .homepage-materials__item-tags
+                            each tag in item.tags
+                                a(href="#").homepage-materials__item-tag=tag
+                        a(href="#").homepage-materials__item-name=item.name
+                        a(href="#").homepage-materials__item-more
+                            span Подробнее
+                            include ../../../../img/svg/ic-more.svg
+        .homepage-materials__all
+            a(href="#").btn.btn-primary Все материалы

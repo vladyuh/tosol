@@ -1,0 +1,22 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/common/page-banner/page-banner";
+@import "../blocks/modules/about/about-info/about-info";
+@import "../blocks/modules/about/about-company/about-company";
+@import "../blocks/modules/about/about-people/about-people";
+@import "../blocks/modules/about/about-dilers/about-dilers";
+@import "../blocks/modules/about/about-quality/about-quality";
+
+
+@import "../blocks/modules/home/home-brands/home-brands";
+
+
+@import "../blocks/modules/about/about-partners/about-partners";
+
+@import "../blocks/modules/common/gallery-block/gallery-block";
+@import "../blocks/modules/common/cert-block/cert-block";
+

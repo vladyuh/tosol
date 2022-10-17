@@ -1,0 +1,40 @@
+section.homepage-advantages
+    .container
+        .homepage-advantages__title.section-h2 Наши премущества
+        .homepage-advantages__items
+
+            -
+                var list = [
+
+                    {
+                        image: "img/home/adv-1",
+                        name: "Логистический центр",
+                        desc: "Гарантируем нашим клиентам быструю и надежную доставку в регионы РФ, ближнее и дальнее зарубежье"
+                    },
+
+                    {
+                        image: "img/home/adv-2",
+                        name: "Продукция мирового качества",
+                        desc: "Продукция с использованием передовых производственных технологий"
+                    },
+
+                    {
+                        image: "img/home/adv-3",
+                        name: "Собственное автоматизированное производство",
+                        desc: "Комплексный подход позволяет обеспечивать полную совместимость компонентов и подсистем между собой"
+                    },
+
+                    {
+                        image: "img/home/adv-4",
+                        name: "Собственная акредитованная лаборатория",
+                        desc: "Удовлетворяем требования заказчиков в области испытаний, измерений или исследований продукции"
+                    },
+
+                ]
+
+            each item in list
+                .homepage-advantages__item
+                    .homepage-advantages__item-icon: img.lazyload(loading="lazy" data-src=item.image + ".svg" width=70 height="70")
+                    .homepage-advantages__item-content
+                        .homepage-advantages__item-name=item.name
+                        .homepage-advantages__item-desc=item.desc

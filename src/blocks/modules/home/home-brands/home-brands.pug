@@ -1,0 +1,52 @@
+section.homepage-brands
+    .container
+        .homepage-brands__title.section-h2 Наши бренды
+        .homepage-brands__items.splide
+            .splide__track
+
+                -
+                    var list = [
+
+                        {
+                            image: "img/home/brand",
+                            logo: "img/home/brand-logo",
+                            desc: [
+                                "Новая серия профессиональных антифризов FELIX разработана с учетом последних требований спецификаций крупнейших мировых автопроизводителей.",
+                                "Антифризы FELIX предназначены для использования во всех легковых и грузовых автомобилях, эксплуатируемых в тяжелых климатических и дорожных условиях."
+                            ]
+                        },
+
+                        {
+                            image: "img/home/brand",
+                            logo: "img/home/brand-logo",
+                            desc: [
+                                "Новая серия профессиональных антифризов FELIX разработана с учетом последних требований спецификаций крупнейших мировых автопроизводителей.",
+                                "Антифризы FELIX предназначены для использования во всех легковых и грузовых автомобилях, эксплуатируемых в тяжелых климатических и дорожных условиях."
+                            ]
+                        },
+
+                    ]
+
+                ul.splide__list
+                    each item in list
+                        li.splide__slide.homepage-brands__item
+                            .homepage-brands__item-image
+                                picture
+                                    source(srcset=item.image + ".webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src=item.image + ".jpg")
+                            .homepage-brands__item-content
+                                .homepage-brands__item-logo
+                                    picture
+                                        source(srcset=item.logo + ".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.logo + ".jpg")
+                                .homepage-brands__item-desc
+                                    each p in item.desc
+                                        p=p
+            ul.splide__pagination.homepage-brands__pagination
+            .homepage-brands__arrows.splide__arrows.slider-nav
+                button.homepage-brands__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                    include ../../../../img/svg/ic_arrow-left.svg
+                button.homepage-brands__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                    span Далее
+                    include ../../../../img/svg/ic_arrow-right.svg
+

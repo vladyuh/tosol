@@ -1,0 +1,12 @@
+section.aboutpage-partners
+    .container
+        .section-h2.aboutpage-partners__title Наши партнеры
+        .aboutpage-partners__items
+            - var n = 1;
+            while n < 19
+                .aboutpage-partners__item
+                    picture
+                        source(srcset="img/about/brand-" + n + ".webp" type="image/webp")
+                        img.lazyload(loading="lazy" data-src="img/about/brand-" + n + ".jpg")
+                        -
+                            n++

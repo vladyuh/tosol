@@ -1,0 +1,146 @@
+extends ../layouts/default-1
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+include ../../blocks/modules/common/page-banner/page-banner
+
+
+block variables
+    - const title = "Главная"
+block styles
+    link(rel="stylesheet" href="styles/vacancies.css")
+block content
+
+    +pageBanner({
+        links: [
+            {
+                link: "/",
+                text: "Главная",
+            },
+            {
+                link: "/",
+                text: "Вакансии",
+                isActive: true,
+            },
+        ],
+        title: "Вакансии",
+        text: "Главные принципы: профессионализм,<br> желание развиваться и совершенствоваться!",
+        image: "img/vacancies"
+    })
+
+    section.vacancies-block.detail-page
+        .container
+            .vacancies-block__content.detail-page__content
+                .vacancies-block__items
+                    .vacancies-block__item
+                        .vacancies-block__item-name Водитель кат. Е с ДОПОГ
+                        .vacancies-block__item-price от 60 000 руб.
+                        .vacancies-block__item-desc
+                            p Обязанности:
+                            ul
+                                li междугородние перевозки опасных грузов на полуприцепе-цистерне.
+                            p Требования:
+                            ul
+                                li водительские права кат. Е;
+                                li действующее удостоверение ДОПОГ;
+                                li опыт междугородних перевозок опасных грузов в цистерне не менее 3 лет;
+                                li готовность к командировкам.
+                            p Условия:
+                            ul
+                                li официальное трудоустройство в стабильной компании;
+                                li сдельная оплата труда;
+                                li расширенный соцпакет.
+                        .vacancies-block__item-more
+                            span.show Подробнее
+                            span.hide Свернуть
+                            +icons('#ic_arrow-expand', 12)
+                        .vacancies-block__item-respond
+                            a(href="#").btn.btn-secondary Откликнуться на вакансию
+                    .vacancies-block__item
+                        .vacancies-block__item-name Менеджер по работе с сетевыми клиентами
+                        .vacancies-block__item-price 35 000 – 55 000 руб.
+                        .vacancies-block__item-desc
+                            p Обязанности:
+                            ul
+                                li отгрузки сетевых клиентов в 1С на основе входящих заказов от клиентов,
+                                li сопровождение отгрузок сетевых клиентов (заказ транспорта, корректировка заказов, формирование отгрузочных и сопроводительных документов в ЭДО или в бумажном виде),
+                                li контроль доставки заказов,
+                        .vacancies-block__item-more
+                            span.show Подробнее
+                            span.hide Свернуть
+                            +icons('#ic_arrow-expand', 12)
+                        .vacancies-block__item-respond
+                            a(href="#").btn.btn-secondary Откликнуться на вакансию
+                    .vacancies-block__item
+                        .vacancies-block__item-name Старший кладовщик-грузчик
+                        .vacancies-block__item-price от 40 000 руб.
+                        .vacancies-block__item-desc
+                            p Обязанности:
+                            ul
+                                li руководство сменой (2 кладовщика-грузчика);
+                                li погрузо-разгрузочные и внутрискладские работы с применением механизмов и вручную;
+                                li подготовка сборного груза;
+                                li приемка и отгрузка ТМЦ;
+                        .vacancies-block__item-more
+                            span.show Подробнее
+                            span.hide Свернуть
+                            +icons('#ic_arrow-expand', 12)
+                        .vacancies-block__item-respond
+                            a(href="#").btn.btn-secondary Откликнуться на вакансию
+                    .vacancies-block__item
+                        .vacancies-block__item-name Мастер смены (с функциями наладчика)
+                        .vacancies-block__item-price от 40 000 руб.
+                        .vacancies-block__item-desc
+                            p Обязанности:
+                            ul
+                                li Руководство персоналом смены.
+                                li Обеспечение работоспособности линии розлива, оборудования упаковки и маркировки продукции, приборов контроля и управления технологическим процессом.
+                        .vacancies-block__item-more
+                            span.show Подробнее
+                            span.hide Свернуть
+                            +icons('#ic_arrow-expand', 12)
+                        .vacancies-block__item-respond
+                            a(href="#").btn.btn-secondary Откликнуться на вакансию
+                .pagination.vacancies-block__pagination
+                    .pagination-more
+                        .btn.btn-primary Показать еще
+                    .pagination-pages
+                        a(href="#").pagination-pages__page.prev: include ../../img/svg/ic_prev.svg
+                        ul.pagination-pages__items
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link.is-active 1
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link 2
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link ...
+                            li.pagination-pages__item: a(href="#").pagination-pages__item-link 7
+                        a(href="#").pagination-pages__page.next: include ../../img/svg/ic_next.svg
+            .vacancies-block__sidebar.detail-page__sidebar
+                form.form.vacancies-block__form.detail-page__form
+                    .form__title.section-h3 Хотите стать членом команды?
+                    .form__caption Пришлите резюме и мы свяжемся с Вами в ближайшее время
+                    .form__fields
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="text" placeholder="Ваше имя *")
+                                label.input-label Ваше имя *
+                        .form__field
+                            .input.input-text.input-with--label
+                                input(type="tel" placeholder="Ваш телефон")
+                                label.input-label Ваш телефон
+                        .form__field.fullwidth
+                            label.file-input
+                                .file-input__icon: +icons('#ic_file', 48)
+                                .file-input__title Прикрепите резюме
+                                .file-input__caption название файла - ангийскими буквами до 10 Мб - максимальный размер файла .pdf / .doc / .jpg / .txt
+                                input(type="file" name="resume")
+                    .form__submit
+                        button.btn.btn-primary Отправить резюме
+                    .form__agreement Нажимая на кнопку «Отправить»,Вы даете Согласие на &nbsp;
+                        a(href="#") обработку персональных данных
+
+    
+block scripts
+    script(src="js/main.js")
+    script(src="js/vacancies.js")
