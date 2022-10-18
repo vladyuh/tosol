@@ -85,10 +85,10 @@ block content
         .container
             .distribute-map__title Представительства компании в регионах РФ, ближнем и дальнем зарубежье
             .distribute-map__regions
-                .distribute-map__region.is-active Россия
+                .distribute-map__region.is-active(data-center='55.751574,37.573856' data-region='ru') Россия
+                .distribute-map__region(data-center='53.902284,27.561831' data-region='by') Беларусь
                 .distribute-map__region Армения
                 .distribute-map__region Азербайджан
-                .distribute-map__region Беларусь
                 .distribute-map__region Болгария
                 .distribute-map__region Грузия
                 .distribute-map__region Израиль
@@ -104,28 +104,36 @@ block content
                 .distribute-map__region Узбекистан
             .distribute-map__list
                 .distribute-map__list-search
-                    input(type="search" placeholder="Поиск")
-                    +icons("#ic_search-gray", 20)
+                    input(type='text' placeholder='Поиск')
+                    svg(width='20' height='20')
+                        use(xlink:href='/img/sprites/sprite.svg#ic_search-gray')
                 .distribute-map__list-items
-                    .distribute-map__list-item
+                    .distribute-map__list-item(data-coords='53.381497,83.690753' data-region='ru')
                         .distribute-map__list-name ООО «Алтай-ТС»
                         .distribute-map__list-address г. Барнаул, ул. Совхозная, д 54, корп 1
-                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
-                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
-                        a(href="#").distribute-map__list-site avtoopt.com
-                    .distribute-map__list-item
+                        a.distribute-map__list-phone(href='#') 8 3852 22-99-09
+                        a.distribute-map__list-email(href='#') ts-s@avtoopt.com
+                        a.distribute-map__list-site(href='#') avtoopt.com
+                    .distribute-map__list-item(data-coords='53.354229,83.775491' data-region='ru')
                         .distribute-map__list-name ООО «Барнаул-ТС»
                         .distribute-map__list-address г. Барнаул, ул. Советская, д 5
-                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
-                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
-                        a(href="#").distribute-map__list-site avtoopt.com
-                    .distribute-map__list-item
+                        a.distribute-map__list-phone(href='#') 8 3852 22-99-09
+                        a.distribute-map__list-email(href='#') ts-s@avtoopt.com
+                        a.distribute-map__list-site(href='#') avtoopt.com
+                    .distribute-map__list-item(data-coords='53.368206,83.755432' data-region='ru')
                         .distribute-map__list-name
                         .distribute-map__list-name ООО «Масло-ТС»
                         .distribute-map__list-address г. Барнаул, пр. Ленина, д 11
-                        a(href="#").distribute-map__list-phone 8 3852 22-99-09
-                        a(href="#").distribute-map__list-email ts-s@avtoopt.com
-                        a(href="#").distribute-map__list-site avtoopt.com
+                        a.distribute-map__list-phone(href='#') 8 3852 22-99-09
+                        a.distribute-map__list-email(href='#') ts-s@avtoopt.com
+                        a.distribute-map__list-site(href='#') avtoopt.com
+                    .distribute-map__list-item(data-coords='53.899859,27.560672' data-region='by')
+                        .distribute-map__list-name
+                        .distribute-map__list-name ООО «Масло-ТС»
+                        .distribute-map__list-address г. Минск, пр. Ленина, д 11
+                        a.distribute-map__list-phone(href='#') 8 3852 22-99-09
+                        a.distribute-map__list-email(href='#') ts-s@avtoopt.com
+                        a.distribute-map__list-site(href='#') avtoopt.com
             .distribute-map__container
                 .distribute-map__container-wrap
                     #map

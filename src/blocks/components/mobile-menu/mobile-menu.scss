@@ -1,39 +1,179 @@
-$mBack: #eee;
-$mWidth: 300px;
 .mobilemenu {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
     transform: translateX(-100%);
-    width: $mWidth;
-    background: $mBack;
-    transition: transform 0.3s ease;
+    width: 300px;
+    background: var(--color-accent);
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
     overflow-y: scroll;
     z-index: 1001;
-
-    &_opened {
-        transform: translateX(0);
-    }
-
-    &__header {
-        height: 56px;
-        display: flex;
-        align-items: center;
-    }
-
-    &__nav {
-       &-item{
-           font-size: 18px;
-           line-height: 120%;
-           margin-bottom: 15px;
-       }
-    }
+    padding-bottom: 32px;
 }
 
-@media screen and (max-width: 1365px) {
-    .mobilemenu {
-        display: block;
-    }
+.mobilemenu_opened {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.mobilemenu__header {
+    height: 68px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.mobilemenu__header .burger{
+    margin-right: auto;
+}
+
+.mobilemenu__header .burger__line{
+    background: #fff;
+}
+
+.mobilemenu__nav{
+    padding-bottom: 12px;
+}
+
+.mobilemenu__nav-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+    display: block
+}
+
+.mobilemenu__nav-item {
+    position: relative;
+    margin-bottom: 24px
+}
+
+.mobilemenu__nav-item.more .mobilemenu__nav-link {
+    color: #fff;
+    font-weight: 700
+}
+
+.mobilemenu__nav-item.has-submenu > .mobilemenu__nav-link {
+    padding-right: 28px
+}
+
+.mobilemenu__nav-item.has-submenu.is-active .mobilemenu__nav-toggle {
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    transform: scaleY(-1)
+}
+
+.mobilemenu__nav-item.has-submenu.is-active .mobilemenu__nav-submenu {
+    display: block
+}
+
+.mobilemenu__nav-toggle {
+    width: 28px;
+    height: 28px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s
+}
+
+.mobilemenu__nav-submenu {
+    display: none
+}
+
+.mobilemenu__nav-submenu .mobilemenu__nav-item {
+    margin: 12px 0
+}
+
+.mobilemenu__nav-submenu .mobilemenu__nav-item:last-child {
+    margin-bottom: 0
+}
+
+.mobilemenu__nav-submenu .mobilemenu__nav-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-text-secondary)
+}
+
+.mobilemenu__feedback .btn{
+    letter-spacing: initial;
+    padding: 12px 24px;
+}
+
+.mobilemenu__lang {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mobilemenu__lang-icon {
+    width: 20px;
+    height: 20px
+}
+
+.mobilemenu__lang-choose .select__styled span {
+    color: #fff
+}
+
+.mobilemenu__lang-choose .select__styled_active {
+    opacity: 0
+}
+
+.mobilemenu__lang-choose .select__options li,
+.mobilemenu__lang-choose .select__styled,
+.mobilemenu__lang-choose select {
+    background: 0 0;
+    padding: 6px;
+    border: none;
+    height: auto;
+    font-size: 15px;
+    line-height: 120%;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.mobilemenu__lang-choose .select__options li::after,
+.mobilemenu__lang-choose .select__styled::after,
+.mobilemenu__lang-choose select::after {
+    display: none
+}
+
+.mobilemenu__lang-choose .select__options {
+    top: 0;
+    background: 0 0;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.mobilemenu__lang-choose .select__options li.active,
+.mobilemenu__lang-choose .select__options li:hover {
+    color: rgba(255, 255, 255, .5)
+}
+
+.mobilemenu__profile {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
 }
