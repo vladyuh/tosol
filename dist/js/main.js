@@ -10,7 +10,7 @@ function testWebP(callback) {
         callback(webP.height == 2);
     };
     webP.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+        "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
 
 testWebP(function (support) {
@@ -126,7 +126,7 @@ window.addEventListener("scroll", () => {
 //Scroll to top btn
 scrollTop();
 document.querySelector(".scroll-top").addEventListener("click", function () {
-    window.scroll({ top: 0, left: 0, behavior: "smooth" });
+    window.scroll({top: 0, left: 0, behavior: "smooth"});
 });
 
 //Load scripts after page load
@@ -141,10 +141,19 @@ window.addEventListener("load", function () {
     };
     document.body.appendChild(select);
 
+    if(document.querySelector('[data-fslightbox]')){
+
+        var fs = document.createElement("script");
+        fs.src = "/js/fslightbox.min.js";
+        document.body.appendChild(fs);
+
+    }
+
+
     //Browser-level image lazy-loading
     if (
         "loading" in HTMLImageElement.prototype ||
-    "loading" in HTMLIFrameElement.prototype
+        "loading" in HTMLIFrameElement.prototype
     ) {
         const images = document.querySelectorAll("img[loading=\"lazy\"]");
         for (var i = 0; i < images.length; i++) {
@@ -192,13 +201,13 @@ document.addEventListener("click", function (e) {
     }
 });
 
-document.querySelectorAll(".footer__nav-toggle").forEach(function (el) {
+document.querySelectorAll(".footer__nav-toggle, .mobilemenu__nav-toggle").forEach(function (el) {
     el.addEventListener("click", function (e) {
         el.parentElement.classList.toggle("is-active");
     });
 });
 
 function findAncestor(el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
+    while ((el = el.parentElement) && !el.classList.contains(cls)) ;
     return el;
 }

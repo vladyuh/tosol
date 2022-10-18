@@ -115,6 +115,11 @@
       color: var(--color-accent);
       min-height: 63px;
       margin-bottom: 3px;
+      transition: all 0.25s ease;
+      &:hover{
+        color: var(--color-accent-hover);
+      }
+
     }
 
     &-volume{

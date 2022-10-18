@@ -105,6 +105,19 @@
 
   @media screen and (min-width: 1153px) {
     padding: 120px 0;
+
+    .logistic-block__number-value{
+      font-size: 30px;
+    }
+
+    .logistic-block__number-value strong{
+      font-size: 40px;
+    }
+
+    .logistic-block__number-value strong span{
+      font-size: 60px;
+    }
+
   }
 }
 

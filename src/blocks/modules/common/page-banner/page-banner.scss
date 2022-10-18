@@ -13,11 +13,10 @@
 
     .breadcrumb__link{
       color: #fff;
+    }
 
-      &__active{
-        color: rgba(255, 255, 255, 0.5);
-      }
-
+    .breadcrumb__link.breadcrumb__link_active{
+      color: rgba(255, 255, 255, 0.5);
     }
 
   }

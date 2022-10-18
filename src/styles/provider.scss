@@ -35,6 +35,19 @@
   @media screen and (min-width: 1025px) {
     padding: 80px 0 120px;
   }
+
+  @media screen and (min-width: 1153px) {
+
+    &__content{
+      width: 834px / 1400px * 100%;
+    }
+
+
+    &__sidebar{
+      width: 506px / 1400px * 100%;
+    }
+  }
+
 }
 
 .provider-steps {

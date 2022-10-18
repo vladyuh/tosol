@@ -1,5 +1,5 @@
 .mobilemenu {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,6 +16,11 @@
     overflow-y: scroll;
     z-index: 1001;
     padding-bottom: 32px;
+
+    @media screen and (min-width: 1366px) {
+        display: none;
+    }
+
 }
 
 .mobilemenu_opened {

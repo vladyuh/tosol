@@ -141,6 +141,15 @@ window.addEventListener("load", function () {
     };
     document.body.appendChild(select);
 
+    if(document.querySelector('[data-fslightbox]')){
+
+        var fs = document.createElement("script");
+        fs.src = "/js/fslightbox.min.js";
+        document.body.appendChild(fs);
+
+    }
+
+
     //Browser-level image lazy-loading
     if (
         "loading" in HTMLImageElement.prototype ||

@@ -80,7 +80,10 @@
     &__items{
       width: (495px + 109px) / 1400px * 100%;
       margin-right: auto;
+      margin-bottom: 0;
     }
+
+
 
     &__image{
       margin-top: -48px;
@@ -95,6 +98,14 @@
     &__title{
       margin-bottom: 40px;
     }
+
+    &__item{
+      margin-bottom: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   @media screen and (min-width: 1153px) {

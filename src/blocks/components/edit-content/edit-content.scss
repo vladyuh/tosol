@@ -32,9 +32,9 @@ $tableBorder: #b5b5b5;
   }
 
   p {
-    margin: 0 0 16px;
+    margin: 0 0 24px;
     font-size: 16px;
-    line-height: 30px / 18px * 100%;
+    line-height: 175%;
     color: $textPrimary;
 
     @media screen and (min-width: 831px) {
@@ -45,7 +45,7 @@ $tableBorder: #b5b5b5;
   a {
     color: $linkColor;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 175%;
 
     @media screen and (min-width: 831px) {
       font-size: 18px;
@@ -68,6 +68,7 @@ $tableBorder: #b5b5b5;
       font-size: 15px;
       line-height: 180%;
       color: $textPrimary;
+      font-weight: 300;
 
       @media screen and (min-width: 577px) {
         padding-left: 45px;
@@ -82,7 +83,7 @@ $tableBorder: #b5b5b5;
       display: block;
       font-weight: bold;
       font-size: 14px;
-      line-height: 180%;
+      line-height: 175%;
       color: $marker;
     }
   }
@@ -96,6 +97,7 @@ $tableBorder: #b5b5b5;
       font-size: 16px;
       line-height: 180%;
       color: $textPrimary;
+      font-weight: 300;
     }
 
     li::before {

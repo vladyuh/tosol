@@ -1,9 +1,9 @@
 window.addEventListener("load", function () {
-    
+
     var splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
-        
+
         var banner = new Splide(".homepage-banner__slider", {
             perPage: 1,
             arrows: true,
@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
             rewind: true,
             pauseOnFocus: false,
             pauseOnHover: false,
+            drag: true,
         });
 
         var list = new Splide(".homepage-banner__contains-list", {
@@ -42,6 +43,7 @@ window.addEventListener("load", function () {
             pauseOnHover: false,
             mediaQuery: "min",
             gap: 16,
+            drag: true,
             breakpoints: {
                 831: {
                     pagination: true,
@@ -56,6 +58,7 @@ window.addEventListener("load", function () {
             mediaQuery: "min",
             autoHeight: true,
             gap: 16,
+            drag: true,
             breakpoints: {
                 641: {
                     perPage: 2
@@ -68,8 +71,8 @@ window.addEventListener("load", function () {
                 }
             }
         }).mount();
-        
+
     };
     document.body.appendChild(splide);
-    
+
 });
