@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/personal.css")
 block content
 
     .page-breadcrumbs
@@ -58,11 +57,11 @@ block content
             .personal-block__content
                 .personal-docs
                     .personal-docs__toggles
-                        .personal-docs__toggle.btn.btn-secondary.is-active(data-tab="1") Ассортиментные листы
-                        .personal-docs__toggle.btn.btn-secondary(data-tab="2") Каталог продукции
-                        .personal-docs__toggle.btn.btn-secondary(data-tab="3") Фото с конференции
+                        .personal-docs__toggle.js-personal-docs__toggle.btn.btn-secondary.is-active(data-tab="1") Ассортиментные листы
+                        .personal-docs__toggle.js-personal-docs__toggle.btn.btn-secondary(data-tab="2") Каталог продукции
+                        .personal-docs__toggle.js-personal-docs__toggle.btn.btn-secondary(data-tab="3") Фото с конференции
                     .personal-docs__tabs
-                        .personal-docs__tab(data-tab="1").is-active
+                        .personal-docs__tab.js-personal-docs__tab(data-tab="1").is-active
                             .personal-docs__items
                                 .personal-docs__item
                                     .personal-docs__item-icon: img(src="img/svg/ic_docs.svg" width=48 height=48)
@@ -99,8 +98,8 @@ block content
                                         .personal-docs__item-get
                                             span PDF, размер файла: (59,13kb)
                                             a(href="#") Скачать
-                        .personal-docs__tab(data-tab="2")
-                        .personal-docs__tab(data-tab="3")
+                        .personal-docs__tab.js-personal-docs__tab(data-tab="2")
+                        .personal-docs__tab.js-personal-docs__tab(data-tab="3")
 
 block scripts
     script(src="js/main.js")

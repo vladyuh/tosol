@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
     
-    var splide = document.createElement("script");
+    let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
 
-        new Splide('.certificates-block', {
+        new Splide('.js-certificates-block', {
             perPage: 2,
             arrows: true,
             pagination: false,

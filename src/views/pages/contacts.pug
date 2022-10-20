@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/contacts.css")
 block content
 
     .page-breadcrumbs
@@ -35,13 +34,13 @@ block content
         .container
             h1.contacts-block__title.section-h1 Контакты
             .contacts-block__toggles
-                .contacts-block__toggle.btn.btn-secondary(data-tab="1").is-active Центральный офис
-                .contacts-block__toggle.btn.btn-secondary(data-tab="2") Склад
-                .contacts-block__toggle.btn.btn-secondary(data-tab="3") Производство
-                .contacts-block__toggle.btn.btn-secondary(data-tab="4") Логистический центр
-                .contacts-block__toggle.btn.btn-secondary(data-tab="5") Производство ПЭТ
+                .contacts-block__toggle.js-contacts-block__toggle.btn.btn-secondary(data-tab="1").is-active Центральный офис
+                .contacts-block__toggle.js-contacts-block__toggle.btn.btn-secondary(data-tab="2") Склад
+                .contacts-block__toggle.js-contacts-block__toggle.btn.btn-secondary(data-tab="3") Производство
+                .contacts-block__toggle.js-contacts-block__toggle.btn.btn-secondary(data-tab="4") Логистический центр
+                .contacts-block__toggle.js-contacts-block__toggle.btn.btn-secondary(data-tab="5") Производство ПЭТ
             .contacts-block__tabs
-                .contacts-block__tab(data-tab="1").is-active
+                .contacts-block__tab.js-contacts-block__tab(data-tab="1").is-active
                     .contacts-block__info
                         .contacts-block__info-title.section-h4 Центральный офис
                         .contacts-block__info-items
@@ -135,10 +134,10 @@ block content
                                 .contacts-block__item-caption=item.caption
                                 a(href="#").contacts-block__item-phone=item.phone
                                 a(href="#").contacts-block__item-email=item.email
-                .contacts-block__tab(data-tab="2")
-                .contacts-block__tab(data-tab="3")
-                .contacts-block__tab(data-tab="4")
-                .contacts-block__tab(data-tab="5")
+                .contacts-block__tab.js-contacts-block__tab(data-tab="2")
+                .contacts-block__tab.js-contacts-block__tab(data-tab="3")
+                .contacts-block__tab.js-contacts-block__tab(data-tab="4")
+                .contacts-block__tab.js-contacts-block__tab(data-tab="5")
     
     .requisites-block
         .container

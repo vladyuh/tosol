@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/vacancies.css")
 block content
 
     +pageBanner({
@@ -39,7 +38,7 @@ block content
                     .vacancies-block__item
                         .vacancies-block__item-name Водитель кат. Е с ДОПОГ
                         .vacancies-block__item-price от 60 000 руб.
-                        .vacancies-block__item-desc
+                        .vacancies-block__item-desc.js-vacancies-block__item-desc
                             p Обязанности:
                             ul
                                 li междугородние перевозки опасных грузов на полуприцепе-цистерне.
@@ -54,7 +53,7 @@ block content
                                 li официальное трудоустройство в стабильной компании;
                                 li сдельная оплата труда;
                                 li расширенный соцпакет.
-                        .vacancies-block__item-more
+                        .vacancies-block__item-more.js-vacancies-block__item-more
                             span.show Подробнее
                             span.hide Свернуть
                             +icons('#ic_arrow-expand', 12)
@@ -63,13 +62,13 @@ block content
                     .vacancies-block__item
                         .vacancies-block__item-name Менеджер по работе с сетевыми клиентами
                         .vacancies-block__item-price 35 000 – 55 000 руб.
-                        .vacancies-block__item-desc
+                        .vacancies-block__item-desc.js-vacancies-block__item-desc
                             p Обязанности:
                             ul
                                 li отгрузки сетевых клиентов в 1С на основе входящих заказов от клиентов,
                                 li сопровождение отгрузок сетевых клиентов (заказ транспорта, корректировка заказов, формирование отгрузочных и сопроводительных документов в ЭДО или в бумажном виде),
                                 li контроль доставки заказов,
-                        .vacancies-block__item-more
+                        .vacancies-block__item-more.js-vacancies-block__item-more
                             span.show Подробнее
                             span.hide Свернуть
                             +icons('#ic_arrow-expand', 12)
@@ -78,14 +77,14 @@ block content
                     .vacancies-block__item
                         .vacancies-block__item-name Старший кладовщик-грузчик
                         .vacancies-block__item-price от 40 000 руб.
-                        .vacancies-block__item-desc
+                        .vacancies-block__item-desc.js-vacancies-block__item-desc
                             p Обязанности:
                             ul
                                 li руководство сменой (2 кладовщика-грузчика);
                                 li погрузо-разгрузочные и внутрискладские работы с применением механизмов и вручную;
                                 li подготовка сборного груза;
                                 li приемка и отгрузка ТМЦ;
-                        .vacancies-block__item-more
+                        .vacancies-block__item-more.js-vacancies-block__item-more
                             span.show Подробнее
                             span.hide Свернуть
                             +icons('#ic_arrow-expand', 12)
@@ -94,12 +93,12 @@ block content
                     .vacancies-block__item
                         .vacancies-block__item-name Мастер смены (с функциями наладчика)
                         .vacancies-block__item-price от 40 000 руб.
-                        .vacancies-block__item-desc
+                        .vacancies-block__item-desc.js-vacancies-block__item-desc
                             p Обязанности:
                             ul
                                 li Руководство персоналом смены.
                                 li Обеспечение работоспособности линии розлива, оборудования упаковки и маркировки продукции, приборов контроля и управления технологическим процессом.
-                        .vacancies-block__item-more
+                        .vacancies-block__item-more.js-vacancies-block__item-more
                             span.show Подробнее
                             span.hide Свернуть
                             +icons('#ic_arrow-expand', 12)
@@ -122,13 +121,13 @@ block content
                     .form__caption Пришлите резюме и мы свяжемся с Вами в ближайшее время
                     .form__fields
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="text" placeholder="Ваше имя *")
-                                label.input-label Ваше имя *
+                            .input.input-text.did-floating-label-content
+                                input.did-floating-input(type='text' placeholder='Ваше имя*' required)
+                                label.did-floating-label Ваше имя*
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="tel" placeholder="Ваш телефон")
-                                label.input-label Ваш телефон
+                            .input.input-tel.did-floating-label-content
+                                input.did-floating-input(type='tel' placeholder='Телефон*' required)
+                                label.did-floating-label Телефон*
                         .form__field.fullwidth
                             label.file-input
                                 .file-input__icon: +icons('#ic_file', 48)

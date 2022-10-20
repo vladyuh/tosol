@@ -1,13 +1,3 @@
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-
-@import "vendor/splide-core";
-
-@import "../blocks/modules/common/page-banner/page-banner";
-
-@import "../blocks/modules/common/gallery-block/gallery-block";
-
 .logistic-block {
   padding: 60px 0;
 
@@ -120,5 +110,3 @@
 
   }
 }
-
-@import "../blocks/modules/common/quest-block/quest-block";

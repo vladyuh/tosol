@@ -79,7 +79,7 @@ body {
 
     &.page{
         @media screen and (max-width: 1365px) {
-            &_mobile{
+            &.is-mobile{
                 overflow: hidden;
 
                 &::after {

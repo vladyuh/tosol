@@ -6,7 +6,7 @@ footer.footer
                 ul.footer__nav-list
                     li.footer__nav-item.has-submenu
                         a(href="#").footer__nav-link О компании
-                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        .footer__nav-toggle.js-footer__nav-toggle: +icons("#ic_chevron-down", 28)
                         ul.footer__nav-submenu
                             li.footer__nav-item: a(href="#").footer__nav-link О нас
                             li.footer__nav-item: a(href="#").footer__nav-link История предприятия
@@ -14,13 +14,13 @@ footer.footer
                             li.footer__nav-item: a(href="#").footer__nav-link Основы устойчивого развития
                     li.footer__nav-item.has-submenu
                         a(href="#").footer__nav-link Пресс-центр
-                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        .footer__nav-toggle.js-footer__nav-toggle: +icons("#ic_chevron-down", 28)
                         ul.footer__nav-submenu
                             li.footer__nav-item: a(href="#").footer__nav-link Публикации
                             li.footer__nav-item: a(href="#").footer__nav-link Обучающие материалы
                     li.footer__nav-item.has-submenu
                         a(href="#").footer__nav-link Продукция
-                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        .footer__nav-toggle.js-footer__nav-toggle: +icons("#ic_chevron-down", 28)
                         ul.footer__nav-submenu
                             li.footer__nav-item: a(href="#").footer__nav-link Охлаждающие жидкости
                             li.footer__nav-item: a(href="#").footer__nav-link Тормозные жидкости
@@ -45,7 +45,7 @@ footer.footer
                         a(href="#").footer__nav-link Контрактное производство
                     li.footer__nav-item.has-submenu
                         a(href="#").footer__nav-link Сертификаты и допуски
-                        .footer__nav-toggle: +icons("#ic_chevron-down", 28)
+                        .footer__nav-toggle.js-footer__nav-toggle: +icons("#ic_chevron-down", 28)
                         ul.footer__nav-submenu
                                 li.footer__nav-item: a(href="#").footer__nav-link Сертификат IATF
                                 li.footer__nav-item: a(href="#").footer__nav-link Сертификаты соответствия системы экологического менеджмента
@@ -82,9 +82,19 @@ footer.footer
             .footer__copy Copyright © 2003-2021 Tosol-Sintez
             a(href="policy.html").footer__policy Политика обработки персональных данных
 
+.floating__menu.js-floating__menu
+    a(href="#").floating__menu-item.floating__menu-message
+        .floating__menu-icon: include ../../../img/svg/ic_dots.svg
+        .floating__menu-caption Написать<br>нам
+    a(href="#").floating__menu-item.floating__menu-products
+        .floating__menu-icon: include ../../../img/svg/ic_product.svg
+        .floating__menu-caption Подбор<br>продукции
+
 +coopPopup()
 +vacancyPopup()
 +productionPopup()
 +successPopup()
 +loginPopup()
 +catalogPopup()
++cityPopup()
++citiesPopup()

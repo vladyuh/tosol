@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
     
-    var splide = document.createElement("script");
+    let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
 
-        new Splide('.gallery-block', {
+        new Splide('.js-gallery-block', {
             perPage: 1,
             arrows: true,
             pagination: false,

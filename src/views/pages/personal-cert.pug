@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/personal.css")
 block content
 
     .page-breadcrumbs
@@ -58,13 +57,13 @@ block content
             .personal-block__content
                 .personal-certificates
                     .personal-certificates__toggles
-                        .personal-certificates__toggle.btn.btn-secondary.is-active(data-tab="1") Сертификаты IATF
-                        .personal-certificates__toggle.btn.btn-secondary(data-tab="2") Охлаждающие жидкости
-                        .personal-certificates__toggle.btn.btn-secondary(data-tab="3") Теплоносители
-                        .personal-certificates__toggle.btn.btn-secondary(data-tab="4") Тормозные колодки
-                        .personal-certificates__toggle.btn.btn-secondary(data-tab="5") Сертификаты соответсвия системы экологического менеджмента
+                        .personal-certificates__toggle.js-personal-certificates__toggle.btn.btn-secondary.is-active(data-tab="1") Сертификаты IATF
+                        .personal-certificates__toggle.js-personal-certificates__toggle.btn.btn-secondary(data-tab="2") Охлаждающие жидкости
+                        .personal-certificates__toggle.js-personal-certificates__toggle.btn.btn-secondary(data-tab="3") Теплоносители
+                        .personal-certificates__toggle.js-personal-certificates__toggle.btn.btn-secondary(data-tab="4") Тормозные колодки
+                        .personal-certificates__toggle.js-personal-certificates__toggle.btn.btn-secondary(data-tab="5") Сертификаты соответсвия системы экологического менеджмента
                     .personal-certificates__tabs
-                        .personal-certificates__tab(data-tab="1").is-active
+                        .personal-certificates__tab.js-personal-certificates__tab(data-tab="1").is-active
                             .personal-certificates__items
                                 .personal-certificates__item
                                     a(href="img/about/cert-1.jpg" data-fslightbox="cert").personal-certificates__item-link
@@ -120,10 +119,10 @@ block content
                                     .personal-certificates__item-get
                                         span PDF, 59.3 kb
                                         a(href="#") Скачать
-                        .personal-certificates__tab(data-tab="2")
-                        .personal-certificates__tab(data-tab="3")
-                        .personal-certificates__tab(data-tab="4")
-                        .personal-certificates__tab(data-tab="5")
+                        .personal-certificates__tab.js-personal-certificates__tab(data-tab="2")
+                        .personal-certificates__tab.js-personal-certificates__tab(data-tab="3")
+                        .personal-certificates__tab.js-personal-certificates__tab(data-tab="4")
+                        .personal-certificates__tab.js-personal-certificates__tab(data-tab="5")
 
 block scripts
     script(src="js/main.js")

@@ -24,6 +24,10 @@
     border-radius: 99px;
     cursor: pointer;
 
+    &:disabled{
+      opacity: 0.5;
+    }
+
     &.splide__arrow--prev{
       background: rgba(8, 123, 168, 0.1);
       margin-right: 20px;

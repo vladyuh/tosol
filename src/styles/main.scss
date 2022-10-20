@@ -1,3 +1,12 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/components/components";
+@import "../blocks/modules/modules";
+
 :root {
   --color-accent: #087ba8;
   --color-accent-hover: #00415d;
@@ -10,18 +19,22 @@
   --color-footer-bottom-bg: #01192b;
 }
 
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "vendor/libs";
-@import "base/fonts";
-@import "base/general";
-@import "../blocks/components/components";
-@import "../blocks/modules/modules";
-
-.splide__sr {
-  display: none;
-}
+@import "about";
+@import "articles";
+@import "basics";
+@import "catalog";
+@import "contacts";
+@import "distribute";
+@import "history";
+@import "index";
+@import "logistic";
+@import "materials";
+@import "personal";
+@import "production";
+@import "provider";
+@import "result";
+@import "textpage";
+@import "vacancies";
 
 .not-found {
   padding: 0 0 50px;

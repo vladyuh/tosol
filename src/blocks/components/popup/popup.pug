@@ -1,5 +1,5 @@
 mixin coopPopup
-    .popup.popup-coop#coop
+    .popup.js-popup.popup-coop#coop
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)
@@ -8,36 +8,38 @@ mixin coopPopup
                     .form__title.section-h3 Оставьте заявку на сотрудничество
                     .form__fields
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="text" placeholder="Ваше имя*")
-                                label.input-label Ваше имя*
+                            .input.input-text.did-floating-label-content
+                                input.did-floating-input(type='text' placeholder='Ваше имя*' required)
+                                label.did-floating-label Ваше имя*
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="text" placeholder="Название организации*")
-                                label.input-label Название организации*
+                            .input.input-text.did-floating-label-content
+                                input.did-floating-input(type='text' placeholder='Название организации*' required)
+                                label.did-floating-label Название организации*
                         .form__field
-                            .input.input-tel.input-with--label
-                                input(type="tel" placeholder="Телефон*")
-                                label.input-label Телефон*
+                            .input.input-tel.did-floating-label-content
+                                input.did-floating-input(type='tel' placeholder='Телефон*' required)
+                                label.did-floating-label Телефон*
                         .form__field
-                            .input.input-email.input-with--label
-                                input(type="email" placeholder="Ваш email*")
-                                label.input-label Ваш email*
+                            .input.input-email.did-floating-label-content
+                                input.did-floating-input(type='email' placeholder='Ваш email*' required)
+                                label.did-floating-label Ваш email*
                         .form__field
-                            .select
-                                select(name="")
-                                    option(value="Выберите регион" selected) Выберите регион
-                                    option(value="Москва") Москва
+                            .did-floating-label-content
+                                select.did-floating-select(name='' onclick="this.setAttribute('value', this.value);" value='')
+                                    option(value='' selected=''  disabled='') Выберите регион
+                                    option(value='Москва') Москва
+                                label.did-floating-label Выберите регион
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="text" placeholder="Комментарий")
-                                label.input-label Комментарий
+                            .input.input-text.did-floating-label-content
+                                input.did-floating-input(type='text' placeholder='Комментарий')
+                                label.did-floating-label Комментарий
+
                     .form__submit
                         button.btn.btn-primary Оставить заявку
                     .form__agreement Заявки обрабатываются с 9-00 до 19-00, по будням. Передавая свои данные, вы даете согласие на&nbsp;
                         a(href="#") обработку персональных данных
 mixin vacancyPopup
-    .popup.popup-vacancy#vacancy
+    .popup.js-popup.popup-vacancy#vacancy
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)
@@ -47,13 +49,13 @@ mixin vacancyPopup
                     .form__caption Пришлите резюме и мы свяжемся с Вами в ближайшее время
                     .form__fields
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="text" placeholder="Ваше имя *")
-                                label.input-label Ваше имя *
+                            .input.input-text.did-floating-label-content
+                                input.did-floating-input(type='text' placeholder='Ваше имя*' required)
+                                label.did-floating-label Ваше имя*
                         .form__field
-                            .input.input-text.input-with--label
-                                input(type="tel" placeholder="Ваш телефон")
-                                label.input-label Ваш телефон
+                            .input.input-tel.did-floating-label-content
+                                input.did-floating-input(type='tel' placeholder='Телефон*' required)
+                                label.did-floating-label Телефон*
                         .form__field.fullwidth
                             label.file-input
                                 .file-input__icon: +icons('#ic_file', 48)
@@ -65,7 +67,7 @@ mixin vacancyPopup
                     .form__agreement Нажимая на кнопку «Отправить»,Вы даете Согласие на &nbsp;
                         a(href="#") обработку персональных данных
 mixin productionPopup
-    .popup.popup-production#production
+    .popup.js-popup.popup-production#production
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)
@@ -75,41 +77,35 @@ mixin productionPopup
                     .form__fields
                         .form__field
                             span.label Продукт
-                            .select
-                                select(name="")
-                                    option(value="Выберите продукт" selected) Выберите продукт
-                                    option(value="Охлаждающая жидкость") Охлаждающая жидкость
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите продукт
+                                option(value="Охлаждающая жидкость") Охлаждающая жидкость
                         .form__field
                             span.label Марка автомобиля
-                            .select
-                                select(name="")
-                                    option(value="Выберите марку автомобиля" selected) Выберите марку автомобиля
-                                    option(value="Audi") Audi
-                                    option(value="BMW") BMW
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите марку автомобиля
+                                option(value="Audi") Audi
+                                option(value="BMW") BMW
                         .form__field.halfwidth
                             span.label Модель
-                            .select
-                                select(name="")
-                                    option(value="Выберите модель" selected) Выберите модель
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите модель
                         .form__field.halfwidth
                             span.label Объем двигателя
-                            .select
-                                select(name="")
-                                    option(value="Выберите объем" selected) Выберите объем
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите объем
                         .form__field.halfwidth
                             span.label Топливо
-                            .select
-                                select(name="")
-                                    option(value="Выберите топливо" selected) Выберите топливо
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите топливо
                         .form__field.halfwidth
                             span.label Год выпуска
-                            .select
-                                select(name="")
-                                    option(value="Выберите год" selected) Выберите год
+                            select(name="" onclick="this.setAttribute('value', this.value);" value='')
+                                option(value="" selected disabled='') Выберите год
                     .form__submit
                         button.btn.btn-primary Подобрать
 mixin successPopup
-    .popup.popup-success#success
+    .popup.js-popup.popup-success#success
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)
@@ -117,8 +113,73 @@ mixin successPopup
                 .section-h3.popup-success__title Ваша заявка принята!
                 .popup-success__caption Наш менеджер свяжется с вами <br>в ближайшее время
                 a(href="#close").btn.btn-primary Закрыть
+mixin cityPopup
+    .popup.js-popup.popup-city#city
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                .popup__content-wrap
+                    .section-h3.popup-city__title Ваш город Москва?
+                    .popup-city__btns
+                        a(href="#close").btn.btn-primary Да, все верно
+                        a(href="#cities").btn.btn-secondary Выбрать другой город
+mixin citiesPopup
+    .popup.js-popup.popup-cities#cities
+        .popup__wrapper
+            .popup__close
+                a(href="#close"): +icons('#ic_popup-close', 20)
+            .popup__content
+                .popup__content-wrap
+                    .section-h3.popup-cities__title Выбор города
+                    .popup-cities__search.js-popup-cities__search
+                        input(type='text' placeholder='Поиск города')
+                        svg(width='20' height='20')
+                            use(xlink:href='/img/sprites/sprite.svg#ic_search-gray')
+                    ul.popup-cities__list
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') <strong>Москва</strong>
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') <strong>Санкт-Петербург</strong>
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Новосибирск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Екатеринбург
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Казань
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Нижний Новгород
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Челябинск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Самара
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Омск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Ростов-на-Дону
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Уфа
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Красноярск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Воронеж
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Пермь
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Волгоград
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Краснодар
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Саратов
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Тольятти
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Тюмень
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Ижевск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Барнаул
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Ульяновск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Иркутск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Хабаровск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Ярославль
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Владивосток
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Махачкала
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Томск
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Оренбург
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Кемерово
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Новокузнецк
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Рязань
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Набережные Челны
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Астрахань
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Пенза
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Киров
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Липецк
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Калининград
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Чебоксары
+                        li.popup-cities__list-item.js-popup-cities__list-item: a(href='#') Тула
+                        
 mixin loginPopup
-    .popup.popup-login#login
+    .popup.js-popup.popup-login#login
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)
@@ -138,6 +199,7 @@ mixin loginPopup
                             span.label Пароль
                             .input.input-password
                                 input(type="password" placeholder="")
+                                .input-password__show.js-input-password__show
                     .form__submit
                         button.btn.btn-primary Войти
                     .form__links
@@ -146,7 +208,7 @@ mixin loginPopup
                             | Еще не зарегистрировались?&nbsp;
                             a(href="#") Регистрация
 mixin catalogPopup
-    .popup.popup-catalog#catalog
+    .popup.js-popup.popup-catalog#catalog
         .popup__wrapper
             .popup__close
                 a(href="#close"): +icons('#ic_popup-close', 20)

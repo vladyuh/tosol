@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/history.css")
 block content
 
     .page-breadcrumbs
@@ -35,7 +34,7 @@ block content
         .container
             h1.history-block__title.section-h1 История предприятия
             .history-block__caption «Тосол-Синтез» - компания с богатой историей<br> и в настоящее время является лидером среди<br> российских компаний
-            .history-block__years.splide
+            .history-block__years.js-history-block__years.splide
                 .splide__track
                     ul.splide__list
                         li.splide__slide.history-block__years-item 1993
@@ -45,7 +44,7 @@ block content
                         li.splide__slide.history-block__years-item 2016
                         li.splide__slide.history-block__years-item 2018
                         li.splide__slide.history-block__years-item 2022
-            .history-block__slider.splide
+            .history-block__slider.js-history-block__slider.splide
                 .history-block__arrows.splide__arrows.slider-nav
                     button.history-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
                         include ../../img/svg/ic_arrow-left.svg

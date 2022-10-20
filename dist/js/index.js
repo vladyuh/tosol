@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
 
-    var splide = document.createElement("script");
+    let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
 
-        var banner = new Splide(".homepage-banner__slider", {
+        let banner = new Splide(".js-homepage-banner__slider", {
             perPage: 1,
             arrows: true,
             pagination: false,
@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
             drag: true,
         });
 
-        var list = new Splide(".homepage-banner__contains-list", {
+        let list = new Splide(".js-homepage-banner__contains-list", {
             perPage: 6,
             arrows: false,
             pagination: false,
@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
 
 
 
-        new Splide(".homepage-brands__items", {
+        new Splide(".js-homepage-brands__items", {
             perPage: 1,
             arrows: true,
             pagination: false,
@@ -51,7 +51,7 @@ window.addEventListener("load", function () {
             }
         }).mount();
 
-        new Splide(".homepage-press__items", {
+        new Splide(".js-homepage-press__items", {
             perPage: 1,
             arrows: false,
             pagination: false,

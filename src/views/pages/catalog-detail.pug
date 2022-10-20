@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/catalog.css")
 block content
 
     .page-breadcrumbs
@@ -63,12 +62,12 @@ block content
                 .catalog-detail__info-link
                     a(href="#").btn.btn-primary Перейти на сайт FELIX
             .catalog-detail__toggles
-                .catalog-detail__toggle.btn.btn-secondary.is-active(data-tab='1') Преимущества
-                .catalog-detail__toggle.btn.btn-secondary(data-tab='2') Технический лист
-                .catalog-detail__toggle.btn.btn-secondary(data-tab='3') Видео
-                .catalog-detail__toggle.btn.btn-secondary(data-tab='4') Купить онлайн
+                .catalog-detail__toggle.js-catalog-detail__toggle.btn.btn-secondary.is-active(data-tab='1') Преимущества
+                .catalog-detail__toggle.js-catalog-detail__toggle.btn.btn-secondary(data-tab='2') Технический лист
+                .catalog-detail__toggle.js-catalog-detail__toggle.btn.btn-secondary(data-tab='3') Видео
+                .catalog-detail__toggle.js-catalog-detail__toggle.btn.btn-secondary(data-tab='4') Купить онлайн
             .catalog-detail__tabs
-                .catalog-detail__tab.is-active(data-tab='1')
+                .catalog-detail__tab.jscatalog-detail__tab.is-active(data-tab='1')
                     .catalog-detail__advantages
                         .catalog-detail__advantage
                             .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/1.svg" width=42 height=42)
@@ -94,21 +93,21 @@ block content
                         .catalog-detail__advantage
                             .catalog-detail__advantage-icon: img.lazyload(loading="lazy" data-src="img/product-detail/8.svg" width=42 height=42)
                             .catalog-detail__advantage-caption Содержит карбоксилатный пакет присадок
-                .catalog-detail__tab(data-tab='2')
+                .catalog-detail__tab.jscatalog-detail__tab(data-tab='2')
                     .catalog-detail__docs
                         .catalog-detail__doc
                             .catalog-detail__doc-icon: img.lazyload(loading="lazy" data-src="img/svg/ic_docs.svg" width=48 height=48)
                             .catalog-detail__doc-text
                                 .catalog-detail__doc-name Технический лист FELIX CARBOX
                                 .catalog-detail__doc-caption PDF, размер файла: (59,13kb)
-                .catalog-detail__tab(data-tab='3')
-                    .catalog-detail__video(data-id="brInSakoYjI")
+                .catalog-detail__tab.jscatalog-detail__tab(data-tab='3')
+                    .catalog-detail__video.js-catalog-detail__video(data-id="brInSakoYjI")
                         .catalog-detail__video-preview
                             picture
                                 source(srcset='img/about/company.webp' type='image/webp')
                                 img.lazyload(loading="lazy" data-src='img/about/company.jpg')
                         .catalog-detail__video-play: include ../../img/svg/ic_play.svg
-                .catalog-detail__tab(data-tab='4')
+                .catalog-detail__tab.jscatalog-detail__tab(data-tab='4')
                     .catalog-detail__markets
                         a(href="#").catalog-detail__market
                             picture

@@ -23,14 +23,14 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/external.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/personal.min.css">
   </head>
-  <body class="page page_noanimation">
-    <header class="header header-with--bg">
+  <body class="js-body page is-noanimation">
+    <header class="header header-with--bg js-header">
       <div class="container"><a class="header__logo" href="/"><svg width="172" height="36" viewBox="0 0 172 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1006_5346)">
 <path d="M64.0257 14.9412H60.5993V23.9191H58.3429V14.9412H55V13.1618H64.0257V14.9412Z" fill="white"/>
@@ -79,18 +79,18 @@
           </ul>
         </div>
         <div class="header__feedback"><a class="btn btn-primary" href="#">Вопросы по сотрудничеству</a></div>
-        <div class="header__burger"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header__burger js-header__burger"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 10H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M1 4H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M1 16H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
         </div>
-        <div class="header__search">
-          <form class="header__search-form">
+        <div class="header__search js-header__search">
+          <form class="header__search-form js-header__search-form">
             <input type="search" name="search" placeholder="Поиск по сайту">
           </form>
-          <div class="header__search-toggle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="header__search-toggle js-header__search-toggle"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1006_5378)">
 <path d="M8.97377 0C4.02843 0 0 4.02842 0 8.97378C0 13.9191 4.02843 17.9554 8.97377 17.9554C11.0861 17.9554 13.0287 17.2151 14.5641 15.9861L18.302 19.722C18.4907 19.9029 18.7426 20.0026 19.0039 19.9999C19.2652 19.9973 19.5151 19.8924 19.7 19.7078C19.8849 19.5231 19.9901 19.2735 19.9931 19.0122C19.9962 18.7509 19.8967 18.4988 19.7162 18.3099L15.9783 14.572C17.2083 13.0343 17.9495 11.0885 17.9495 8.97378C17.9495 4.02842 13.9191 0 8.97377 0ZM8.97377 1.99463C12.8411 1.99463 15.9529 5.10641 15.9529 8.97378C15.9529 12.8412 12.8411 15.9608 8.97377 15.9608C5.10639 15.9608 1.9946 12.8412 1.9946 8.97378C1.9946 5.10641 5.10639 1.99463 8.97377 1.99463Z" fill="white"/>
 </g>
@@ -142,10 +142,10 @@
         </div>
       </div>
     </header>
-    <div class="mobilemenu">
+    <div class="mobilemenu js-mobilemenu">
       <div class="container">
         <div class="mobilemenu__header">
-          <div class="burger burger_open"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></div><a class="mobilemenu__profile" href="#">
+          <div class="burger js-burger is-open"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></div><a class="mobilemenu__profile" href="#">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_500_980)">
                 <path d="M9.83998 0C6.67691 0 4.08778 2.58922 4.08778 5.75228C4.08778 7.68645 5.05965 9.39908 6.53481 10.4411C3.10108 11.8175 0.664062 15.1756 0.664063 19.0932C0.669315 19.33 0.767067 19.5553 0.936386 19.7209C1.10571 19.8865 1.33313 19.9793 1.56998 19.9793C1.80682 19.9793 2.03425 19.8865 2.20357 19.7209C2.37289 19.5553 2.47064 19.33 2.47589 19.0932C2.47589 14.935 5.82863 11.5841 9.98684 11.5841C14.145 11.5841 17.496 14.935 17.496 19.0932C17.496 19.3337 17.5915 19.5643 17.7616 19.7344C17.9317 19.9044 18.1623 20 18.4028 20C18.6433 20 18.874 19.9044 19.044 19.7344C19.2141 19.5643 19.3096 19.3337 19.3096 19.0932C19.3096 15.1014 16.7775 11.6938 13.2407 10.3685C14.6583 9.32057 15.5833 7.64297 15.5833 5.75228C15.5833 2.58922 13.003 0 9.83998 0ZM9.83998 1.81363C12.0239 1.81363 13.7715 3.56839 13.7715 5.75228C13.7715 7.93616 12.0239 9.68371 9.83998 9.68371C7.6561 9.68371 5.90138 7.93616 5.90138 5.75228C5.90138 3.56839 7.6561 1.81363 9.83998 1.81363Z" fill="white"></path>
@@ -182,30 +182,30 @@
         </div>
         <div class="mobilemenu__nav">
           <ul class="mobilemenu__nav-list">
-            <li class="mobilemenu__nav-item has-submenu"><a class="mobilemenu__nav-link" href="#">О компании</a>
-              <div class="mobilemenu__nav-toggle">
+            <li class="mobilemenu__nav-item has-submenu"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">О компании</a>
+              <div class="mobilemenu__nav-toggle js-mobilemenu__nav-toggle">
                 <svg width="28" height="28">
                   <use xlink:href="/img/sprites/sprite.svg#ic_chevron-down"></use>
                 </svg>
               </div>
               <ul class="mobilemenu__nav-submenu">
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">О нас</a></li>
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">О нас</a></li>
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">
                     История
                     предприятия</a></li>
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">География</a></li>
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Лаборатория</a></li>
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">География</a></li>
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Лаборатория</a></li>
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">
                     Логистический
                     центр</a></li>
-                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Вакансии</a></li>
+                <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Вакансии</a></li>
               </ul>
             </li>
-            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Продукция</a></li>
-            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Основы развития</a></li>
-            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Пресс-центр</a></li>
-            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Сотрудничество</a></li>
-            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link" href="#">Контакты</a></li>
+            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Продукция</a></li>
+            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Основы развития</a></li>
+            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Пресс-центр</a></li>
+            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Сотрудничество</a></li>
+            <li class="mobilemenu__nav-item"><a class="mobilemenu__nav-link js-mobilemenu__nav-link" href="#">Контакты</a></li>
           </ul>
         </div>
         <div class="mobilemenu__feedback"><a class="btn btn-secondary" href="#">Вопросы по сотрудничеству</a></div>
@@ -217,8 +217,8 @@
           <div class="breadcrumb">
             <ul class="breadcrumb__list">
               <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Главная</a></li>
-              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link_active" href="/">Личный кабинет</a></li>
-              <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link_active" href="/">Сертификаты и допуски</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link is-active" href="/">Личный кабинет</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link is-active" href="/">Сертификаты и допуски</a></li>
             </ul>
           </div>
         </div>
@@ -243,14 +243,14 @@
           <div class="personal-block__content">
             <div class="personal-certificates">
               <div class="personal-certificates__toggles">
-                <div class="personal-certificates__toggle btn btn-secondary is-active" data-tab="1">Сертификаты IATF</div>
-                <div class="personal-certificates__toggle btn btn-secondary" data-tab="2">Охлаждающие жидкости</div>
-                <div class="personal-certificates__toggle btn btn-secondary" data-tab="3">Теплоносители</div>
-                <div class="personal-certificates__toggle btn btn-secondary" data-tab="4">Тормозные колодки</div>
-                <div class="personal-certificates__toggle btn btn-secondary" data-tab="5">Сертификаты соответсвия системы экологического менеджмента</div>
+                <div class="personal-certificates__toggle js-personal-certificates__toggle btn btn-secondary is-active" data-tab="1">Сертификаты IATF</div>
+                <div class="personal-certificates__toggle js-personal-certificates__toggle btn btn-secondary" data-tab="2">Охлаждающие жидкости</div>
+                <div class="personal-certificates__toggle js-personal-certificates__toggle btn btn-secondary" data-tab="3">Теплоносители</div>
+                <div class="personal-certificates__toggle js-personal-certificates__toggle btn btn-secondary" data-tab="4">Тормозные колодки</div>
+                <div class="personal-certificates__toggle js-personal-certificates__toggle btn btn-secondary" data-tab="5">Сертификаты соответсвия системы экологического менеджмента</div>
               </div>
               <div class="personal-certificates__tabs">
-                <div class="personal-certificates__tab is-active" data-tab="1">
+                <div class="personal-certificates__tab js-personal-certificates__tab is-active" data-tab="1">
                   <div class="personal-certificates__items">
                     <div class="personal-certificates__item"><a class="personal-certificates__item-link" href="img/about/cert-1.jpg" data-fslightbox="cert">
                         <picture>
@@ -296,10 +296,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="personal-certificates__tab" data-tab="2"></div>
-                <div class="personal-certificates__tab" data-tab="3"></div>
-                <div class="personal-certificates__tab" data-tab="4"></div>
-                <div class="personal-certificates__tab" data-tab="5"></div>
+                <div class="personal-certificates__tab js-personal-certificates__tab" data-tab="2"></div>
+                <div class="personal-certificates__tab js-personal-certificates__tab" data-tab="3"></div>
+                <div class="personal-certificates__tab js-personal-certificates__tab" data-tab="4"></div>
+                <div class="personal-certificates__tab js-personal-certificates__tab" data-tab="5"></div>
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@
           <div class="footer__nav">
             <ul class="footer__nav-list">
               <li class="footer__nav-item has-submenu"><a class="footer__nav-link" href="#">О компании</a>
-                <div class="footer__nav-toggle">
+                <div class="footer__nav-toggle js-footer__nav-toggle">
                   <svg width="28" height="28">
                     <use xlink:href="/img/sprites/sprite.svg#ic_chevron-down"></use>
                   </svg>
@@ -325,7 +325,7 @@
                 </ul>
               </li>
               <li class="footer__nav-item has-submenu"><a class="footer__nav-link" href="#">Пресс-центр</a>
-                <div class="footer__nav-toggle">
+                <div class="footer__nav-toggle js-footer__nav-toggle">
                   <svg width="28" height="28">
                     <use xlink:href="/img/sprites/sprite.svg#ic_chevron-down"></use>
                   </svg>
@@ -336,7 +336,7 @@
                 </ul>
               </li>
               <li class="footer__nav-item has-submenu"><a class="footer__nav-link" href="#">Продукция</a>
-                <div class="footer__nav-toggle">
+                <div class="footer__nav-toggle js-footer__nav-toggle">
                   <svg width="28" height="28">
                     <use xlink:href="/img/sprites/sprite.svg#ic_chevron-down"></use>
                   </svg>
@@ -363,7 +363,7 @@
               <li class="footer__nav-item"><a class="footer__nav-link" href="#">Дистрибьюторы</a></li>
               <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контрактное производство</a></li>
               <li class="footer__nav-item has-submenu"><a class="footer__nav-link" href="#">Сертификаты и допуски</a>
-                <div class="footer__nav-toggle">
+                <div class="footer__nav-toggle js-footer__nav-toggle">
                   <svg width="28" height="28">
                     <use xlink:href="/img/sprites/sprite.svg#ic_chevron-down"></use>
                   </svg>
@@ -426,7 +426,34 @@
         </div>
       </div>
     </footer>
-        <div class="popup popup-coop" id="coop">
+    <div class="floating__menu js-floating__menu"><a class="floating__menu-item floating__menu-message" href="#">
+        <div class="floating__menu-icon"><svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1006_5462)">
+<path d="M27.0001 3.37509C12.113 3.37509 0.000189127 13.9726 0.000189127 27C0.000189127 32.3392 2.03868 37.4625 5.78154 41.5799L0.408563 47.8372C-0.0234358 48.3367 -0.12131 49.042 0.155439 49.6394C0.428812 50.2402 1.02956 50.6249 1.68768 50.6249H27.0001C41.8871 50.6249 54 40.0274 54 27C54 13.9726 41.8871 3.37509 27.0001 3.37509Z" fill="#087BA8"/>
+<path d="M27 30C28.6569 30 30 28.6568 30 27C30 25.3431 28.6569 24 27 24C25.3431 24 24 25.3431 24 27C24 28.6568 25.3431 30 27 30Z" fill="white"/>
+<path d="M15 30C16.6569 30 18 28.6568 18 27C18 25.3431 16.6569 24 15 24C13.3431 24 12 25.3431 12 27C12 28.6568 13.3431 30 15 30Z" fill="white"/>
+<path d="M39 30C40.6569 30 42 28.6568 42 27C42 25.3431 40.6569 24 39 24C37.3431 24 36 25.3431 36 27C36 28.6568 37.3431 30 39 30Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1006_5462">
+<rect width="54" height="54" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+        </div>
+        <div class="floating__menu-caption">Написать<br>нам</div></a><a class="floating__menu-item floating__menu-products" href="#">
+        <div class="floating__menu-icon"><svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="27" cy="27" r="27" fill="#087BA8"/>
+<path d="M40.3476 24.4991L34.6458 18.9127C34.2315 18.5062 33.6574 18.2734 33.0714 18.2734H30.9794V16.6371C30.9794 15.7348 30.2303 15.0008 29.3093 15.0008L26.8969 15C25.976 15 25.2268 15.734 25.2268 16.6363V18.2726C23.9992 18.2726 23 19.2511 23 20.4544V36.8174C23 38.0207 23.9992 38.9992 25.2268 38.9992L38.7732 39C40.0008 39 41 38.0215 41 36.8183V26.0417C41 25.4675 40.7619 24.905 40.3476 24.4991ZM29.3093 34.6368C27.774 34.6368 26.5258 33.4132 26.5258 31.9095C26.5258 30.5395 28.5254 28.6134 28.9266 28.241C29.1419 28.0418 29.4768 28.0418 29.6921 28.241C30.0933 28.6133 32.0928 30.5395 32.0928 31.9095C32.0928 33.4132 30.8446 34.6368 29.3093 34.6368ZM37.7272 28.1574C37.4118 28.4664 36.9922 28.6368 36.5464 28.6368C36.1006 28.6368 35.6809 28.4664 35.3656 28.1574L30.912 23.7938C30.2607 23.1556 30.2607 22.118 30.912 21.4799C31.5622 20.8417 32.6234 20.8417 33.2736 21.4799L37.7272 25.8435C38.3785 26.4816 38.3785 27.5193 37.7272 28.1574Z" fill="white"/>
+<path d="M13.8016 21.2249C13.3895 20.8128 12.7213 20.8128 12.3091 21.2249C11.897 21.637 11.897 22.3053 12.3091 22.7174L14.2957 24.7043C14.7079 25.1164 15.3763 25.1164 15.7885 24.7043L19.6909 20.8016C20.103 20.3895 20.103 19.7213 19.6909 19.3091C19.2788 18.897 18.6105 18.897 18.1984 19.3091L15.0421 22.4654L13.8016 21.2249L13.8016 21.2249Z" fill="white"/>
+<path d="M14.326 29.3091C13.9139 28.897 13.2457 28.897 12.8335 29.3091C12.4214 29.7212 12.4214 30.3895 12.8335 30.8016L17.674 35.6421C18.0861 36.0542 18.7544 36.0542 19.1665 35.6421C19.5786 35.2299 19.5786 34.5617 19.1665 34.1496L14.326 29.3091Z" fill="white"/>
+<path d="M19.1665 30.8016C19.5786 30.3895 19.5786 29.7213 19.1665 29.3091C18.7543 28.897 18.0861 28.897 17.674 29.3091L12.8334 34.1496C12.4213 34.5617 12.4213 35.2299 12.8334 35.6421C13.2455 36.0542 13.9138 36.0542 14.3259 35.6421L19.1665 30.8016Z" fill="white"/>
+</svg>
+
+        </div>
+        <div class="floating__menu-caption">Подбор<br>продукции</div></a></div>
+        <div class="popup js-popup popup-coop" id="coop">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -437,41 +464,42 @@
                 <div class="form__title section-h3">Оставьте заявку на сотрудничество</div>
                 <div class="form__fields">
                   <div class="form__field">
-                    <div class="input input-text input-with--label">
-                      <input type="text" placeholder="Ваше имя*">
-                      <label class="input-label">Ваше имя*</label>
+                    <div class="input input-text did-floating-label-content">
+                      <input class="did-floating-input" type="text" placeholder="Ваше имя*" required>
+                      <label class="did-floating-label">Ваше имя*</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="input input-text input-with--label">
-                      <input type="text" placeholder="Название организации*">
-                      <label class="input-label">Название организации*</label>
+                    <div class="input input-text did-floating-label-content">
+                      <input class="did-floating-input" type="text" placeholder="Название организации*" required>
+                      <label class="did-floating-label">Название организации*</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="input input-tel input-with--label">
-                      <input type="tel" placeholder="Телефон*">
-                      <label class="input-label">Телефон*</label>
+                    <div class="input input-tel did-floating-label-content">
+                      <input class="did-floating-input" type="tel" placeholder="Телефон*" required>
+                      <label class="did-floating-label">Телефон*</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="input input-email input-with--label">
-                      <input type="email" placeholder="Ваш email*">
-                      <label class="input-label">Ваш email*</label>
+                    <div class="input input-email did-floating-label-content">
+                      <input class="did-floating-input" type="email" placeholder="Ваш email*" required>
+                      <label class="did-floating-label">Ваш email*</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите регион" selected>Выберите регион</option>
+                    <div class="did-floating-label-content">
+                      <select class="did-floating-select" name="" onclick="this.setAttribute('value', this.value);" value="">
+                        <option value="" selected="" disabled="">Выберите регион</option>
                         <option value="Москва">Москва</option>
                       </select>
+                      <label class="did-floating-label">Выберите регион</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="input input-text input-with--label">
-                      <input type="text" placeholder="Комментарий">
-                      <label class="input-label">Комментарий</label>
+                    <div class="input input-text did-floating-label-content">
+                      <input class="did-floating-input" type="text" placeholder="Комментарий">
+                      <label class="did-floating-label">Комментарий</label>
                     </div>
                   </div>
                 </div>
@@ -483,7 +511,7 @@
             </div>
           </div>
         </div>
-        <div class="popup popup-vacancy" id="vacancy">
+        <div class="popup js-popup popup-vacancy" id="vacancy">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -495,15 +523,15 @@
                 <div class="form__caption">Пришлите резюме и мы свяжемся с Вами в ближайшее время</div>
                 <div class="form__fields">
                   <div class="form__field">
-                    <div class="input input-text input-with--label">
-                      <input type="text" placeholder="Ваше имя *">
-                      <label class="input-label">Ваше имя *</label>
+                    <div class="input input-text did-floating-label-content">
+                      <input class="did-floating-input" type="text" placeholder="Ваше имя*" required>
+                      <label class="did-floating-label">Ваше имя*</label>
                     </div>
                   </div>
                   <div class="form__field">
-                    <div class="input input-text input-with--label">
-                      <input type="tel" placeholder="Ваш телефон">
-                      <label class="input-label">Ваш телефон</label>
+                    <div class="input input-tel did-floating-label-content">
+                      <input class="did-floating-input" type="tel" placeholder="Телефон*" required>
+                      <label class="did-floating-label">Телефон*</label>
                     </div>
                   </div>
                   <div class="form__field fullwidth">
@@ -527,7 +555,7 @@
             </div>
           </div>
         </div>
-        <div class="popup popup-production" id="production">
+        <div class="popup js-popup popup-production" id="production">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -538,49 +566,37 @@
                 <div class="form__title section-h3">Мастер подбора продукции</div>
                 <div class="form__fields">
                   <div class="form__field"><span class="label">Продукт</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите продукт" selected>Выберите продукт</option>
-                        <option value="Охлаждающая жидкость">Охлаждающая жидкость</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите продукт</option>
+                      <option value="Охлаждающая жидкость">Охлаждающая жидкость</option>
+                    </select>
                   </div>
                   <div class="form__field"><span class="label">Марка автомобиля</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите марку автомобиля" selected>Выберите марку автомобиля</option>
-                        <option value="Audi">Audi</option>
-                        <option value="BMW">BMW</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите марку автомобиля</option>
+                      <option value="Audi">Audi</option>
+                      <option value="BMW">BMW</option>
+                    </select>
                   </div>
                   <div class="form__field halfwidth"><span class="label">Модель</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите модель" selected>Выберите модель</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите модель</option>
+                    </select>
                   </div>
                   <div class="form__field halfwidth"><span class="label">Объем двигателя</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите объем" selected>Выберите объем</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите объем</option>
+                    </select>
                   </div>
                   <div class="form__field halfwidth"><span class="label">Топливо</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите топливо" selected>Выберите топливо</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите топливо</option>
+                    </select>
                   </div>
                   <div class="form__field halfwidth"><span class="label">Год выпуска</span>
-                    <div class="select">
-                      <select name="">
-                        <option value="Выберите год" selected>Выберите год</option>
-                      </select>
-                    </div>
+                    <select name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <option value="" selected disabled="">Выберите год</option>
+                    </select>
                   </div>
                 </div>
                 <div class="form__submit">
@@ -590,7 +606,7 @@
             </div>
           </div>
         </div>
-        <div class="popup popup-success" id="success">
+        <div class="popup js-popup popup-success" id="success">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -602,7 +618,7 @@
             </div>
           </div>
         </div>
-        <div class="popup popup-login" id="login">
+        <div class="popup js-popup popup-login" id="login">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -625,6 +641,7 @@
                   <div class="form__field"><span class="label">Пароль</span>
                     <div class="input input-password">
                       <input type="password" placeholder="">
+                      <div class="input-password__show js-input-password__show"></div>
                     </div>
                   </div>
                 </div>
@@ -639,7 +656,7 @@
             </div>
           </div>
         </div>
-        <div class="popup popup-catalog" id="catalog">
+        <div class="popup js-popup popup-catalog" id="catalog">
           <div class="popup__wrapper">
             <div class="popup__close"><a href="#close">
                 <svg width="20" height="20">
@@ -689,7 +706,82 @@
             </div>
           </div>
         </div>
-    <div class="scroll-top">
+        <div class="popup js-popup popup-city" id="city">
+          <div class="popup__wrapper">
+            <div class="popup__close"><a href="#close">
+                <svg width="20" height="20">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_popup-close"></use>
+                </svg></a></div>
+            <div class="popup__content">
+              <div class="popup__content-wrap">
+                <div class="section-h3 popup-city__title">Ваш город Москва?</div>
+                <div class="popup-city__btns"><a class="btn btn-primary" href="#close">Да, все верно</a><a class="btn btn-secondary" href="#cities">Выбрать другой город</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup js-popup popup-cities" id="cities">
+          <div class="popup__wrapper">
+            <div class="popup__close"><a href="#close">
+                <svg width="20" height="20">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_popup-close"></use>
+                </svg></a></div>
+            <div class="popup__content">
+              <div class="popup__content-wrap">
+                <div class="section-h3 popup-cities__title">Выбор города</div>
+                <div class="popup-cities__search js-popup-cities__search">
+                  <input type="text" placeholder="Поиск города">
+                  <svg width="20" height="20">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_search-gray"></use>
+                  </svg>
+                </div>
+                <ul class="popup-cities__list">
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#"><strong>Москва</strong></a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#"><strong>Санкт-Петербург</strong></a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Новосибирск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Екатеринбург</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Казань</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Нижний Новгород</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Челябинск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Самара</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Омск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Ростов-на-Дону</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Уфа</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Красноярск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Воронеж</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Пермь</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Волгоград</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Краснодар</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Саратов</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Тольятти</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Тюмень</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Ижевск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Барнаул</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Ульяновск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Иркутск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Хабаровск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Ярославль</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Владивосток</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Махачкала</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Томск</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Оренбург</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Кемерово</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Новокузнецк</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Рязань</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Набережные Челны</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Астрахань</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Пенза</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Киров</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Липецк</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Калининград</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Чебоксары</a></li>
+                  <li class="popup-cities__list-item js-popup-cities__list-item"><a href="#">Тула</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="scroll-top js-scroll-top">
       <svg width="24" height="24">
         <use xlink:href="/img/sprites/sprite.svg#ic_up"></use>
       </svg>

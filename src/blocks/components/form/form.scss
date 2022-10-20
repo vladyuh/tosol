@@ -8,7 +8,8 @@ $iconDimensions: 20px;
 $border: #deeaef;
 
 input:not([type="checkbox"]):not([type="radio"]),
-textarea {
+textarea,
+select{
   outline: none;
   resize: none;
   appearance: none;
@@ -23,7 +24,8 @@ input[type="submit"] {
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
-textarea {
+textarea,
+select{
   transition: all 0.25s ease;
   border: 1px solid $border;
   width: 100%;
@@ -57,12 +59,59 @@ textarea {
   }
 }
 
+select{
+  text-overflow: ellipsis;
+  background-image: url(../img/svg/ic_expand.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(100% - 12px);
+  background-size: 24px;
+}
+
+select[value=""]{
+  color: rgba(1, 25, 43, .5)
+}
+
+input:not([type=checkbox]):not([type=radio]):focus,
+textarea:focus,
+select:focus{
+  border-color: var(--color-accent);
+}
+
 .input,
 .select,
 .textarea {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.input-password{
+  position: relative;
+
+  input{
+    padding-right: 39px;
+  }
+
+  &.is-visible{
+    .input-password__show{
+      background-image: url("../img/svg/ic_password-show.svg");
+    }
+  }
+
+  &__show{
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/svg/ic_password-hide.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
 }
 
 .input,
@@ -262,29 +311,6 @@ textarea {
   }
 }
 
-.input-with--label {
-  .input-label {
-    display: block;
-    font-size: 12px;
-    line-height: 14px;
-    color: rgba(1, 25, 43, 0.5);
-    margin-left: 20px;
-    order: -1;
-    transition: all 0.25s ease;
-  }
-
-  input:placeholder-shown + .input-label {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  input:not(:placeholder-shown) + .input-label,
-  input:focus:not(:placeholder-shown) + .input-label {
-    max-height: 100vh;
-    padding-bottom: 7px;
-  }
-}
-
 .file-input {
   padding: 20px 30px 20px 88px;
   border: 1px solid #deeaef;
@@ -318,4 +344,46 @@ textarea {
   input {
     display: none;
   }
+}
+
+/* floating labels */
+
+.did-floating-label-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.did-floating-label {
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  order: -1;
+  opacity: 0;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(1, 25, 43, 0.5);
+  padding-bottom: 7px;
+  padding-left: 20px;
+}
+.did-floating-input,
+.did-floating-select {
+}
+.did-floating-input:focus, .did-floating-select:focus {
+  outline: none;
+}
+.did-floating-input:focus ~ .did-floating-label, .did-floating-select:focus ~ .did-floating-label {
+  opacity: 1;
+}
+select.did-floating-select::-ms-expand {
+  display: none;
+}
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  opacity: 1;
+}
+.did-floating-select:not([value=""]):valid ~ .did-floating-label {
+  opacity: 1;
+}
+.did-floating-select[value=""]:focus ~ .did-floating-label {
+  opacity: 1;
 }

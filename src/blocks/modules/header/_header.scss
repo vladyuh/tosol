@@ -11,13 +11,13 @@
     transition: all 0.25s ease;
     background: linear-gradient(180deg, rgba(1, 25, 43, 0.5) 0%, rgba(1, 25, 43, 0) 100%);
 
-    &_scrolldown,
-    &_scrollup{
+    &.is-scrolldown,
+    &.is-scrollup{
         top: 0;
     }
 
-    &_scrolldown,
-    &_scrollup,
+    &.is-scrolldown,
+    &.is-scrollup,
     &-with--bg{
         background: #FFFFFF;
 

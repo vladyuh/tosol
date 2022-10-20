@@ -1,5 +1,5 @@
 include ../../components/burger/burger
-header.header.header-with--bg
+header.header.header-with--bg.js-header
     .container
         a(href="/").header__logo: include ../../../img/logo.svg
         .header__nav
@@ -25,11 +25,11 @@ header.header.header-with--bg
                     a(href="#").header__nav-link Контакты
         .header__feedback
             a(href="#").btn.btn-primary Вопросы по сотрудничеству
-        .header__burger: include ../../../img/svg/ic_menu.svg
-        .header__search
-            form.header__search-form
+        .header__burger.js-header__burger: include ../../../img/svg/ic_menu.svg
+        .header__search.js-header__search
+            form.header__search-form.js-header__search-form
                 input(type="search" name="search" placeholder="Поиск по сайту")
-            .header__search-toggle: include ../../../img/svg/ic_search.svg
+            .header__search-toggle.js-header__search-toggle: include ../../../img/svg/ic_search.svg
         .header__links
             a(href="#").header__links-link.header__links-phone: include ../../../img/svg/ic_phone.svg
             a(href="#").header__links-link.header__links-profile: include ../../../img/svg/ic_user.svg

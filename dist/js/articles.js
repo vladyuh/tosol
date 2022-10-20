@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
     
-    var splide = document.createElement("script");
+    let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
 
-        if(document.querySelector('.articles-more')){
+        if(document.querySelector('.js-articles-more')){
 
-            new Splide(".articles-more", {
+            new Splide(".js-articles-more", {
                 perPage: 1,
                 arrows: true,
                 pagination: false,
@@ -28,9 +28,9 @@ window.addEventListener("load", function () {
 
         }
 
-        if(document.querySelector('.materials-more')){
+        if(document.querySelector('.js-materials-more')){
 
-            new Splide(".materials-more", {
+            new Splide(".js-materials-more", {
                 perPage: 1,
                 arrows: true,
                 pagination: false,

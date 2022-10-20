@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
     
-    var splide = document.createElement("script");
+    let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
     splide.onload = function (){
 
-        var years = new Splide('.history-block__years', {
+        let years = new Splide('.js-history-block__years', {
             perPage: 3,
             arrows: false,
             pagination: false,
@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
             }
         });
 
-        var main = new Splide('.history-block__slider', {
+        let main = new Splide('.js-history-block__slider', {
             perPage: 1,
             arrows: true,
             pagination: false,

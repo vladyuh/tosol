@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/distribute.css")
 block content
 
     .page-breadcrumbs
@@ -36,10 +35,10 @@ block content
             .trust-block__title.distribute-block__title.section-h2 Дистрибьюторы
             .trust-block__caption.distribute-block__caption Продукция компании "Тосол-Синтез" на рынке автохимии представлена:
             .trust-block__filter
-                .trust-block__filter-item.btn.btn-secondary.is-active(data-filter="is-net") Транснациональные сети
-                .trust-block__filter-item.btn.btn-secondary(data-filter="is-station") Автозаправочные станции
-                .trust-block__filter-item.btn.btn-secondary(data-filter="is-store") Интернет-магазины
-                .trust-block__filter-item.btn.btn-secondary(data-filter="is-market") Маркетплейсы
+                .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary.is-active(data-filter="is-net") Транснациональные сети
+                .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-station") Автозаправочные станции
+                .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-store") Интернет-магазины
+                .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-market") Маркетплейсы
             .trust-block__arrows.splide__arrows.slider-nav
                 button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
                     include ../../img/svg/ic_arrow-left.svg
@@ -85,49 +84,49 @@ block content
         .container
             .distribute-map__title Представительства компании в регионах РФ, ближнем и дальнем зарубежье
             .distribute-map__regions
-                .distribute-map__region.is-active(data-center='55.751574,37.573856' data-region='ru') Россия
-                .distribute-map__region(data-center='53.902284,27.561831' data-region='by') Беларусь
-                .distribute-map__region Армения
-                .distribute-map__region Азербайджан
-                .distribute-map__region Болгария
-                .distribute-map__region Грузия
-                .distribute-map__region Израиль
-                .distribute-map__region Казахстан
-                .distribute-map__region Кыргызстан
-                .distribute-map__region Латвия
-                .distribute-map__region Литва
-                .distribute-map__region Молдавия
-                .distribute-map__region Монголия
-                .distribute-map__region Приднестровье
-                .distribute-map__region Таджикистан
-                .distribute-map__region Туркмения
-                .distribute-map__region Узбекистан
+                .distribute-map__region.js-distribute-map__region.is-active(data-center='55.751574,37.573856' data-region='ru') Россия
+                .distribute-map__region.js-distribute-map__region(data-center='53.902284,27.561831' data-region='by') Беларусь
+                .distribute-map__region.js-distribute-map__region Армения
+                .distribute-map__region.js-distribute-map__region Азербайджан
+                .distribute-map__region.js-distribute-map__region Болгария
+                .distribute-map__region.js-distribute-map__region Грузия
+                .distribute-map__region.js-distribute-map__region Израиль
+                .distribute-map__region.js-distribute-map__region Казахстан
+                .distribute-map__region.js-distribute-map__region Кыргызстан
+                .distribute-map__region.js-distribute-map__region Латвия
+                .distribute-map__region.js-distribute-map__region Литва
+                .distribute-map__region.js-distribute-map__region Молдавия
+                .distribute-map__region.js-distribute-map__region Монголия
+                .distribute-map__region.js-distribute-map__region Приднестровье
+                .distribute-map__region.js-distribute-map__region Таджикистан
+                .distribute-map__region.js-distribute-map__region Туркмения
+                .distribute-map__region.js-distribute-map__region Узбекистан
             .distribute-map__list
-                .distribute-map__list-search
+                .distribute-map__list-search.js-distribute-map__list-search
                     input(type='text' placeholder='Поиск')
                     svg(width='20' height='20')
                         use(xlink:href='/img/sprites/sprite.svg#ic_search-gray')
                 .distribute-map__list-items
-                    .distribute-map__list-item(data-coords='53.381497,83.690753' data-region='ru')
+                    .distribute-map__list-item.js-distribute-map__list-item(data-coords='53.381497,83.690753' data-region='ru')
                         .distribute-map__list-name ООО «Алтай-ТС»
                         .distribute-map__list-address г. Барнаул, ул. Совхозная, д 54, корп 1
                         a.distribute-map__list-phone(href='#') 8 3852 22-99-09
                         a.distribute-map__list-email(href='#') ts-s@avtoopt.com
                         a.distribute-map__list-site(href='#') avtoopt.com
-                    .distribute-map__list-item(data-coords='53.354229,83.775491' data-region='ru')
+                    .distribute-map__list-item.js-distribute-map__list-item(data-coords='53.354229,83.775491' data-region='ru')
                         .distribute-map__list-name ООО «Барнаул-ТС»
                         .distribute-map__list-address г. Барнаул, ул. Советская, д 5
                         a.distribute-map__list-phone(href='#') 8 3852 22-99-09
                         a.distribute-map__list-email(href='#') ts-s@avtoopt.com
                         a.distribute-map__list-site(href='#') avtoopt.com
-                    .distribute-map__list-item(data-coords='53.368206,83.755432' data-region='ru')
+                    .distribute-map__list-item.js-distribute-map__list-item(data-coords='53.368206,83.755432' data-region='ru')
                         .distribute-map__list-name
                         .distribute-map__list-name ООО «Масло-ТС»
                         .distribute-map__list-address г. Барнаул, пр. Ленина, д 11
                         a.distribute-map__list-phone(href='#') 8 3852 22-99-09
                         a.distribute-map__list-email(href='#') ts-s@avtoopt.com
                         a.distribute-map__list-site(href='#') avtoopt.com
-                    .distribute-map__list-item(data-coords='53.899859,27.560672' data-region='by')
+                    .distribute-map__list-item.js-distribute-map__list-item(data-coords='53.899859,27.560672' data-region='by')
                         .distribute-map__list-name
                         .distribute-map__list-name ООО «Масло-ТС»
                         .distribute-map__list-address г. Минск, пр. Ленина, д 11

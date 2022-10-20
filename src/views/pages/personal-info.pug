@@ -12,7 +12,6 @@ include ../../blocks/modules/common/page-banner/page-banner
 block variables
     - const title = "Главная"
 block styles
-    link(rel="stylesheet" href="styles/personal.css")
 block content
 
     .page-breadcrumbs
@@ -62,36 +61,36 @@ block content
                             .personal-info__data-title.section-h4 Контактные данные
                             .form__fields
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="Название компании")
-                                        label.input-label Название компании
+                                    .input.input-text.did-floating-label-content
+                                        input.did-floating-input(type='text' placeholder='Название компании')
+                                        label.did-floating-label Название компании
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="ИНН")
-                                        label.input-label ИНН
+                                    .input.input-text.did-floating-label-content
+                                        input.did-floating-input(type='text' placeholder='ИНН')
+                                        label.did-floating-label ИНН
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="КПП")
-                                        label.input-label КПП
+                                    .input.input-text.did-floating-label-content
+                                        input.did-floating-input(type='text' placeholder='КПП')
+                                        label.did-floating-label КПП
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="ОГРН")
-                                        label.input-label ОГРН
+                                    .input.input-text.did-floating-label-content
+                                        input.did-floating-input(type='text' placeholder='ОГРН')
+                                        label.did-floating-label ОГРН
                         .personal-info__data-col
                             .personal-info__data-title.section-h4 Регистрационные данные
                             .form__fields
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="Электронная почта")
-                                        label.input-label Электронная почта
+                                    .input.input-email.did-floating-label-content
+                                        input.did-floating-input(type='email' placeholder='Электронная почта')
+                                        label.did-floating-label Электронная почта
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="+7 123 456-78-90")
-                                        label.input-label +7 123 456-78-90
+                                    .input.input-tel.did-floating-label-content
+                                        input.did-floating-input(type='tel' placeholder='Телефон')
+                                        label.did-floating-label Телефон
                                 .form__field
-                                    .input.input-text.input-with--label
-                                        input(type="text" placeholder="Адрес")
-                                        label.input-label Адрес
+                                    .input.input-text.did-floating-label-content
+                                        input.did-floating-input(type='text' placeholder='Адрес')
+                                        label.did-floating-label Адрес
                         .form__submit
                             a(href="#").btn.btn-primary Изменить данные
                     form.form.personal-info__data.personal-info__password
@@ -99,17 +98,20 @@ block content
                             .personal-info__data-title.section-h4 Смена пароля
                             .form__fields
                                 .form__field
-                                    .input.input-password.input-with--label
-                                        input(type="password" placeholder="Текущий пароль")
-                                        label.input-label Текущий пароль
+                                    .input.input-password.did-floating-label-content
+                                        input.did-floating-input(type='password' placeholder='Текущий пароль')
+                                        label.did-floating-label Текущий пароль
+                                        .input-password__show.js-input-password__show
                                 .form__field
-                                    .input.input-password.input-with--label
-                                        input(type="password" placeholder="Новый пароль")
-                                        label.input-label Новый пароль
+                                    .input.input-password.did-floating-label-content
+                                        input.did-floating-input(type='password' placeholder='Новый пароль')
+                                        label.did-floating-label Новый пароль
+                                        .input-password__show.js-input-password__show
                                 .form__field
-                                    .input.input-password.input-with--label
-                                        input(type="password" placeholder="Повторите пароль")
-                                        label.input-label Повторите пароль
+                                    .input.input-password.did-floating-label-content
+                                        input.did-floating-input(type='password' placeholder='Повторите пароль')
+                                        label.did-floating-label Повторите пароль
+                                        .input-password__show.js-input-password__show
                         .form__submit
                             a(href="#").btn.btn-primary Сменить пароль
 

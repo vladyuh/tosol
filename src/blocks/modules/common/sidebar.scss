@@ -52,15 +52,10 @@
     }
 
     &__form {
-      .form__fields {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -20px -20px 0;
-      }
 
       .form__field {
-        width: calc(100% - 40px);
-        margin: 20px;
+        width: calc(100% - 20px);
+        margin: 10px;
       }
 
       .form__submit {

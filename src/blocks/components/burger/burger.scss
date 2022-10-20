@@ -17,7 +17,7 @@ $strokeBackground: #000;
     transition: .5s ease-in-out;
     cursor: pointer;
 
-    &_open {
+    &.is-open {
         .burger__line {
             &:nth-child(1) {
                 top: 0;

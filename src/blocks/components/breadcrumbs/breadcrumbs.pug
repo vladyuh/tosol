@@ -4,7 +4,7 @@ mixin breadcrumb(data, modify)
       each item in data
         if item.isActive
           li.breadcrumb__item
-            a(href=item.link).breadcrumb__link.breadcrumb__link_active= item.text
+            a(href=item.link).breadcrumb__link.is-active= item.text
         else
           li.breadcrumb__item
             a(href=item.link).breadcrumb__link= item.text

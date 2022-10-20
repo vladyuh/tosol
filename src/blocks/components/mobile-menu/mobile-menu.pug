@@ -1,7 +1,7 @@
-.mobilemenu
+.mobilemenu.js-mobilemenu
     .container
         .mobilemenu__header
-            .burger.burger_open
+            .burger.js-burger.is-open
                 span.burger__line
                 span.burger__line
                 span.burger__line
@@ -23,43 +23,43 @@
                                 rect(width='20' height='20' fill='white')
                 .mobilemenu__lang-choose
                     .select
-                      select
-                        option(value='' disabled='disabled' selected='selected') RU
-                        option(value='item') RU
-                        option(value='item') EN
+                        select
+                            option(value='' disabled='disabled' selected='selected') RU
+                            option(value='item') RU
+                            option(value='item') EN
         .mobilemenu__nav
             ul.mobilemenu__nav-list
                 li.mobilemenu__nav-item.has-submenu
-                    a.mobilemenu__nav-link(href='#') О компании
-                    .mobilemenu__nav-toggle
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') О компании
+                    .mobilemenu__nav-toggle.js-mobilemenu__nav-toggle
                         svg(width='28' height='28')
                             use(xlink:href='/img/sprites/sprite.svg#ic_chevron-down')
                     ul.mobilemenu__nav-submenu
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#') О нас
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') О нас
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#')
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#')
                                 | История
                                 | предприятия
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#') География
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') География
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#') Лаборатория
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Лаборатория
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#')
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#')
                                 | Логистический
                                 | центр
                         li.mobilemenu__nav-item
-                            a.mobilemenu__nav-link(href='#') Вакансии
+                            a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Вакансии
                 li.mobilemenu__nav-item
-                    a.mobilemenu__nav-link(href='#') Продукция
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Продукция
                 li.mobilemenu__nav-item
-                    a.mobilemenu__nav-link(href='#') Основы развития
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Основы развития
                 li.mobilemenu__nav-item
-                    a.mobilemenu__nav-link(href='#') Пресс-центр
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Пресс-центр
                 li.mobilemenu__nav-item
-                    a.mobilemenu__nav-link(href='#') Сотрудничество
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Сотрудничество
                 li.mobilemenu__nav-item
-                    a.mobilemenu__nav-link(href='#') Контакты
+                    a.mobilemenu__nav-link.js-mobilemenu__nav-link(href='#') Контакты
         .mobilemenu__feedback
             a.btn.btn-secondary(href='#') Вопросы по сотрудничеству

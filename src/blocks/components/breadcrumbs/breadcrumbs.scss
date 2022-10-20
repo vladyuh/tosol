@@ -37,7 +37,7 @@ $symbol: "";
         font-size: 12px;
         color: var(--color-accent);
 
-        &_active {
+        &.is-active {
             color: rgba(1, 25, 43, 0.3);
         }
     }
