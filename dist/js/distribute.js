@@ -72,10 +72,12 @@ function filter(splide) {
 function initMap() {
     ymaps.ready(function () {
 
+        let coords,region;
+
         let activeRegion = document.querySelector(".js-distribute-map__region.is-active");
         if(activeRegion){
-            let coords = activeRegion.getAttribute("data-center").split(",");
-            let region = activeRegion.getAttribute("data-region");
+            coords = activeRegion.getAttribute("data-center").split(",");
+            region = activeRegion.getAttribute("data-region");
         }
 
         let myMap = new ymaps.Map("map", {
