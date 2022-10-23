@@ -369,53 +369,53 @@
                 <div class="form__fields">
                   <div class="form__field">
                     <div class="input input-text did-floating-label-content">
-                      <input class="did-floating-input" type="text" placeholder="Контактное лица*" required>
-                      <label class="did-floating-label">Контактное лица*</label>
+                      <input class="did-floating-input" type="text" placeholder="Контактное лица*" required id="contact">
+                      <label class="did-floating-label" for="contact">Контактное лица*</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-text did-floating-label-content">
-                      <input class="did-floating-input" type="text" placeholder="Название организации*" required>
-                      <label class="did-floating-label">Название организации*</label>
+                      <input class="did-floating-input" type="text" placeholder="Название организации*" required id="org">
+                      <label class="did-floating-label" for="org">Название организации*</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-text did-floating-label-content">
-                      <input class="did-floating-input" type="text" placeholder="ИНН*" required>
-                      <label class="did-floating-label">ИНН*</label>
+                      <input class="did-floating-input" type="text" placeholder="ИНН*" required id="inn-1">
+                      <label class="did-floating-label" for="inn-1">ИНН*</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-email did-floating-label-content">
-                      <input class="did-floating-input" type="email" placeholder="Ваш email*" required>
-                      <label class="did-floating-label">Ваш email*</label>
+                      <input class="did-floating-input" type="email" placeholder="Ваш email*" required id="email-1">
+                      <label class="did-floating-label" for="email-1">Ваш email*</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-tel did-floating-label-content">
-                      <input class="did-floating-input" type="tel" placeholder="Телефон*" required>
-                      <label class="did-floating-label">Телефон*</label>
+                      <input class="did-floating-input" type="tel" placeholder="Телефон*" required id="phone-1">
+                      <label class="did-floating-label" for="phone-1">Телефон*</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-text did-floating-label-content">
-                      <input class="did-floating-input" type="text" placeholder="ФИО руководителя предприятия">
-                      <label class="did-floating-label">ФИО руководителя предприятия</label>
+                      <input class="did-floating-input" type="text" placeholder="ФИО руководителя предприятия" id="fio">
+                      <label class="did-floating-label" for="fio">ФИО руководителя предприятия</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="did-floating-label-content">
-                      <select class="did-floating-select" name="" onclick="this.setAttribute('value', this.value);" value="">
+                      <select class="did-floating-select" name="" onclick="this.setAttribute('value', this.value);" value="" id="region">
                         <option value="" selected="" disabled="">Выберите регион</option>
                         <option value="Москва">Москва</option>
                       </select>
-                      <label class="did-floating-label">Выберите регион</label>
+                      <label class="did-floating-label" for="region">Выберите регион</label>
                     </div>
                   </div>
                   <div class="form__field">
                     <div class="input input-text did-floating-label-content">
-                      <input class="did-floating-input" type="text" placeholder="Сайт">
-                      <label class="did-floating-label">Сайт</label>
+                      <input class="did-floating-input" type="text" placeholder="Сайт" id="site">
+                      <label class="did-floating-label" for="site">Сайт</label>
                     </div>
                   </div>
                 </div>
@@ -658,13 +658,13 @@
                     </div>
                   </div>
                   <div class="form__field fullwidth">
-                    <label class="file-input">
+                    <label class="file-input js-file-input">
                       <div class="file-input__icon">
                         <svg width="48" height="48">
                           <use xlink:href="/img/sprites/sprite.svg#ic_file"></use>
                         </svg>
                       </div>
-                      <div class="file-input__title">Прикрепите резюме</div>
+                      <div class="file-input__title js-file-input__title">Прикрепите резюме</div>
                       <div class="file-input__caption">название файла - ангийскими буквами до 10 Мб - максимальный размер файла .pdf / .doc / .jpg / .txt</div>
                       <input type="file" name="resume">
                     </label>

@@ -3,43 +3,48 @@ window.addEventListener("load", function () {
     splide.src = "/js/splide.min.js";
     splide.onload = function () {
 
-        let trust = new Splide(".trust-block", {
-            perPage: 2,
-            arrows: true,
-            pagination: false,
-            mediaQuery: "min",
-            gap: 16,
-            breakpoints: {
-                577: {
-                    perPage: 3,
-                },
-                831: {
-                    perPage: 4,
-                },
-                1025: {
-                    perPage: 5,
-                },
-                1153: {
-                    perPage: 6,
-                },
-            },
-        });
+        if(document.querySelectorAll(".js-trust-block__slider").length){
+            document.querySelectorAll(".js-trust-block__slider").forEach(function (el){
+                new Splide(el, {
+                    perPage: 2,
+                    arrows: true,
+                    pagination: false,
+                    mediaQuery: "min",
+                    gap: 16,
+                    breakpoints: {
+                        577: {
+                            perPage: 3,
+                        },
+                        831: {
+                            perPage: 4,
+                        },
+                        1025: {
+                            perPage: 5,
+                        },
+                        1153: {
+                            perPage: 6,
+                        },
+                    },
+                }).mount();
+            });
+        }
 
-        trust.on("mounted", function () {
-            filter(trust);
-        });
 
-        trust.mount();
-
-        let filterItems = document.querySelectorAll(".trust-block__filter-item");
-        if(filterItems.length){
-            filterItems.forEach(function (el) {
+        let filterToggles = document.querySelectorAll(".js-trust-block__filter-item");
+        if(filterToggles.length){
+            filterToggles.forEach(function (el) {
                 el.addEventListener("click", function () {
+                    let id = el.getAttribute("data-filter");
                     document
-                        .querySelector(".trust-block__filter-item.is-active")
+                        .querySelector(".js-trust-block__filter-item.is-active")
                         .classList.remove("is-active");
+                    document
+                        .querySelector(".js-trust-block__slider.is-visible")
+                        .classList.remove("is-visible");
                     el.classList.add("is-active");
-                    filter(trust);
+                    document
+                        .querySelector(".js-trust-block__slider[data-filter='" + id + "']")
+                        .classList.add("is-visible");
                 });
             });
         }

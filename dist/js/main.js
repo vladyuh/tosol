@@ -32,13 +32,13 @@ window.addEventListener("resize", function () {
 //Mobile menu init
 function mobileMenu() {
     let toggle = document.querySelector(".js-header__burger");
-    if(!toggle) return;
+    if (!toggle) return;
     let close = document.querySelector(".mobilemenu__header .js-burger");
-    if(!close) return;
+    if (!close) return;
     let menu = document.querySelector(".js-mobilemenu");
-    if(!menu) return;
+    if (!menu) return;
     let body = document.querySelector(".js-body");
-    if(!body) return;
+    if (!body) return;
 
     this.onOpen = function () {
         menu.classList.add("is-open");
@@ -70,7 +70,7 @@ function mobileMenu() {
 let mobile = new mobileMenu();
 
 let navLinks = document.querySelectorAll(".js-mobilemenu__nav-link");
-if(navLinks.length){
+if (navLinks.length) {
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("click", function () {
             mobile.onClose();
@@ -95,11 +95,10 @@ const isScrollingDown = () => {
 };
 
 
-
 function handleNavScroll() {
 
     const nav = document.querySelector(".js-header");
-    if(nav){
+    if (nav) {
         if (isScrollingDown() && !nav.contains(document.activeElement)) {
             nav.classList.add("is-scrolldown");
             nav.classList.remove("is-scrollup");
@@ -143,12 +142,11 @@ function showFloating() {
             .classList.remove("is-active");
     }
 
-    if(inViewport(foot)){
+    if (inViewport(foot)) {
         this.document
             .querySelector(".js-floating__menu")
             .classList.add("is-white");
-    }
-    else{
+    } else {
         this.document
             .querySelector(".js-floating__menu")
             .classList.remove("is-white");
@@ -170,7 +168,7 @@ window.addEventListener("scroll", () => {
 
 //Scroll to top btn
 scrollTop();
-if(document.querySelector(".js-scroll-top")){
+if (document.querySelector(".js-scroll-top")) {
     document.querySelector(".js-scroll-top").addEventListener("click", function () {
         window.scroll({top: 0, left: 0, behavior: "smooth"});
     });
@@ -189,20 +187,35 @@ window.addEventListener("load", function () {
     };
     document.body.appendChild(select);
 
-    if(document.querySelector("[data-fslightbox]")){
+    if (document.querySelector("[data-fslightbox]")) {
 
         let fs = document.createElement("script");
         fs.src = "/js/fslightbox.min.js";
+        fs.onload = function () {
+
+            if (document.querySelector("[data-gallery]")) {
+
+                var galleryLinks = document.querySelectorAll("[data-gallery]");
+                galleryLinks.forEach(function (el){
+                    el.addEventListener("click", function (e){
+                        e.preventDefault();
+                        let sources = el.getAttribute("data-gallery");
+                        let lightbox = new FsLightbox();
+                        lightbox.props.sources = sources.split(",");
+                        lightbox.open();
+                    });
+                });
+
+            }
+
+        };
         document.body.appendChild(fs);
 
     }
 
 
     //Browser-level image lazy-loading
-    if (
-        "loading" in HTMLImageElement.prototype ||
-        "loading" in HTMLIFrameElement.prototype
-    ) {
+    if ("loading" in HTMLImageElement.prototype || "loading" in HTMLIFrameElement.prototype) {
         const images = document.querySelectorAll("img[loading=\"lazy\"]");
         for (let i = 0; i < images.length; i++) {
             images[i].src = images[i].dataset.src;
@@ -221,7 +234,7 @@ window.addEventListener("load", function () {
 
 //close popups
 let popupClose = document.querySelectorAll(".js-popup");
-if(popupClose.length){
+if (popupClose.length) {
     popupClose.forEach(function (element) {
         element.addEventListener("click", function (e) {
             if (e.target !== e.currentTarget) {
@@ -233,7 +246,7 @@ if(popupClose.length){
 }
 
 
-if(document.querySelector(".js-header__search-toggle")) {
+if (document.querySelector(".js-header__search-toggle")) {
     document.querySelector(".js-header__search-toggle")
         .addEventListener("click", function (e) {
             document.querySelector(".js-header__search").classList.toggle("is-active");
@@ -259,17 +272,16 @@ function findAncestor(el, cls) {
 }
 
 let showPassword = document.querySelectorAll(".js-input-password__show");
-if(showPassword.length){
-    showPassword.forEach(function (el){
-        el.addEventListener("click", function (e){
+if (showPassword.length) {
+    showPassword.forEach(function (el) {
+        el.addEventListener("click", function (e) {
 
-            let parent = findAncestor(el,"input-password");
+            let parent = findAncestor(el, "input-password");
             parent.classList.toggle("is-visible");
 
-            if(parent.classList.contains("is-visible")){
+            if (parent.classList.contains("is-visible")) {
                 parent.querySelector("input").type = "text";
-            }
-            else{
+            } else {
                 parent.querySelector("input").type = "password";
             }
 
@@ -277,7 +289,7 @@ if(showPassword.length){
     });
 }
 
-function inViewport (element) {
+function inViewport(element) {
     if (!element) return false;
     if (1 !== element.nodeType) return false;
 
@@ -292,14 +304,13 @@ function inViewport (element) {
 }
 
 let searchField = document.querySelector(".js-popup-cities__search input");
-if(searchField){
+if (searchField) {
     let listItems = document.querySelectorAll(".js-popup-cities__list-item");
-    searchField.addEventListener("input", function (e){
-        for(let i = 0; i < listItems.length; i++){
-            if(listItems[i].innerText.toLowerCase().includes(searchField.value.toLowerCase())){
+    searchField.addEventListener("input", function (e) {
+        for (let i = 0; i < listItems.length; i++) {
+            if (listItems[i].innerText.toLowerCase().includes(searchField.value.toLowerCase())) {
                 listItems[i].classList.remove("is-hide");
-            }
-            else{
+            } else {
                 listItems[i].classList.add("is-hide");
             }
         }
@@ -320,3 +331,27 @@ function initMaska() {
 }
 
 window.addEventListener("click", initMaska);
+
+var fileInputs = document.querySelectorAll(".js-file-input input[type=\"file\"]");
+if (fileInputs.length) {
+
+    fileInputs.forEach(function (el) {
+        el.addEventListener("change", function () {
+
+            var parent = el.parentNode;
+            var dataText = parent.getAttribute("data-caption");
+            var caption = parent.querySelector(".js-file-input__title");
+
+            if (el.files.length) {
+                if (caption) {
+                    caption.textContent = el.files[0].name;
+                }
+            } else {
+                if (caption) {
+                    caption.textContent = dataText;
+                }
+            }
+        });
+    });
+
+}

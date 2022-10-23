@@ -1,39 +1,83 @@
-section.trust-block.js-trust-block.splide
+section.trust-block
   .container
     .trust-block__title.section-h2 Нам доверяют
     .trust-block__filter
       .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary.is-active(data-filter="is-net") Транснациональные сети
       .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-station") Автозаправочные станции
       .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-store") Интернет-магазины
-    .trust-block__arrows.splide__arrows.slider-nav
-      button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
-        include ../../../../img/svg/ic_arrow-left.svg
-      button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
-        span Далее
-        include ../../../../img/svg/ic_arrow-right.svg
-    .splide__track
-      ul.splide__list
-        li.splide__slide(data-filter="is-net")
-          picture
-            source(srcset="img/trust/1.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
-        li.splide__slide(data-filter="is-net")
-          picture
-            source(srcset="img/trust/2.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
-        li.splide__slide(data-filter="is-station")
-          picture
-            source(srcset="img/trust/3.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
-        li.splide__slide(data-filter="is-station")
-          picture
-            source(srcset="img/trust/4.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
-        li.splide__slide(data-filter="is-store")
-          picture
-            source(srcset="img/trust/5.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/5.jpg")
-        li.splide__slide(data-filter="is-store")
-          picture
-            source(srcset="img/trust/6.webp" type="image/webp")
-            img.lazyload(loading="lazy" data-src="img/trust/6.jpg")
+    .trust-block__sliders
+      .splide.js-trust-block__slider.is-visible(data-filter="is-net")
+        .splide__track
+          ul.splide__list
+            li.splide__slide
+              picture
+                source(srcset="img/trust/1.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/2.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/3.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/4.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/5.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/5.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/6.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/6.jpg")
+          .trust-block__arrows.slider-nav.splide__arrows
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+              include ../../../../img/svg/ic_arrow-left.svg
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+              span Далее
+              include ../../../../img/svg/ic_arrow-right.svg
+      .splide.js-trust-block__slider(data-filter="is-station")
+        .splide__track
+          ul.splide__list
+            li.splide__slide
+              picture
+                source(srcset="img/trust/1.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/2.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/3.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/4.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
+          .trust-block__arrows.slider-nav.splide__arrows
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+              include ../../../../img/svg/ic_arrow-left.svg
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+              span Далее
+              include ../../../../img/svg/ic_arrow-right.svg
+      .splide.js-trust-block__slider(data-filter="is-store")
+        .splide__track
+          ul.splide__list
+            li.splide__slide
+              picture
+                source(srcset="img/trust/1.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+            li.splide__slide
+              picture
+                source(srcset="img/trust/2.webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+          .trust-block__arrows.slider-nav.splide__arrows
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+              include ../../../../img/svg/ic_arrow-left.svg
+            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+              span Далее
+              include ../../../../img/svg/ic_arrow-right.svg

@@ -317,6 +317,7 @@ select:focus{
   border-radius: 4px;
   position: relative;
   display: block;
+  cursor: pointer;
 
   &__icon {
     position: absolute;

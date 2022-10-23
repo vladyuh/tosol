@@ -30,7 +30,7 @@ block content
                 ]
             )
 
-    section.distribute-block.trust-block.splide
+    section.distribute-block.trust-block
         .container
             .trust-block__title.distribute-block__title.section-h2 Дистрибьюторы
             .trust-block__caption.distribute-block__caption Продукция компании "Тосол-Синтез" на рынке автохимии представлена:
@@ -39,47 +39,99 @@ block content
                 .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-station") Автозаправочные станции
                 .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-store") Интернет-магазины
                 .trust-block__filter-item.js-trust-block__filter-item.btn.btn-secondary(data-filter="is-market") Маркетплейсы
-            .trust-block__arrows.splide__arrows.slider-nav
-                button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
-                    include ../../img/svg/ic_arrow-left.svg
-                button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
-                    span Далее
-                    include ../../img/svg/ic_arrow-right.svg
-            .splide__track
-                ul.splide__list
-                    li.splide__slide(data-filter="is-net")
-                        picture
-                            source(srcset="img/trust/1.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
-                    li.splide__slide(data-filter="is-net")
-                        picture
-                            source(srcset="img/trust/2.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
-                    li.splide__slide(data-filter="is-station")
-                        picture
-                            source(srcset="img/trust/3.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
-                    li.splide__slide(data-filter="is-station")
-                        picture
-                            source(srcset="img/trust/4.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
-                    li.splide__slide(data-filter="is-store")
-                        picture
-                            source(srcset="img/trust/5.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/5.jpg")
-                    li.splide__slide(data-filter="is-store")
-                        picture
-                            source(srcset="img/trust/6.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/trust/6.jpg")
-                    li.splide__slide(data-filter="is-market")
-                        picture
-                            source(srcset="img/product-detail/wb.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/product-detail/wb.png")
-                    li.splide__slide(data-filter="is-market")
-                        picture
-                            source(srcset="img/product-detail/ozon.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/product-detail/ozon.png")
-
+            .trust-block__sliders
+                .splide.js-trust-block__slider.is-visible(data-filter="is-net")
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/1.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/2.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/3.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/4.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/5.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/5.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/6.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/6.jpg")
+                        .trust-block__arrows.slider-nav.splide__arrows
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                                include ../../img/svg/ic_arrow-left.svg
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                                span Далее
+                                include ../../img/svg/ic_arrow-right.svg
+                .splide.js-trust-block__slider(data-filter="is-station")
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/1.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/2.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/3.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/3.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/4.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/4.jpg")
+                        .trust-block__arrows.slider-nav.splide__arrows
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                                include ../../img/svg/ic_arrow-left.svg
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                                span Далее
+                                include ../../img/svg/ic_arrow-right.svg
+                .splide.js-trust-block__slider(data-filter="is-store")
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/1.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/2.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+                        .trust-block__arrows.slider-nav.splide__arrows
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                                include ../../img/svg/ic_arrow-left.svg
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                                span Далее
+                                include ../../img/svg/ic_arrow-right.svg
+                .splide.js-trust-block__slider(data-filter="is-market")
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/1.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/1.jpg")
+                            li.splide__slide
+                                picture
+                                    source(srcset="img/trust/2.webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="img/trust/2.jpg")
+                        .trust-block__arrows.slider-nav.splide__arrows
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--prev
+                                include ../../img/svg/ic_arrow-left.svg
+                            button.trust-block__arrow.slider-nav__arrow.splide__arrow.splide__arrow--next
+                                span Далее
+                                include ../../img/svg/ic_arrow-right.svg
     section.distribute-map
         .container
             .distribute-map__title Представительства компании в регионах РФ, ближнем и дальнем зарубежье

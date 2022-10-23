@@ -248,26 +248,26 @@
                   <div class="form__fields">
                     <div class="form__field">
                       <div class="input input-text did-floating-label-content">
-                        <input class="did-floating-input" type="text" placeholder="Название компании">
-                        <label class="did-floating-label">Название компании</label>
+                        <input class="did-floating-input" type="text" placeholder="Название компании" id="company">
+                        <label class="did-floating-label" for="company">Название компании</label>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-text did-floating-label-content">
-                        <input class="did-floating-input" type="text" placeholder="ИНН">
-                        <label class="did-floating-label">ИНН</label>
+                        <input class="did-floating-input" type="text" placeholder="ИНН" id="inn">
+                        <label class="did-floating-label" for="inn">ИНН</label>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-text did-floating-label-content">
-                        <input class="did-floating-input" type="text" placeholder="КПП">
-                        <label class="did-floating-label">КПП</label>
+                        <input class="did-floating-input" type="text" placeholder="КПП" id="kpp">
+                        <label class="did-floating-label" for="kpp">КПП</label>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-text did-floating-label-content">
-                        <input class="did-floating-input" type="text" placeholder="ОГРН">
-                        <label class="did-floating-label">ОГРН</label>
+                        <input class="did-floating-input" type="text" placeholder="ОГРН" id="ogrn">
+                        <label class="did-floating-label" for="ogrn">ОГРН</label>
                       </div>
                     </div>
                   </div>
@@ -277,20 +277,20 @@
                   <div class="form__fields">
                     <div class="form__field">
                       <div class="input input-email did-floating-label-content">
-                        <input class="did-floating-input" type="email" placeholder="Электронная почта">
-                        <label class="did-floating-label">Электронная почта</label>
+                        <input class="did-floating-input" type="email" placeholder="Электронная почта" id="email">
+                        <label class="did-floating-label" for="email">Электронная почта</label>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-tel did-floating-label-content">
-                        <input class="did-floating-input" type="tel" placeholder="Телефон">
-                        <label class="did-floating-label">Телефон</label>
+                        <input class="did-floating-input" type="tel" placeholder="Телефон" id="phone">
+                        <label class="did-floating-label" for="phone">Телефон</label>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-text did-floating-label-content">
-                        <input class="did-floating-input" type="text" placeholder="Адрес">
-                        <label class="did-floating-label">Адрес</label>
+                        <input class="did-floating-input" type="text" placeholder="Адрес" id="address">
+                        <label class="did-floating-label" for="address">Адрес</label>
                       </div>
                     </div>
                   </div>
@@ -303,22 +303,22 @@
                   <div class="form__fields">
                     <div class="form__field">
                       <div class="input input-password did-floating-label-content">
-                        <input class="did-floating-input" type="password" placeholder="Текущий пароль">
-                        <label class="did-floating-label">Текущий пароль</label>
+                        <input class="did-floating-input" type="password" placeholder="Текущий пароль" id="password">
+                        <label class="did-floating-label" for="password">Текущий пароль</label>
                         <div class="input-password__show js-input-password__show"></div>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-password did-floating-label-content">
-                        <input class="did-floating-input" type="password" placeholder="Новый пароль">
-                        <label class="did-floating-label">Новый пароль</label>
+                        <input class="did-floating-input" type="password" placeholder="Новый пароль" id="password-new">
+                        <label class="did-floating-label" for="password-new">Новый пароль</label>
                         <div class="input-password__show js-input-password__show"></div>
                       </div>
                     </div>
                     <div class="form__field">
                       <div class="input input-password did-floating-label-content">
-                        <input class="did-floating-input" type="password" placeholder="Повторите пароль">
-                        <label class="did-floating-label">Повторите пароль</label>
+                        <input class="did-floating-input" type="password" placeholder="Повторите пароль" id="password-repeat">
+                        <label class="did-floating-label" for="password-repeat">Повторите пароль</label>
                         <div class="input-password__show js-input-password__show"></div>
                       </div>
                     </div>
@@ -560,13 +560,13 @@
                     </div>
                   </div>
                   <div class="form__field fullwidth">
-                    <label class="file-input">
+                    <label class="file-input js-file-input">
                       <div class="file-input__icon">
                         <svg width="48" height="48">
                           <use xlink:href="/img/sprites/sprite.svg#ic_file"></use>
                         </svg>
                       </div>
-                      <div class="file-input__title">Прикрепите резюме</div>
+                      <div class="file-input__title js-file-input__title">Прикрепите резюме</div>
                       <div class="file-input__caption">название файла - ангийскими буквами до 10 Мб - максимальный размер файла .pdf / .doc / .jpg / .txt</div>
                       <input type="file" name="resume">
                     </label>

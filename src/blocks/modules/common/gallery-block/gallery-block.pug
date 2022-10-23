@@ -10,20 +10,23 @@ section.gallery-block.js-gallery-block.splide
         .splide__track
             ul.splide__list
                 li.splide__slide.gallery-block__slide
-                    a(href="#").gallery-block__slide-image
-                        picture
-                            source(srcset="img/about/gallery-1.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/about/gallery-1.jpg")
-                    .gallery-block__slide-caption Выставка автомобильной промышленности Automechanika Dubai 2021
+                    a(href="#" data-gallery="img/about/gallery-1.jpg,img/about/gallery-2.jpg,img/about/gallery-3.jpg")
+                        .gallery-block__slide-image
+                            picture
+                                source(srcset="img/about/gallery-1.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/gallery-1.jpg")
+                        .gallery-block__slide-caption Выставка автомобильной промышленности Automechanika Dubai 2021
                 li.splide__slide.gallery-block__slide
-                    a(href="#").gallery-block__slide-image
-                        picture
-                            source(srcset="img/about/gallery-2.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/about/gallery-2.jpg")
-                    .gallery-block__slide-caption Логистический центр с современными складскими помещениями
+                    a(href="#" data-gallery="img/about/gallery-1.jpg,img/about/gallery-2.jpg,img/about/gallery-3.jpg")
+                        .gallery-block__slide-image
+                            picture
+                                source(srcset="img/about/gallery-2.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/gallery-2.jpg")
+                        .gallery-block__slide-caption Логистический центр с современными складскими помещениями
                 li.splide__slide.gallery-block__slide
-                    a(href="#").gallery-block__slide-image
-                        picture
-                            source(srcset="img/about/gallery-3.webp" type="image/webp")
-                            img.lazyload(loading="lazy" data-src="img/about/gallery-3.jpg")
-                    .gallery-block__slide-caption «Тосол-Синтез» на производстве
+                    a(href="#" data-gallery="img/about/gallery-1.jpg,img/about/gallery-2.jpg,img/about/gallery-3.jpg")
+                        .gallery-block__slide-image
+                            picture
+                                source(srcset="img/about/gallery-3.webp" type="image/webp")
+                                img.lazyload(loading="lazy" data-src="img/about/gallery-3.jpg")
+                        .gallery-block__slide-caption «Тосол-Синтез» на производстве

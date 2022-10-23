@@ -146,38 +146,38 @@ block content
                         .form__fields
                             .form__field
                                 .input.input-text.did-floating-label-content
-                                    input.did-floating-input(type='text' placeholder='Контактное лица*' required)
-                                    label.did-floating-label Контактное лица*
+                                    input.did-floating-input(type='text' placeholder='Контактное лица*' required id="contact")
+                                    label.did-floating-label(for="contact") Контактное лица*
                             .form__field
                                 .input.input-text.did-floating-label-content
-                                    input.did-floating-input(type='text' placeholder='Название организации*' required)
-                                    label.did-floating-label Название организации*
+                                    input.did-floating-input(type='text' placeholder='Название организации*' required id="org")
+                                    label.did-floating-label(for="org") Название организации*
                             .form__field
                                 .input.input-text.did-floating-label-content
-                                    input.did-floating-input(type='text' placeholder='ИНН*' required)
-                                    label.did-floating-label ИНН*
+                                    input.did-floating-input(type='text' placeholder='ИНН*' required id="inn-1")
+                                    label.did-floating-label(for="inn-1") ИНН*
                             .form__field
                                 .input.input-email.did-floating-label-content
-                                    input.did-floating-input(type='email' placeholder='Ваш email*' required)
-                                    label.did-floating-label Ваш email*
+                                    input.did-floating-input(type='email' placeholder='Ваш email*' required id="email-1")
+                                    label.did-floating-label(for="email-1") Ваш email*
                             .form__field
                                 .input.input-tel.did-floating-label-content
-                                    input.did-floating-input(type='tel' placeholder='Телефон*' required)
-                                    label.did-floating-label Телефон*
+                                    input.did-floating-input(type='tel' placeholder='Телефон*' required id="phone-1")
+                                    label.did-floating-label(for="phone-1") Телефон*
                             .form__field
                                 .input.input-text.did-floating-label-content
-                                    input.did-floating-input(type='text' placeholder='ФИО руководителя предприятия')
-                                    label.did-floating-label ФИО руководителя предприятия
+                                    input.did-floating-input(type='text' placeholder='ФИО руководителя предприятия' id="fio")
+                                    label.did-floating-label(for="fio") ФИО руководителя предприятия
                             .form__field
                                 .did-floating-label-content
-                                    select.did-floating-select(name='' onclick="this.setAttribute('value', this.value);" value='')
+                                    select.did-floating-select(name='' onclick="this.setAttribute('value', this.value);" value='' id="region")
                                         option(value='' selected='' disabled='') Выберите регион
                                         option(value='Москва') Москва
-                                    label.did-floating-label Выберите регион
+                                    label.did-floating-label(for="region") Выберите регион
                             .form__field
                                 .input.input-text.did-floating-label-content
-                                    input.did-floating-input(type='text' placeholder='Сайт')
-                                    label.did-floating-label Сайт
+                                    input.did-floating-input(type='text' placeholder='Сайт' id="site")
+                                    label.did-floating-label(for="site") Сайт
                     .form__submit
                         button.btn.btn-primary Оставить заявку
                     .form__agreement Заявки обрабатываются с 9-00 до 19-00, по будням. Передавая свои данные, вы даете согласие на&nbsp;

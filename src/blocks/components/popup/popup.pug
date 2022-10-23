@@ -57,9 +57,9 @@ mixin vacancyPopup
                                 input.did-floating-input(type='tel' placeholder='Телефон*' required)
                                 label.did-floating-label Телефон*
                         .form__field.fullwidth
-                            label.file-input
+                            label.file-input.js-file-input
                                 .file-input__icon: +icons('#ic_file', 48)
-                                .file-input__title Прикрепите резюме
+                                .file-input__title.js-file-input__title Прикрепите резюме
                                 .file-input__caption название файла - ангийскими буквами до 10 Мб - максимальный размер файла .pdf / .doc / .jpg / .txt
                                 input(type="file" name="resume")
                     .form__submit

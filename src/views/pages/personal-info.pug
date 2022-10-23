@@ -62,35 +62,35 @@ block content
                             .form__fields
                                 .form__field
                                     .input.input-text.did-floating-label-content
-                                        input.did-floating-input(type='text' placeholder='Название компании')
-                                        label.did-floating-label Название компании
+                                        input.did-floating-input(type='text' placeholder='Название компании' id="company")
+                                        label.did-floating-label(for="company") Название компании
                                 .form__field
                                     .input.input-text.did-floating-label-content
-                                        input.did-floating-input(type='text' placeholder='ИНН')
-                                        label.did-floating-label ИНН
+                                        input.did-floating-input(type='text' placeholder='ИНН' id="inn")
+                                        label.did-floating-label(for="inn") ИНН
                                 .form__field
                                     .input.input-text.did-floating-label-content
-                                        input.did-floating-input(type='text' placeholder='КПП')
-                                        label.did-floating-label КПП
+                                        input.did-floating-input(type='text' placeholder='КПП' id="kpp")
+                                        label.did-floating-label(for="kpp") КПП
                                 .form__field
                                     .input.input-text.did-floating-label-content
-                                        input.did-floating-input(type='text' placeholder='ОГРН')
-                                        label.did-floating-label ОГРН
+                                        input.did-floating-input(type='text' placeholder='ОГРН' id="ogrn")
+                                        label.did-floating-label(for="ogrn") ОГРН
                         .personal-info__data-col
                             .personal-info__data-title.section-h4 Регистрационные данные
                             .form__fields
                                 .form__field
                                     .input.input-email.did-floating-label-content
-                                        input.did-floating-input(type='email' placeholder='Электронная почта')
-                                        label.did-floating-label Электронная почта
+                                        input.did-floating-input(type='email' placeholder='Электронная почта' id="email")
+                                        label.did-floating-label(for="email") Электронная почта
                                 .form__field
                                     .input.input-tel.did-floating-label-content
-                                        input.did-floating-input(type='tel' placeholder='Телефон')
-                                        label.did-floating-label Телефон
+                                        input.did-floating-input(type='tel' placeholder='Телефон' id="phone")
+                                        label.did-floating-label(for="phone") Телефон
                                 .form__field
                                     .input.input-text.did-floating-label-content
-                                        input.did-floating-input(type='text' placeholder='Адрес')
-                                        label.did-floating-label Адрес
+                                        input.did-floating-input(type='text' placeholder='Адрес' id="address")
+                                        label.did-floating-label(for="address") Адрес
                         .form__submit
                             a(href="#").btn.btn-primary Изменить данные
                     form.form.personal-info__data.personal-info__password
@@ -99,18 +99,18 @@ block content
                             .form__fields
                                 .form__field
                                     .input.input-password.did-floating-label-content
-                                        input.did-floating-input(type='password' placeholder='Текущий пароль')
-                                        label.did-floating-label Текущий пароль
+                                        input.did-floating-input(type='password' placeholder='Текущий пароль' id="password")
+                                        label.did-floating-label(for="password") Текущий пароль
                                         .input-password__show.js-input-password__show
                                 .form__field
                                     .input.input-password.did-floating-label-content
-                                        input.did-floating-input(type='password' placeholder='Новый пароль')
-                                        label.did-floating-label Новый пароль
+                                        input.did-floating-input(type='password' placeholder='Новый пароль' id="password-new")
+                                        label.did-floating-label(for="password-new") Новый пароль
                                         .input-password__show.js-input-password__show
                                 .form__field
                                     .input.input-password.did-floating-label-content
-                                        input.did-floating-input(type='password' placeholder='Повторите пароль')
-                                        label.did-floating-label Повторите пароль
+                                        input.did-floating-input(type='password' placeholder='Повторите пароль' id="password-repeat")
+                                        label.did-floating-label(for="password-repeat") Повторите пароль
                                         .input-password__show.js-input-password__show
                         .form__submit
                             a(href="#").btn.btn-primary Сменить пароль
