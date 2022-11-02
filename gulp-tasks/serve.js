@@ -1,6 +1,8 @@
 "use strict";
 
-import { paths } from "../gulpfile.babel";
+import {
+    paths
+} from "../gulpfile.babel";
 import gulp from "gulp";
 import browsersync from "browser-sync";
 
@@ -17,5 +19,5 @@ gulp.task("serve", () => {
     gulp.watch(paths.sprites.watch, gulp.parallel("sprites"));
     gulp.watch(paths.images.watch, gulp.parallel("images"));
     gulp.watch(paths.fonts.watch, gulp.parallel("fonts"));
-    gulp.watch(paths.resize.watch, gulp.parallel("resize"));
+    //gulp.watch(paths.resize.watch, gulp.parallel("resize"));
 });

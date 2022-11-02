@@ -9,7 +9,7 @@ $border: #deeaef;
 
 input:not([type="checkbox"]):not([type="radio"]),
 textarea,
-select{
+select {
   outline: none;
   resize: none;
   appearance: none;
@@ -25,7 +25,7 @@ input[type="submit"] {
 
 input:not([type="checkbox"]):not([type="radio"]),
 textarea,
-select{
+select {
   transition: all 0.25s ease;
   border: 1px solid $border;
   width: 100%;
@@ -59,7 +59,7 @@ select{
   }
 }
 
-select{
+select {
   text-overflow: ellipsis;
   background-image: url(../img/svg/ic_expand.svg);
   background-repeat: no-repeat;
@@ -68,13 +68,13 @@ select{
   background-size: 24px;
 }
 
-select[value=""]{
+select[value=""] {
   color: rgba(1, 25, 43, .5)
 }
 
 input:not([type=checkbox]):not([type=radio]):focus,
 textarea:focus,
-select:focus{
+select:focus {
   border-color: var(--color-accent);
 }
 
@@ -86,20 +86,20 @@ select:focus{
   position: relative;
 }
 
-.input-password{
+.input-password {
   position: relative;
 
-  input{
+  input {
     padding-right: 39px;
   }
 
-  &.is-visible{
-    .input-password__show{
+  &.is-visible {
+    .input-password__show {
       background-image: url("../img/svg/ic_password-show.svg");
     }
   }
 
-  &__show{
+  &__show {
     width: 24px;
     height: 24px;
     background-image: url('../img/svg/ic_password-hide.svg');
@@ -288,7 +288,7 @@ select:focus{
   &__field {
     margin-bottom: 20px;
 
-    span.label{
+    span.label {
       display: block;
       margin-bottom: 7px;
       font-weight: 700;
@@ -334,6 +334,11 @@ select:focus{
     margin-bottom: 6px;
     color: var(--color-accent);
     font-weight: 700;
+
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
   }
 
   &__caption {
@@ -354,6 +359,7 @@ select:focus{
   display: flex;
   flex-direction: column;
 }
+
 .did-floating-label {
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
@@ -367,24 +373,32 @@ select:focus{
   padding-bottom: 7px;
   padding-left: 20px;
 }
+
 .did-floating-input,
-.did-floating-select {
-}
-.did-floating-input:focus, .did-floating-select:focus {
+.did-floating-select {}
+
+.did-floating-input:focus,
+.did-floating-select:focus {
   outline: none;
 }
-.did-floating-input:focus ~ .did-floating-label, .did-floating-select:focus ~ .did-floating-label {
+
+.did-floating-input:focus~.did-floating-label,
+.did-floating-select:focus~.did-floating-label {
   opacity: 1;
 }
+
 select.did-floating-select::-ms-expand {
   display: none;
 }
-.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+
+.did-floating-input:not(:placeholder-shown)~.did-floating-label {
   opacity: 1;
 }
-.did-floating-select:not([value=""]):valid ~ .did-floating-label {
+
+.did-floating-select:not([value=""]):valid~.did-floating-label {
   opacity: 1;
 }
-.did-floating-select[value=""]:focus ~ .did-floating-label {
+
+.did-floating-select[value=""]:focus~.did-floating-label {
   opacity: 1;
 }

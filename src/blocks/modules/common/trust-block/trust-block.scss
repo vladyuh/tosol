@@ -66,10 +66,35 @@
         display: block;
       }
     }
+
+    & ul {
+
+      & li {
+        & picture {
+          padding-top: 30%;
+          position: relative;
+          display: block;
+          width: 100%;
+
+          & img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 80%;
+            max-height: 90%;
+            margin: auto;
+          }
+        }
+      }
+    }
+
   }
 
   @media screen and (min-width: 831px) {
     padding: 100px 0;
+
     .container {
       align-items: center;
     }
@@ -107,6 +132,6 @@
   }
 }
 
-.trust-block + .certificates-block {
+.trust-block+.certificates-block {
   padding-top: 0;
 }

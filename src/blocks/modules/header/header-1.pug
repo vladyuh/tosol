@@ -1,28 +1,10 @@
 include ../../components/burger/burger
+include header-menu
 header.header.header-with--bg.js-header
     .container
-        a(href="/").header__logo: include ../../../img/logo.svg
+        a(href="/").header__logo: img(src="/img/logo.svg")
         .header__nav
-            ul.header__nav-list
-                li.header__nav-item.has-submenu
-                    a(href="#").header__nav-link О компании
-                    ul.header__nav-submenu
-                        li.header__nav-item: a(href="#").header__nav-link О нас
-                        li.header__nav-item: a(href="#").header__nav-link История предприятия
-                        li.header__nav-item: a(href="#").header__nav-link География
-                        li.header__nav-item: a(href="#").header__nav-link Лаборатория
-                        li.header__nav-item: a(href="#").header__nav-link Логистический центр
-                        li.header__nav-item: a(href="#").header__nav-link Вакансии
-                li.header__nav-item
-                    a(href="#").header__nav-link Продукция
-                li.header__nav-item
-                    a(href="#").header__nav-link Основы развития
-                li.header__nav-item
-                    a(href="#").header__nav-link Пресс-центр
-                li.header__nav-item
-                    a(href="#").header__nav-link Сотрудничество
-                li.header__nav-item
-                    a(href="#").header__nav-link Контакты
+            +header-menu()
         .header__feedback
             a(href="#").btn.btn-primary Вопросы по сотрудничеству
         .header__burger.js-header__burger: include ../../../img/svg/ic_menu.svg

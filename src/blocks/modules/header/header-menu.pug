@@ -1,0 +1,24 @@
+mixin header-menu()
+    ul.header__nav-list
+        li.header__nav-item.has-submenu
+            a(href="/about.html").header__nav-link О компании
+            ul.header__nav-submenu
+                li.header__nav-item: a(href="/about.html").header__nav-link О нас
+                li.header__nav-item: a(href="/history.html").header__nav-link История предприятия
+                li.header__nav-item: a(href="").header__nav-link География
+                li.header__nav-item: a(href="#").header__nav-link Лаборатория
+                li.header__nav-item: a(href="/logistic.html").header__nav-link Логистический центр
+                li.header__nav-item: a(href="/vacancies.html").header__nav-link Вакансии
+                li.header__nav-item: a(href="production.html").header__nav-link Производство
+                li.header__nav-item: a(href="provider.html").header__nav-link Стать поставщиком
+                li.header__nav-item: a(href="distribute.html").header__nav-link Дистрибьюторы
+        li.header__nav-item
+            a(href="/catalog.html").header__nav-link Продукция
+        li.header__nav-item
+            a(href="/basics.html").header__nav-link Основы развития
+        li.header__nav-item
+            a(href="articles.html").header__nav-link Пресс-центр
+        li.header__nav-item
+            a(href="#").header__nav-link Сотрудничество
+        li.header__nav-item
+            a(href="/contacts.html").header__nav-link Контакты

@@ -14,6 +14,7 @@
     position: relative;
     min-height: 106px;
     margin-bottom: 55px;
+
     &-dots {
       display: flex;
       align-items: center;
@@ -81,7 +82,8 @@
         &::after {
           opacity: 1;
         }
-        & ~ .provider-steps__progress-dot {
+
+        &~.provider-steps__progress-dot {
           background: #deeaef;
         }
       }
@@ -183,8 +185,11 @@
       position: relative;
       z-index: 1;
 
+
+
       .splide__arrow--next {
         max-width: 160px;
+
       }
     }
   }
@@ -227,7 +232,7 @@
           }
         }
 
-        & ~ .aboutpage-company__step {
+        &~.aboutpage-company__step {
           .aboutpage-company__step-dot {
             background: #deeaef;
           }
