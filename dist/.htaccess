@@ -1,8 +1,3 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /.htpasswd
-Require valid-user
-
 # Error 404
 ErrorDocument 404 /404.html
 
