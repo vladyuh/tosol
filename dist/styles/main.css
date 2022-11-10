@@ -8835,7 +8835,11 @@ h5 {
   }
 
   .homepage-press {
-    padding: 0px 0 120px 0;
+    padding: 120px 0 120px;
+  }
+
+  .homepage-press.articles-block {
+    padding: 0 0 120px 0;
   }
 
   .homepage-press__item {
@@ -8857,6 +8861,10 @@ h5 {
   }
 
   .homepage-products {
+    padding: 120px 0 60px;
+  }
+
+  .homepage-products.products-block {
     padding: 0px 0 60px 0;
   }
 
