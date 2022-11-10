@@ -103,6 +103,8 @@
 
     }
 
+
+
     &__nav {
         display: none;
     }
@@ -417,4 +419,12 @@
 
 
 
+}
+
+.header__nav-list>.header__nav-item:hover .header__nav-link {
+    opacity: 0.5;
+}
+
+.header__nav-list>.header__nav-item .header__nav-link {
+    transition: 0.3s ease;
 }

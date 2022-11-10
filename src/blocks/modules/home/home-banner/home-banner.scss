@@ -1,4 +1,4 @@
-.homepage-banner{
+.homepage-banner {
   margin-top: -68px;
   position: relative;
   padding: 0;
@@ -11,11 +11,21 @@
 
   }
 
-  &__slide{
+  &__container {
+    max-width: 1904px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__slide {
     position: relative;
   }
 
-  &__image img{
+  &__image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +35,7 @@
     object-fit: cover;
   }
 
-  &__content{
+  &__content {
     position: relative;
     z-index: 1;
     padding: 100px 0 102px;
@@ -34,7 +44,7 @@
     display: flex;
     flex-grow: 1;
 
-    .container{
+    .container {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -47,13 +57,13 @@
 
   }
 
-  &__title{
+  &__title {
     color: #fff;
     max-width: 700px;
     line-height: 123%;
   }
 
-  &__caption{
+  &__caption {
     color: #fff;
     font-weight: 500;
     font-size: 20px;
@@ -62,19 +72,19 @@
     margin-bottom: 24px;
   }
 
-  &__actions{
+  &__actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
-    .btn{
+    .btn {
       margin-right: 24px;
     }
 
   }
 
-  &__action{
-    &.watch{
+  &__action {
+    &.watch {
       width: 54px;
       height: 54px;
       background: #FFFFFF;
@@ -84,18 +94,18 @@
       justify-content: center;
       transition: all 0.25s ease;
 
-      svg{
+      svg {
         transition: all 0.25s ease;
       }
 
-      &:hover{
+      &:hover {
         background: var(--color-accent);
 
-        svg *[stroke]{
+        svg *[stroke] {
           stroke: #fff;
         }
 
-        svg *[fill]{
+        svg *[fill] {
           fill: #fff;
         }
 
@@ -105,30 +115,30 @@
     }
   }
 
-  &__feedback{
+  &__feedback {
     padding-top: 40px;
     display: flex;
     align-items: center;
 
-    &-icon{
+    &-icon {
       margin-right: 10px;
       flex-shrink: 0;
     }
 
-    &-caption{
+    &-caption {
       font-weight: 700;
       font-size: 14px;
       line-height: 16px / 14px * 100%;
       color: #FFFFFF;
     }
 
-    &-item{
+    &-item {
       display: flex;
       align-items: center;
       margin-right: 24px;
 
-      &:hover .homepage-banner__feedback-icon{
-        svg *[fill="#087BA8"]{
+      &:hover .homepage-banner__feedback-icon {
+        svg *[fill="#087BA8"] {
           fill: var(--color-accent-hover);
         }
       }
@@ -137,7 +147,7 @@
 
   }
 
-  &__arrows{
+  &__arrows {
     position: absolute;
     bottom: 24px;
     left: 0;
@@ -147,7 +157,7 @@
     justify-content: center;
   }
 
-  &__arrow{
+  &__arrow {
     appearance: none;
     border: none;
     width: 54px;
@@ -160,10 +170,10 @@
     justify-content: center;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       background: #fff;
 
-      svg path{
+      svg path {
         fill: #087BA8;
       }
 
@@ -171,13 +181,13 @@
 
   }
 
-  &__contains{
+  &__contains {
     display: none;
   }
 
   @media screen and (min-width: 641px) {
 
-    &__title{
+    &__title {
       margin-top: auto;
     }
 
@@ -185,19 +195,20 @@
 
   @media screen and (min-width: 1153px) {
 
-    &__content{
+    &__content {
       min-height: 940px;
-      .container{
+
+      .container {
         padding-right: 320px;
       }
 
-      .homepage-banner__feedback{
+      .homepage-banner__feedback {
         display: none;
       }
 
     }
 
-    &__contains{
+    &__contains {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -210,7 +221,7 @@
       padding: 100px 24px 102px;
       width: 320px;
 
-      &-item{
+      &-item {
         padding-left: 26px;
         position: relative;
         font-weight: 700;
@@ -220,7 +231,7 @@
         cursor: pointer;
 
 
-        &::after{
+        &::after {
           content: "";
           position: absolute;
           top: 50%;
@@ -232,9 +243,9 @@
           border-radius: 50%;
         }
 
-        &.is-active{
+        &.is-active {
 
-          &::after{
+          &::after {
             left: 0;
             width: 12px;
             min-width: 12px;
@@ -249,17 +260,17 @@
 
       }
 
-      .homepage-banner__feedback{
+      .homepage-banner__feedback {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-left: -51px;
 
-        &-item{
+        &-item {
           margin-right: 0;
           margin-bottom: 30px;
 
-          &:last-child{
+          &:last-child {
             margin-bottom: 0;
           }
 
@@ -269,14 +280,15 @@
 
     }
 
-    .homepage-banner__actions{
+    .homepage-banner__actions {
       margin-top: 48px;
     }
 
-    .homepage-banner__action.watch{
+    .homepage-banner__action.watch {
       width: 70px;
       height: 70px;
-      svg{
+
+      svg {
         width: 48px;
         height: 48px;
       }
@@ -284,19 +296,28 @@
 
   }
 
+  @media screen and (min-width: 2000px) {
+
+    &__contains {
+      padding: 100px 24px 102px;
+      width: 300px;
+    }
+
+  }
+
   @media screen and (min-width: 1441px) {
 
-    &__content{
-      .container{
+    &__content {
+      .container {
         padding-right: 475px;
       }
     }
 
-    &__contains{
+    &__contains {
       padding: 100px 24px 102px;
-      width: 475px;
+      width: 335px;
 
-      &-item{
+      &-item {
         padding-left: 26px;
         position: relative;
         font-weight: 700;
@@ -305,7 +326,7 @@
         color: #FFFFFF;
         opacity: 0.8;
 
-        &.is-active{
+        &.is-active {
           opacity: 1;
         }
       }
@@ -320,15 +341,18 @@
   25% {
     border-top-color: #fff;
   }
+
   50% {
     border-top-color: #fff;
     border-right-color: #fff;
   }
+
   75% {
     border-top-color: #fff;
     border-right-color: #fff;
     border-bottom-color: #fff;
   }
+
   100% {
     border-top-color: #fff;
     border-right-color: #fff;
@@ -341,15 +365,18 @@
   25% {
     border-top-color: #fff;
   }
+
   50% {
     border-top-color: #fff;
     border-right-color: #fff;
   }
+
   75% {
     border-top-color: #fff;
     border-right-color: #fff;
     border-bottom-color: #fff;
   }
+
   100% {
     border-top-color: #fff;
     border-right-color: #fff;

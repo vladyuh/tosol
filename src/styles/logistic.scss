@@ -10,6 +10,10 @@
     p {
       margin-top: 0;
     }
+
+    img {
+      margin-bottom: 20px;
+    }
   }
 
   &__numbers {
@@ -96,15 +100,15 @@
   @media screen and (min-width: 1153px) {
     padding: 120px 0;
 
-    .logistic-block__number-value{
+    .logistic-block__number-value {
       font-size: 30px;
     }
 
-    .logistic-block__number-value strong{
+    .logistic-block__number-value strong {
       font-size: 40px;
     }
 
-    .logistic-block__number-value strong span{
+    .logistic-block__number-value strong span {
       font-size: 60px;
     }
 
