@@ -1,0 +1,246 @@
+.coop-block {
+  padding: 50px 0 33px;
+}
+
+.coop-block__caption {
+  max-width: 680px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  color: var(--color-text-primary);
+}
+
+.advantages-block {
+  padding: 33px 0;
+}
+
+.advantages-block__title {
+  margin-bottom: 24px;
+}
+
+.advantages-block__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px -8px 0;
+}
+
+.advantages-block__item {
+  width: calc(100% - 16px);
+  margin: 8px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.advantages-block__item:hover .advantages-block__item-image::before {
+  height: 100%;
+  opacity: 1;
+}
+
+.advantages-block__item-image {
+  position: absolute;
+  padding-top: 60.97561%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.advantages-block__item-image::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.479);
+  background: #000124;
+  background: linear-gradient(360deg, rgba(8, 123, 168, 0) 50.36%, #087ba8 100%);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.advantages-block__item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.advantages-block__item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0, 65, 93, 0) 0%, rgba(0, 65, 93, 0.8) 100%);
+  min-height: 200px;
+  z-index: 1;
+  transition: all 0.25s ease;
+}
+
+.advantages-block__item-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  transition: all 0.25s ease;
+  margin-top: auto;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+}
+
+.order-block {
+  padding: 33px 0 60px;
+}
+
+.order-block__title {
+  margin-bottom: 32px;
+}
+
+.order-block__items {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order-block__item {
+  background: #ffffff;
+  border: 1px solid rgba(8, 123, 168, 0.2);
+  border-radius: 4px;
+  padding: 30px;
+  margin: 15px;
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.order-block__item-name {
+  margin-bottom: 29px;
+}
+
+.order-block__item-image {
+  max-width: 192px;
+  margin: auto auto 10px;
+}
+
+.order-block__item-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.order-block__item-options {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.order-block__item-options img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 9px;
+}
+
+.order-block__item-option {
+  padding: 0 6px;
+}
+
+.order-block__item-option span {
+  font-size: 14px;
+  line-height: 157.14286%;
+}
+
+.order-block__item-btn {
+  min-width: 201px;
+}
+
+@media screen and (min-width: 481px) {
+  .advantages-block__item-content {
+    min-height: 280px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .advantages-block__item {
+    width: calc(100% / 2 - 16px);
+  }
+
+  .order-block__item {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 831px) {
+  .coop-block__caption {
+    font-size: 18px;
+  }
+
+  .advantages-block__item {
+    width: calc(100% / 3 - 16px);
+  }
+
+  .advantages-block__item-content {
+    padding: 25px 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .coop-block__caption {
+    font-size: 20px;
+  }
+
+  .advantages-block {
+    padding: 33px 0 60px;
+  }
+
+  .advantages-block__title {
+    margin-bottom: 48px;
+  }
+
+  .order-block {
+    padding: 33px 0 120px;
+  }
+
+  .order-block__item {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  .advantages-block__items {
+    margin: -24px -24px 0;
+  }
+
+  .advantages-block__item {
+    width: calc(100% / 3 - 48px);
+    margin: 24px;
+  }
+
+  .advantages-block__item-name {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .coop-block__caption {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=maps/production.css.map */

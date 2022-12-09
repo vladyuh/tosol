@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
 
     let splide = document.createElement("script");
     splide.src = "/js/splide.min.js";
-    splide.onload = function (){
+    splide.onload = function () {
 
         let banner = new Splide(".js-homepage-banner__slider", {
             perPage: 1,
@@ -11,8 +11,8 @@ window.addEventListener("load", function () {
             autoplay: true,
             interval: 5000,
             rewind: true,
-            pauseOnFocus: false,
-            pauseOnHover: false,
+            pauseOnFocus: true,
+            pauseOnHover: true,
             drag: true,
         });
 
@@ -73,6 +73,56 @@ window.addEventListener("load", function () {
         }).mount();
 
     };
+
     document.body.appendChild(splide);
+
+    /* ==========================================
+    video
+    ==========================================*/
+
+
+
+    if (document.querySelector('[data-video]')) {
+
+        function youtube_parser(url) {
+            var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+            var match = url.match(regExp);
+            return (match && match[7].length == 11) ? match[7] : false;
+        }
+
+        document.querySelectorAll('[data-video]').forEach(item => {
+            item.addEventListener('click', function (e) {
+
+                e.preventDefault()
+                let html = `
+                        <div id="video" class="popup js-popup popup-video">
+                            <div class="popup__wrapper">
+                            <div class="popup__close"><a href="#close">
+                                <svg width="20" height="20"> <use xlink:href="/img/sprites/sprite.svg#ic_popup-close"></use> </svg></a></div>
+                            <div class="popup__content">
+                                <div class="popup__content-iframe">
+                                    <div class="video-player" >
+                                        <div class="video-player__inner" >
+                                            <iframe src="https://www.youtube.com/embed/${youtube_parser(item.dataset.video)}?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0" ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>`;
+
+                let div = document.createElement('div');
+                div.innerHTML = html;
+
+                div.querySelector('.popup__close').addEventListener('click', function () {
+                    div.remove()
+                })
+
+                document.body.append(div);
+                window.location.hash = 'video';
+
+            })
+        })
+    }
 
 });

@@ -1,11 +1,11 @@
-.products-block{
+.products-block {
   padding-top: 0;
 
-  .homepage-products__item{
+  .homepage-products__item {
     flex-grow: 0;
   }
 
-  &__caption{
+  &__caption {
     padding-top: 60px;
     max-width: 920px;
     font-size: 16px;
@@ -21,33 +21,33 @@
 
 }
 
-.catalog{
+.catalog {
   padding: 0 0 60px;
 
-  .container{
+  .container {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &-title{
+  &-title {
     width: 100%;
     margin-bottom: 24px;
   }
 
-  &-categories{
+  &-categories {
     width: 100%;
     margin-bottom: 40px;
 
-    &__list{
+    &__list {
       display: flex;
       flex-wrap: wrap;
 
-      &-item{
+      &-item {
         display: flex;
         margin: 3px 0;
       }
 
-      &-link{
+      &-link {
         padding: 11px 21px;
         display: block;
         font-weight: 700;
@@ -57,7 +57,7 @@
         transition: all 0.25s ease;
 
         &.is-active,
-        &:hover{
+        &:hover {
           background: rgba(8, 123, 168, 0.1);
           border-radius: 99px;
           color: var(--color-accent);
@@ -69,19 +69,19 @@
 
   }
 
-  &-products{
+  &-products {
     width: 100%;
 
-    &__filter{
+    &__filter {
       display: flex;
       flex-wrap: wrap;
       margin: -5px -10px 20px;
 
-      &-item{
+      &-item {
         margin: 5px 10px;
         display: flex;
 
-        span{
+        span {
           background: #F5F6F6;
           border-radius: 99px;
           padding: 10px 20px;
@@ -93,11 +93,11 @@
           cursor: pointer;
         }
 
-        input{
+        input {
           display: none;
         }
 
-        input:checked ~ span{
+        input:checked~span {
           background: var(--color-accent-hover);
           color: #fff;
         }
@@ -106,13 +106,13 @@
 
     }
 
-    &__items{
+    &__items {
       display: flex;
       flex-wrap: wrap;
       margin: -15px -15px 30px;
     }
 
-    &__item{
+    &__item {
       width: calc(100% - 30px);
       display: flex;
       flex-wrap: wrap;
@@ -124,10 +124,10 @@
       padding: 30px;
       transition: all 0.25s ease;
 
-      &:hover{
+      &:hover {
         border: 1px solid var(--color-accent);
       }
-      
+
       @media screen and (min-width: 577px) {
         width: calc(100% / 2 - 30px);
       }
@@ -136,12 +136,12 @@
         width: calc(100% / 3 - 30px);
       }
 
-      &-image{
+      &-image {
         max-width: 247px;
         width: 100%;
         margin: 0 auto 30px;
 
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: contain;
@@ -150,38 +150,38 @@
 
       }
 
-      &-name{
+      &-name {
         font-weight: 700;
         font-size: 18px;
         line-height: 133%;
         color: var(--color-accent);
         margin-bottom: 15px;
 
-        &:hover{
+        &:hover {
           color: var(--color-accent-hover);
         }
 
       }
 
-      &-info{
+      &-info {
         width: calc(100% - 70px);
         margin-right: auto;
       }
 
-      &-art{
+      &-art {
         font-size: 14px;
         line-height: 200%;
         color: rgba(1, 25, 43, 0.5);
         margin-bottom: 3px;
       }
 
-      &-volume{
+      &-volume {
         font-size: 22px;
         line-height: 127%;
         color: var(--color-text-primary);
       }
 
-      &-link{
+      &-link {
         width: 54px;
         height: 54px;
         background: rgba(8, 123, 168, 0.1);
@@ -190,10 +190,10 @@
         align-items: center;
         justify-content: center;
 
-        &:hover{
+        &:hover {
           background: var(--color-accent);
 
-          svg path{
+          svg path {
             fill: #fff;
           }
 
@@ -203,18 +203,18 @@
 
     }
 
-    &__pagination{
+    &__pagination {
       margin-bottom: 80px;
     }
 
-    &__caption{
+    &__caption {
       font-size: 16px;
       line-height: 175%;
       color: var(--color-text-primary);
     }
 
   }
-  
+
   @media screen and (min-width: 1025px) {
     padding: 0 0 100px;
 
@@ -223,31 +223,31 @@
   @media screen and (min-width: 1153px) {
     padding: 0 0 120px;
 
-    &-title{
+    &-title {
       margin-bottom: 48px;
     }
 
-    &-categories{
-      &__list{
+    &-categories {
+      &__list {
         flex-direction: column;
         flex-wrap: nowrap;
       }
     }
 
-    &-categories{
+    &-categories {
       width: 328px / 1400px * 100%;
       margin-right: auto;
     }
 
-    &-products{
+    &-products {
       width: 1041px / 1400px * 100%;
     }
 
   }
-  
+
 }
 
-.catalog-detail{
+.catalog-detail {
   padding: 0 0 60px;
   overflow-x: hidden;
 
@@ -259,22 +259,97 @@
     padding: 0 0 120px;
   }
 
-  .container{
+
+
+
+  & .splide {
+    &__arrows {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 50%;
+      height: 0;
+      z-index: 2;
+
+
+
+    }
+
+    &__arrow {
+
+
+
+      &--prev,
+      &--next {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        background-color: #135283;
+        border: none;
+        opacity: 0;
+        transition: 0.3s ease;
+
+        & svg {
+          width: 17px;
+          height: 17px;
+          fill: #fff;
+          top: 2px;
+        }
+      }
+
+      &--prev {
+
+        transform: translateX(-10px);
+
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &--next {
+
+        transform: translateX(10px);
+
+
+      }
+    }
+
+
+
+  }
+
+  .container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 42px;
   }
 
-  &__product{
+  &__product {
     width: 100%;
     max-width: 447px;
     margin: 0 auto 40px;
 
-    &__wrapper{
+    &:hover {
+      & .splide {
+        &__arrow {
+
+          &--prev,
+          &--next {
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+        }
+      }
+    }
+
+    &__wrapper {
       background: #FFFFFF;
       border: 1px solid rgba(8, 123, 168, 0.2);
       border-radius: 4px;
@@ -282,31 +357,49 @@
       margin-bottom: 30px;
     }
 
-    &-brand{
+    &-brand {
       max-width: 89px;
       margin-bottom: 17px;
-      img{
+
+      img {
         width: 100%;
         height: auto;
       }
     }
 
-    &-image{
+    &-image {
       max-width: 320px;
       margin: 0 auto;
-      img{
-        width: 100%;
-        height: auto;
+
+      & picture {
+        position: relative;
+        padding-top: 100%;
+        display: block;
+
+        & img {
+
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          object-fit: contain;
+
+        }
+
       }
+
+
     }
 
-    &-types{
+    &-types {
       display: flex;
       align-items: flex-end;
       justify-content: center;
     }
 
-    &-type{
+    &-type {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -316,15 +409,27 @@
       text-align: center;
       color: #01192B;
 
-      &.is-active{
+      &:hover:not(.is-active) {
 
-        svg *[fill="#CCD9DF"]{
+        svg *[fill="#CCD9DF"] {
+          fill: var(--color-accent);
+          opacity: 0.5;
+          cursor: pointer;
+        }
+
+      }
+
+      &.is-active {
+
+        svg *[fill="#CCD9DF"] {
           fill: var(--color-accent);
         }
 
       }
 
-      span{
+
+
+      span {
         margin-top: 9px;
       }
 
@@ -332,17 +437,17 @@
 
   }
 
-  &__info{
+  &__info {
     margin-bottom: 90px;
 
-    &-art{
+    &-art {
       font-size: 18px;
       line-height: 156%;
       color: rgba(1, 25, 43, 0.5);
       margin-bottom: 22px;
     }
 
-    &-title{
+    &-title {
       font-weight: 700;
       font-size: 24px;
       line-height: 28px / 24px * 100%;
@@ -350,77 +455,77 @@
       margin-bottom: 24px;
     }
 
-    &-desc{
+    &-desc {
       font-size: 18px;
       line-height: 156%;
       color: var(--color-text-primary);
       margin-bottom: 41px;
 
-      p{
+      p {
         margin-top: 0;
       }
     }
 
-    &-link{
+    &-link {
       display: flex;
       align-items: center;
     }
 
   }
 
-  &__toggles{
+  &__toggles {
     display: flex;
     overflow-x: auto;
     width: calc(100% + 20px);
     margin: -10px -10px 50px;
   }
 
-  &__toggle{
+  &__toggle {
     flex-shrink: 0;
     margin: 10px;
     background: #f5f6f6;
 
-    &.is-active{
+    &.is-active {
       background: var(--color-accent-hover);
       color: #fff;
     }
 
   }
 
-  &__tabs{
+  &__tabs {
     width: 100%;
   }
 
-  &__tab{
+  &__tab {
     display: none;
     width: 100%;
 
-    &.is-active{
+    &.is-active {
       display: block;
     }
 
   }
 
-  &__advantages{
+  &__advantages {
     display: flex;
     flex-wrap: wrap;
     margin: -12px -12px 0;
   }
 
-  &__advantage{
+  &__advantage {
     width: calc(100% - 24px);
     margin: 12px;
     display: flex;
     align-items: center;
 
-    &-icon{
+    &-icon {
       width: 42px;
       height: 42px;
       flex-shrink: 0;
       margin-right: 26px;
     }
 
-    &-caption{
+    &-caption {
       font-size: 16px;
       line-height: 162%;
       color: var(--color-text-primary);
@@ -428,33 +533,33 @@
 
   }
 
-  &__docs{
+  &__docs {
     display: flex;
     flex-wrap: wrap;
     margin: -12px -12px 0;
   }
 
-  &__doc{
+  &__doc {
     width: calc(100% - 24px);
     margin: 12px;
     display: flex;
     align-items: center;
 
-    &-icon{
+    &-icon {
       width: 48px;
       height: 48px;
       flex-shrink: 0;
       margin-right: 20px;
     }
 
-    &-name{
+    &-name {
       font-weight: 700;
       font-size: 18px;
       line-height: 156%;
       color: var(--color-accent);
     }
 
-    &-caption{
+    &-caption {
       font-size: 16px;
       line-height: 200%;
       color: var(--color-text-primary);
@@ -463,14 +568,15 @@
 
   }
 
-  &__video{
+  &__video {
     max-width: 685px;
     position: relative;
 
-    &-preview{
+    &-preview {
       position: relative;
       padding-top: 409px / 685px * 100%;
-      img{
+
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -481,7 +587,7 @@
       }
     }
 
-    &-play{
+    &-play {
       width: 84px;
       height: 84px;
       background: #FFFFFF;
@@ -496,16 +602,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
 
-      svg{
+      svg {
         transition: all 0.25s ease;
         width: 48px;
         height: 48px;
       }
 
-      &:hover{
+      &:hover {
         background: var(--color-accent);
 
-        svg path{
+        svg path {
           fill: #fff;
         }
 
@@ -513,14 +619,14 @@
 
     }
 
-    &.is-play{
-      .catalog-detail__video-play{
+    &.is-play {
+      .catalog-detail__video-play {
         opacity: 0;
         pointer-events: none;
       }
     }
 
-    iframe{
+    iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -530,13 +636,13 @@
 
   }
 
-  &__markets{
+  &__markets {
     display: flex;
     flex-wrap: wrap;
     margin: -20px -20px 0;
   }
 
-  &__market{
+  &__market {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -548,12 +654,12 @@
   @media screen and (min-width: 831px) {
 
     &__advantages,
-    &__docs{
+    &__docs {
       margin: -24px -24px 0;
     }
 
     &__advantage,
-    &__doc{
+    &__doc {
       width: calc(100% / 2 - 48px);
       margin: 24px;
     }
@@ -561,28 +667,29 @@
 
   @media screen and (min-width: 1025px) {
 
-    &__product{
+    &__product {
       width: 447px / 1400px * 100%;
       margin-right: auto;
       margin-left: 0;
       margin-bottom: 0;
     }
-    &__info{
+
+    &__info {
       width: 913px / 1400px * 100%;
       margin-bottom: 0;
     }
 
-    &__toggles{
+    &__toggles {
       margin-top: 90px;
     }
 
-    &__markets{
+    &__markets {
       display: flex;
       flex-wrap: wrap;
       margin: -16px -40px 0;
     }
 
-    &__market{
+    &__market {
       margin: 16px 40px;
     }
 
@@ -591,12 +698,12 @@
   @media screen and (min-width: 1153px) {
 
     &__advantages,
-    &__docs{
+    &__docs {
       margin: -24px -24px 0;
     }
 
     &__advantage,
-    &__doc{
+    &__doc {
       width: calc(100% / 3 - 48px);
       margin: 24px;
     }
@@ -604,14 +711,13 @@
 
   @media screen and (min-width: 1281px) {
 
-    &__advantages
-    &__docs{
+    &__advantages &__docs {
       margin: -16px -44px 0;
       width: calc(100% + 88px);
     }
 
     &__advantage,
-    &__doc{
+    &__doc {
       width: calc(100% / 3 - 88px);
       margin: 16px 44px;
     }

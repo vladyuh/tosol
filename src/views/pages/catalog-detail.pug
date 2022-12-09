@@ -35,22 +35,42 @@ block content
                         picture
                             source(srcset='img/home/brand-logo.webp' type='image/webp')
                             img(src='img/home/brand-logo.png')
-                    .catalog-detail__product-image
-                        a(data-fslightbox="" href="img/products/image6.jpg")
-                            picture
-                                source(srcset='img/products/1.webp' type='image/webp')
-                                img(src='img/products/1.png' width='247' height='247')
+                    .catalog-detail__product-slider
+                        .splide(data-slider="card")
+                            .splide__track
+                                .splide__list
+                                    .splide__slide
+                                        .catalog-detail__product-image
+                                            a(data-fslightbox="" href="/img/felix1.jpg")
+                                                picture
+                                                    img(src='/img/felix1.jpg' width='247' height='247')
+                                    .splide__slide
+                                        .catalog-detail__product-image
+                                            a(data-fslightbox="" href="img/products/image6.jpg")
+                                                picture
+                                                    img(src='img/products/1.png' width='247' height='247')
+                                    .splide__slide
+                                        .catalog-detail__product-image
+                                            a(data-fslightbox="" href="/img/felix20.jpg")
+                                                picture
+                                                    img(src='/img/felix20.jpg' width='247' height='247')
+                                    .splide__slide
+                                        .catalog-detail__product-image
+                                            a(data-fslightbox="" href="/img/felix180.jpeg")
+                                                picture
+                                                    img(src='/img/felix180.jpeg' width='247' height='247')
                 .catalog-detail__product-types
-                    .catalog-detail__product-type
-                        include ../../img/option-0.svg
-                        span 5 л
-                    .catalog-detail__product-type.is-active
+                    .catalog-detail__product-type(data-slider-thumb="").is-active
                         include ../../img/option-1.svg
                         span 1 л
-                    .catalog-detail__product-type
+                    .catalog-detail__product-type(data-slider-thumb="")
+                        include ../../img/option-0.svg
+                        span 5 л
+                   
+                    .catalog-detail__product-type(data-slider-thumb="")
                         include ../../img/option-2.svg
                         span 20 л
-                    .catalog-detail__product-type
+                    .catalog-detail__product-type(data-slider-thumb="")
                         include ../../img/option-3.svg
                         span 180 кг
             .catalog-detail__info

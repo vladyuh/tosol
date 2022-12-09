@@ -35,4 +35,58 @@ window.addEventListener("load", function () {
     }
 
 
+    if (document.querySelector('[data-slider="card"]')) {
+
+
+
+
+        let splide = document.createElement("script");
+        splide.src = "/js/splide.min.js";
+        splide.onload = function () {
+
+
+
+            let cardCatalog = new Splide('[data-slider="card"]', {
+                perPage: 1,
+                arrows: true,
+                pagination: false,
+                rewind: true,
+                pauseOnFocus: true,
+                pauseOnHover: true,
+                drag: true,
+            });
+
+            let sliderThumbAll = document.querySelectorAll('[data-slider-thumb]');
+
+            sliderThumbAll.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    cardCatalog.go(index)
+                })
+            })
+
+            cardCatalog.on('move', function (newIndex, prevIndex, destIndex) {
+
+                sliderThumbAll.forEach((item, index) => {
+
+                    if (newIndex == index) {
+                        item.classList.add('is-active')
+                    } else {
+                        if (item.classList.contains('is-active')) {
+                            item.classList.remove('is-active')
+                        }
+                    }
+
+                })
+
+            })
+
+            cardCatalog.mount()
+
+        }
+
+        document.body.appendChild(splide);
+
+    }
+
+
 });
