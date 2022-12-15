@@ -1,7 +1,7 @@
 .page_noanimation * {
-    transition: none!important;
-    -webkit-animation: none!important;
-    animation: none!important;
+    transition: none !important;
+    -webkit-animation: none !important;
+    animation: none !important;
 }
 
 html {
@@ -77,9 +77,9 @@ body {
         padding-top: 103px;
     }
 
-    &.page{
+    &.page {
         @media screen and (max-width: 1365px) {
-            &.is-mobile{
+            &.is-mobile {
                 overflow: hidden;
 
                 &::after {
@@ -103,7 +103,7 @@ body {
 
 }
 
-footer{
+footer {
     width: 100%;
     margin-top: auto;
 }
@@ -118,15 +118,37 @@ footer{
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 @keyframes opacity {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body * {
+        scrollbar-color: #cbcfd0 #e2e6e8;
+        scrollbar-width: thin !important;
+    }
+
+    body *::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    body *::-webkit-scrollbar-track {
+        background-color: #e2e6e8;
+    }
+
+    body *::-webkit-scrollbar-thumb {
+        background-color: #cbcfd0;
     }
 }
