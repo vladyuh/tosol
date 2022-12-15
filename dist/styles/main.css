@@ -4453,6 +4453,12 @@ h5 {
   cursor: pointer;
 }
 
+.distribute-map__region a {
+  min-height: 35px;
+  display: inline-flex;
+  align-items: center;
+}
+
 .distribute-map__region.is-active {
   opacity: 1;
   font-size: 22px;
@@ -6913,11 +6919,11 @@ h5 {
   }
 
   .dist-block__form .form__field {
-    width: 57.89474%;
+    width: 57%;
   }
 
   .dist-block__form .form__submit {
-    width: 42.10526%;
+    width: 42%;
   }
 
   .personal-certificates__item {
@@ -8372,7 +8378,7 @@ h5 {
   }
 
   .dist-block__text {
-    width: 40.71429%;
+    width: 40%;
     margin-right: auto;
     margin-bottom: 0;
   }
@@ -8383,7 +8389,7 @@ h5 {
   }
 
   .dist-block__form {
-    width: 52.14286%;
+    width: 52%;
   }
 
   .history-block {
@@ -8756,7 +8762,7 @@ h5 {
   }
 
   .distribute-map__container {
-    width: 65.21429%;
+    width: 65%;
   }
 
   .distribute-map__container-wrap {
@@ -9134,13 +9140,13 @@ h5 {
   }
 
   .dist-block__text {
-    width: 52.14286%;
+    width: 52%;
     margin-right: auto;
     margin-bottom: 0;
   }
 
   .dist-block__form {
-    width: 40.71429%;
+    width: 40%;
   }
 
   .homepage-brands__item-desc {

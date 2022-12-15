@@ -3,8 +3,8 @@ window.addEventListener("load", function () {
     splide.src = "/js/splide.min.js";
     splide.onload = function () {
 
-        if(document.querySelectorAll(".js-trust-block__slider").length){
-            document.querySelectorAll(".js-trust-block__slider").forEach(function (el){
+        if (document.querySelectorAll(".js-trust-block__slider").length) {
+            document.querySelectorAll(".js-trust-block__slider").forEach(function (el) {
                 new Splide(el, {
                     perPage: 2,
                     arrows: true,
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
 
         let filterToggles = document.querySelectorAll(".js-trust-block__filter-item");
-        if(filterToggles.length){
+        if (filterToggles.length) {
             filterToggles.forEach(function (el) {
                 el.addEventListener("click", function () {
                     let id = el.getAttribute("data-filter");
@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
 
 function filter(splide) {
     let filter = document.querySelector(".js-trust-block__filter-item.is-active");
-    if(filter){
+    if (filter) {
         let slides = splide.Components.Slides.get();
         let slidesFilter = splide.Components.Slides.filter(
             "[data-filter='" + filter.getAttribute("data-filter") + "']"
@@ -77,10 +77,10 @@ function filter(splide) {
 function initMap() {
     ymaps.ready(function () {
 
-        let coords,region;
+        let coords, region, center;
 
         let activeRegion = document.querySelector(".js-distribute-map__region.is-active");
-        if(activeRegion){
+        if (activeRegion) {
             coords = activeRegion.getAttribute("data-center").split(",");
             region = activeRegion.getAttribute("data-region");
         }
@@ -91,10 +91,13 @@ function initMap() {
             controls: [],
         });
 
-        changeRegion(region);
+
+
+
+
 
         let listItems = document.querySelectorAll(".js-distribute-map__list-item");
-        if(listItems.length){
+        if (listItems.length) {
             listItems.forEach(function (el) {
                 if (el.getAttribute("data-region") !== region) {
                     el.classList.add("is-hidden");
@@ -102,7 +105,7 @@ function initMap() {
                 if (el.getAttribute("data-coords")) {
                     addPlacemark(el);
 
-                    el.addEventListener("click", function (){
+                    el.addEventListener("click", function () {
                         centerMap(el.getAttribute("data-coords").split(","));
                     });
 
@@ -112,18 +115,57 @@ function initMap() {
             });
         }
 
+        //load from URL
+        if (window.location.hash != '') {
 
-        centerMap(listItems[0].getAttribute("data-coords").split(","));
+
+
+            document.querySelectorAll(".js-distribute-map__region a").forEach(item => {
+                if (item.getAttribute('href') == window.location.hash) {
+                    region = item.parentNode.getAttribute("data-region")
+
+
+                    if (item.parentNode.getAttribute("data-center")) {
+                        center = item.parentNode.getAttribute("data-center").split(",")
+                    }
+
+                    item.parentNode.classList.add('is-active')
+                } else {
+                    if (item.parentNode.classList.contains('is-active')) item.parentNode.classList.remove('is-active')
+                }
+            })
+
+
+            changeRegion(region);
+
+            if (center) {
+                centerMap(center);
+            }
+
+
+        } else {
+            changeRegion(region);
+            centerMap(listItems[0].getAttribute("data-coords").split(","));
+        }
+
+
 
         let regions = document.querySelectorAll(".js-distribute-map__region");
-        if(regions.length){
+        if (regions.length) {
             regions.forEach(function (el) {
                 el.addEventListener("click", function () {
-                    document.querySelector(".js-distribute-map__region.is-active").classList.remove("is-active");
+
+                    if (document.querySelector(".js-distribute-map__region.is-active")) {
+                        document.querySelector(".js-distribute-map__region.is-active").classList.remove("is-active");
+                    }
+
+
                     el.classList.add("is-active");
+
                     if (el.getAttribute("data-center")) {
                         centerMap(el.getAttribute("data-center").split(","));
                     }
+
                     if (el.getAttribute("data-region")) {
                         changeRegion(el.getAttribute("data-region"));
                     }
@@ -136,11 +178,13 @@ function initMap() {
             myMap.setCenter(coords, 14, {
                 checkZoomRange: true
             });
+
+            myMap.container.fitToViewport()
         }
 
         function changeRegion(region) {
             let listItems = document.querySelectorAll(".js-distribute-map__list-item");
-            if(listItems.length){
+            if (listItems.length) {
                 listItems.forEach(function (el) {
                     if (el.getAttribute("data-region") !== region) {
                         el.classList.add("is-hidden");
@@ -158,18 +202,15 @@ function initMap() {
 
             let coords = el.getAttribute("data-coords").split(",");
 
-            placemark = new ymaps.Placemark(coords,
-                {
-                    balloonContentBody: "<div class='distribute-map__list-item no-padding'>" + el.innerHTML + "</div>",
-                },
-                {
-                    iconLayout: "default#image",
-                    iconImageHref: "../img/svg/pin.svg",
-                    iconImageSize: [32, 32],
-                    balloonShadow: false,
-                    hideIconOnBalloonOpen: false,
-                }
-            );
+            placemark = new ymaps.Placemark(coords, {
+                balloonContentBody: "<div class='distribute-map__list-item no-padding'>" + el.innerHTML + "</div>",
+            }, {
+                iconLayout: "default#image",
+                iconImageHref: "../img/svg/pin.svg",
+                iconImageSize: [32, 32],
+                balloonShadow: false,
+                hideIconOnBalloonOpen: false,
+            });
 
             myMap.geoObjects.add(placemark);
 
@@ -187,15 +228,14 @@ function initMap() {
     });
 
     let searchField = document.querySelector(".js-distribute-map__list-search input");
-    if(searchField){
+    if (searchField) {
         let listItems = document.querySelectorAll(".js-distribute-map__list-item");
 
-        searchField.addEventListener("input", function (e){
-            for(let i = 0; i < listItems.length; i++){
-                if(listItems[i].innerText.toLowerCase().includes(searchField.value.toLowerCase())){
+        searchField.addEventListener("input", function (e) {
+            for (let i = 0; i < listItems.length; i++) {
+                if (listItems[i].innerText.toLowerCase().includes(searchField.value.toLowerCase())) {
                     listItems[i].classList.remove("is-hide");
-                }
-                else{
+                } else {
                     listItems[i].classList.add("is-hide");
                 }
             }
